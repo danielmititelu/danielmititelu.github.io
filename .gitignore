@@ -1,5 +1,4 @@
 node_modules
 .svelte-kit
-# todo: find a way to deploy without commiting build folder
-# build
+build
 .DS_Store
