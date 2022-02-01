@@ -1,4 +1,35 @@
 /* Write your global styles here, in PostCSS syntax */
-@tailwind base;
+@import "./code-highlight.css";
+
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
+
+/* rect {
+    fill: none;
+} */
+
+a {
+    @apply no-underline text-black hover:text-blue-600;
+}
+
+h1, h2, h3, p, a, ul {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p, ul {
+    font-size: 18px;
+}
