@@ -15,6 +15,7 @@
 
     import DisjointSets from "$lib/posts/DisjointSets.svelte.md";
     import Heap from "$lib/posts/Heap.svelte.md";
+    import QuickSelect from "$lib/posts/QuickSelect.svelte.md";
 
     export let slug;
 </script>
@@ -25,5 +26,8 @@
     {/if}
     {#if slug == "heap"}
         <Heap />
+    {/if}
+    {#if slug == "quick-select"}
+        <QuickSelect />
     {/if}
 </section>

@@ -1,7 +1,8 @@
 <script>
     export let blogs = [
         { title: 'Heap', path: 'heap' },
-        { title: 'Disjoint sets', path: 'disjoint-sets'}
+        { title: 'Disjoint sets', path: 'disjoint-sets'},
+        { title: 'Quickselect', path: 'quick-select'}
     ]
 </script>
 
@@ -11,5 +12,5 @@
         <a href={blog.path} class=" no-underline text-black hover:text-blue-600">
             <h2>{blog.title}</h2> 
         </a>
-    {/each }
+    {/each}
 </div>
