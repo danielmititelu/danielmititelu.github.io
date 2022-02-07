@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-f87c9cc2.css">
+	<link rel="modulepreload" href="/_app/start-48d0bff7.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-edd1a298.js">
+	<link rel="modulepreload" href="/_app/pages/_slug_.svelte-3eae9f62.js"><script type="module">
+		import { start } from "/_app/start-48d0bff7.js";
+		start({
+			target: document.querySelector("#svelte"),
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-edd1a298.js"),
+						import("/_app/pages/_slug_.svelte-3eae9f62.js")
+				],
+				url: new URL("http://sveltekit-prerender/quick-select"),
+				params: {slug:"quick-select"}
+			}
+		});
+	</script>
+	</head>
+	<body class="bg-gradient-to-r from-blue-300 to-orange-100">
+		<div id="svelte">
+
+
+<section class="max-w-screen-md mx-auto"><header><nav><a href="/" class="flex"><h3 class="mb-0">HOME</h3></a></nav></header>
+	<section>
+    
+    <h1>Quickselect</h1>
+<h4>Quick select or Hoare’s selection algorithm</h4>
+<p>Time complexity: </p>
+<ul><li>average case O(N)</li>
+<li>worst case O(N^2)</li></ul>
+<p>Algoritm steps:</p>
+<ul><li>figure out k-th index(smallest: k, biggest: n - k)</li>
+<li>add 2 pointers (<code>left</code> and <code>right</code>) for the start and end of the array, similar to binary search </li>
+<li>while <code>left</code> is smaller than <code>right</code> pick a random index as pivot and partition:<ul><li>save the pivot in the right pointer</li>
+<li>starting from left with 2 pointers: <code>storeIndex</code> and <code>i</code>:<ul><li>move <code>i</code> forword untill it reaches the right pointer,</li>
+<li>every time <code>i</code> finds a value smaller than the pivot, swap it with <code>storeIndex</code> and increment <code>storeIndex</code></li>
+<li>at the end swap <code>storeIndex</code> with the pivot stored in right pointer</li>
+<li>return <code>storeIndex</code>, this is our pivot in it’s final ordered position</li></ul></li></ul></li>
+<li>similar to binary search compare pivot index with the k-th index:<ul><li>if they are equal then we found the k-th element</li>
+<li>if pivot index is bigger, seach in the left part of the pivot where there are smaller values</li>
+<li>if pivot index is smaller, search in the right part</li></ul></li></ul>
+<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">FindKthLargest</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> nums<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> k<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> kthIndex <span class="token operator">=</span> nums<span class="token punctuation">.</span>Length <span class="token operator">-</span> k<span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> right <span class="token operator">=</span> nums<span class="token punctuation">.</span>Length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> right<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> pivotIdx <span class="token operator">=</span> <span class="token function">Partition</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>pivotIdx <span class="token operator">==</span> kthIndex<span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>pivotIdx <span class="token operator">&lt;</span> kthIndex<span class="token punctuation">)</span>
+            left <span class="token operator">=</span> pivotIdx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            right <span class="token operator">=</span> pivotIdx <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">return</span> nums<span class="token punctuation">[</span>kthIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">Partition</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> nums<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> left<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> right<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> pivotIdx <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Next</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">Swap</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> pivotIdx<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> storeIndex <span class="token operator">=</span> left<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> i <span class="token operator">=</span> left<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> right<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token function">Swap</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> i<span class="token punctuation">,</span> storeIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            storeIndex<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">Swap</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> storeIndex<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> storeIndex<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Swap</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> nums<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> pivot<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> right<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> temp <span class="token operator">=</span> nums<span class="token punctuation">[</span>pivot<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    nums<span class="token punctuation">[</span>pivot<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></section></section>
+
+</div>
+	</body>
+</html>
