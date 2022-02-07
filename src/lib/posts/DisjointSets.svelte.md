@@ -1,8 +1,3 @@
-<script>
-	import DisjointSetsImg from '$lib/images/DisjointSetsImg.svelte';
-	import DisjointSetCompImgImg from '$lib/images/DisjointSetCompImg.svelte';
-</script>
-
 # Disjoint sets
 
 Disjoint Sets or Union find is a data structure used for finding relationships between nodes.
@@ -19,7 +14,7 @@ Time complexity for both find and union is smaller than O(log n) or amortized O(
 
 An array is used to represent the parents of the disjointed sets. This is how the parents array would look after the union operation is performed on the blue and red nodes:
 
-<DisjointSetsImg />
+![image](/DisjointSetsImg.svg)
 
 #### Code example:
 ```cs
@@ -55,7 +50,7 @@ public class UnionFind {
 #### Path compression
 An optimization that aims to flatten the traveral tree to the height of one so that all find operation would be completed in constant time.
 
-<DisjointSetCompImgImg />
+![image](/DisjointSetCompImg.svg)
 
 ```cs
 public int Find(int x) {
