@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-f87c9cc2.css">
+	<link rel="modulepreload" href="/_app/start-70dc6284.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-edd1a298.js">
+	<link rel="modulepreload" href="/_app/pages/_slug_.svelte-70434026.js"><script type="module">
+		import { start } from "/_app/start-70dc6284.js";
+		start({
+			target: document.querySelector("#svelte"),
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-edd1a298.js"),
+						import("/_app/pages/_slug_.svelte-70434026.js")
+				],
+				url: new URL("http://sveltekit-prerender/heap"),
+				params: {slug:"heap"}
+			}
+		});
+	</script>
+	</head>
+	<body class="bg-gradient-to-r from-blue-300 to-orange-100">
+		<div id="svelte">
+
+
+<section class="max-w-screen-md mx-auto"><header><nav><a href="/" class="flex"><h3 class="mb-0">HOME</h3></a></nav></header>
+	<section>
+    <h1>Heap</h1>
+<p>A heap is a complete binary tree where the any given node is smaller/bigger than it’s descendents depending if it’s a min/max heap</p>
+<h3>Heap represented as array</h3>
+<p>A heap can easily be represented as an array:</p>
+<ul><li>add in array level by level</li>
+<li>if a given node is at index i to find the parent of a node: p = (i - 1) / 2 (floor value of i/2)</li>
+<li>left chlid = 2 * i + 1</li>
+<li>right child = 2 * i + 2</li>
+<li>all leaf nodes are in the last half of the array</li></ul>
+<h3>Insert a value in the heap</h3>
+<ul><li>add element at the end of array</li>
+<li>compare with parent and swap if it’s smaller/bigger</li>
+<li>repeat for all parents of that node</li></ul>
+<h3>Extract min/max value from heap</h3>
+<ul><li>get value from root</li>
+<li>bring the right-most leaf(last element of array) in the root</li>
+<li>push the element down by comparing with it’s children and swapping if neccesary (or [[Heapify]]) </li></ul>
+<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MinHeap</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> _heap<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token function">MinHeap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        _heap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Insert</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> <span class="token keyword">value</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        _heap<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> currentIndex <span class="token operator">=</span> _heap<span class="token punctuation">.</span>Count <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> parentIndex <span class="token operator">=</span> <span class="token function">GetParentIndex</span><span class="token punctuation">(</span>currentIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>parentIndex <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> _heap<span class="token punctuation">[</span>currentIndex<span class="token punctuation">]</span> <span class="token operator">&lt;</span> _heap<span class="token punctuation">[</span>parentIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token function">Swap</span><span class="token punctuation">(</span>currentIndex<span class="token punctuation">,</span> parentIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            currentIndex <span class="token operator">=</span> parentIndex<span class="token punctuation">;</span>
+            parentIndex <span class="token operator">=</span> <span class="token function">GetParentIndex</span><span class="token punctuation">(</span>currentIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">GetParentIndex</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> currentIndex<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>currentIndex <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">ExtractMin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>_heap<span class="token punctuation">.</span>Count <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Exception</span><span class="token punctuation">(</span><span class="token string">"Heap is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token class-name"><span class="token keyword">int</span></span> min <span class="token operator">=</span> _heap<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _heap<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> _heap<span class="token punctuation">[</span>_heap<span class="token punctuation">.</span>Count <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _heap<span class="token punctuation">.</span><span class="token function">RemoveAt</span><span class="token punctuation">(</span>_heap<span class="token punctuation">.</span>Count <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">Heapify</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> min<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Heapify</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> index<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name"><span class="token keyword">int</span></span> left <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token keyword">int</span></span> right <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> index <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token keyword">int</span></span> smallest <span class="token operator">=</span> index<span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> _heap<span class="token punctuation">.</span>Count <span class="token operator">&amp;&amp;</span> _heap<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">&lt;</span> _heap<span class="token punctuation">[</span>smallest<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            smallest <span class="token operator">=</span> left<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>right <span class="token operator">&lt;</span> _heap<span class="token punctuation">.</span>Count <span class="token operator">&amp;&amp;</span> _heap<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">&lt;</span> _heap<span class="token punctuation">[</span>smallest<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            smallest <span class="token operator">=</span> right<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>smallest <span class="token operator">!=</span> index<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token function">Swap</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> smallest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">Heapify</span><span class="token punctuation">(</span>smallest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Swap</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> index<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> parentIndex<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name"><span class="token keyword">int</span></span> temp <span class="token operator">=</span> _heap<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _heap<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> _heap<span class="token punctuation">[</span>parentIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _heap<span class="token punctuation">[</span>parentIndex<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>&#96;&#96;&#96;</code><!-- HTML_TAG_END --></pre></section></section>
+
+</div>
+	</body>
+</html>

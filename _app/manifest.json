@@ -1,58 +1,58 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-b26b30a4.js",
+    "file": "start-70dc6284.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-351c083b.js"
+      "_vendor-cac58433.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.svelte",
-      "src/routes/posts.svelte"
+      "src/routes/[slug].svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-d2d050ec.js",
+    "file": "pages/__layout.svelte-edd1a298.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-351c083b.js"
+      "_vendor-cac58433.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-a1c9edbb.css"
+      "assets/pages/__layout.svelte-f87c9cc2.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-97038f3d.js",
+    "file": "error.svelte-98029888.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-351c083b.js"
+      "_vendor-cac58433.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-7874392a.js",
+    "file": "pages/index.svelte-d2e0b06c.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-351c083b.js"
+      "_vendor-cac58433.js"
     ]
   },
-  "src/routes/posts.svelte": {
-    "file": "pages/posts.svelte-6d7e1d36.js",
-    "src": "src/routes/posts.svelte",
+  "src/routes/[slug].svelte": {
+    "file": "pages/_slug_.svelte-70434026.js",
+    "src": "src/routes/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-351c083b.js"
+      "_vendor-cac58433.js"
     ]
   },
-  "_vendor-351c083b.js": {
-    "file": "chunks/vendor-351c083b.js"
+  "_vendor-cac58433.js": {
+    "file": "chunks/vendor-cac58433.js"
   }
 }
