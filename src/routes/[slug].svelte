@@ -11,6 +11,8 @@
 </script>
 
 <script>
+// @ts-nocheck
+
     import DisjointSets from "$lib/posts/DisjointSets.svelte.md";
     import Heap from "$lib/posts/Heap.svelte.md";
 
