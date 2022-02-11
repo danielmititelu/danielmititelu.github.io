@@ -1,7 +1,12 @@
 # My website
+A prototype for my website where I plan to put my notes and maybe some blog pposts
+
+### Run development server
+```
+npm run dev -- --open
+```
 
 ### Deploy to github pages
 ```
-npm build
-git subtree push --prefix build/ origin gh-pages
+npm run deploy
 ```

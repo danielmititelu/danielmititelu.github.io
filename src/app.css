@@ -9,27 +9,35 @@
     fill: none;
 } */
 
-a {
-    @apply no-underline text-black hover:text-blue-600;
+body {
+    @apply bg-slate-900;
 }
 
-h1, h2, h3, p, a, ul {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 400;
+a {
+    @apply no-underline hover:text-blue-600;
+}
+
+h1, h2, h3, h4, h5, p, a, ul {
+    @apply text-white font-sans;
 }
 
 h1 {
-    font-size: 40px;
+    @apply text-4xl;
 }
 
 h2 {
-    font-size: 26px;
+    @apply text-3xl;
 }
 
 h3 {
-    font-size: 22px;
+    @apply text-2xl;
+}
+
+h4 {
+    @apply text-xl;
 }
 
 p, ul {
-    font-size: 18px;
-}
+    @apply text-xl font-light leading-normal tracking-wide text-gray-300; 
+
+} 
