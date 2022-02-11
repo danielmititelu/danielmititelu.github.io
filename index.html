@@ -6,12 +6,12 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-f87c9cc2.css">
-	<link rel="modulepreload" href="/_app/start-48d0bff7.js">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-cf6e22d2.css">
+	<link rel="modulepreload" href="/_app/start-09f6e931.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-edd1a298.js">
-	<link rel="modulepreload" href="/_app/pages/index.svelte-6173e95e.js"><script type="module">
-		import { start } from "/_app/start-48d0bff7.js";
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-5c197553.js">
+	<link rel="modulepreload" href="/_app/pages/index.svelte-77697427.js"><script type="module">
+		import { start } from "/_app/start-09f6e931.js";
 		start({
 			target: document.querySelector("#svelte"),
 			paths: {"base":"","assets":""},
@@ -23,8 +23,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/_app/pages/__layout.svelte-edd1a298.js"),
-						import("/_app/pages/index.svelte-6173e95e.js")
+					import("/_app/pages/__layout.svelte-5c197553.js"),
+						import("/_app/pages/index.svelte-77697427.js")
 				],
 				url: new URL("http://sveltekit-prerender/"),
 				params: {}
@@ -32,16 +32,21 @@
 		});
 	</script>
 	</head>
-	<body class="bg-gradient-to-r from-blue-300 to-orange-100">
+	<body>
 		<div id="svelte">
 
 
-<section class="max-w-screen-md mx-auto"><header><nav><a href="/" class="flex"><h3 class="mb-0">HOME</h3></a></nav></header>
-	<div><h1>Algorithms</h1>
-    <a href="heap" class="no-underline text-black hover:text-blue-600"><h2>Heap</h2> 
-        </a><a href="disjoint-sets" class="no-underline text-black hover:text-blue-600"><h2>Disjoint sets</h2> 
-        </a><a href="quick-select" class="no-underline text-black hover:text-blue-600"><h2>Quickselect</h2> 
-        </a></div></section>
+<section><nav class="fixed flex top-0 w-full bg-slate-800 h-16 left-0 right-0"><div class="ml-4 my-auto text-xl"><a href="/">HOME </a></div></nav>
+	<main class="max-w-screen-md mx-auto mt-24 min-h-screen"><div><h1>Algorithms</h1>
+    <div class="flex"><div class="mr-3"><a href="/algorithms/quick-select" class="text-2xl">Quickselect</a></div></div>
+
+    <div class="mt-20"></div>
+    <h1>Data Structures</h1>
+    <div class="flex"><div class="mr-3"><a href="/data-structures/heap" class="text-2xl">Heap</a></div><div class="mr-3"><a href="/data-structures/disjoint-sets" class="text-2xl">Disjoint sets</a></div></div></div></main>
+	<footer class="flex justify-center content-center flex-col text-center"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
+    </p>
+    <div><a href="https://github.com/danielmititelu/danielmititelu.github.io">Github repo
+        </a></div></footer></section>
 
 </div>
 	</body>

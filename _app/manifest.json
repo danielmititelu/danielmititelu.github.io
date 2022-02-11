@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-48d0bff7.js",
+    "file": "start-09f6e931.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -10,11 +10,13 @@
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.svelte",
-      "src/routes/[slug].svelte"
+      "src/routes/data-structures/disjoint-sets.svelte.md",
+      "src/routes/data-structures/heap.svelte.md",
+      "src/routes/algorithms/quick-select.svelte.md"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-edd1a298.js",
+    "file": "pages/__layout.svelte-5c197553.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -22,7 +24,7 @@
       "_vendor-cac58433.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-f87c9cc2.css"
+      "assets/pages/__layout.svelte-cf6e22d2.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -35,7 +37,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-6173e95e.js",
+    "file": "pages/index.svelte-77697427.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -43,9 +45,27 @@
       "_vendor-cac58433.js"
     ]
   },
-  "src/routes/[slug].svelte": {
-    "file": "pages/_slug_.svelte-3eae9f62.js",
-    "src": "src/routes/[slug].svelte",
+  "src/routes/data-structures/disjoint-sets.svelte.md": {
+    "file": "pages/data-structures/disjoint-sets.svelte.md-3ef619fd.js",
+    "src": "src/routes/data-structures/disjoint-sets.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
+  "src/routes/data-structures/heap.svelte.md": {
+    "file": "pages/data-structures/heap.svelte.md-4b9ff04e.js",
+    "src": "src/routes/data-structures/heap.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
+  "src/routes/algorithms/quick-select.svelte.md": {
+    "file": "pages/algorithms/quick-select.svelte.md-0487593f.js",
+    "src": "src/routes/algorithms/quick-select.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [

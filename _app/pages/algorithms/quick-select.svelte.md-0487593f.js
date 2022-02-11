@@ -1,61 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="./favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-f87c9cc2.css">
-	<link rel="modulepreload" href="/_app/start-48d0bff7.js">
-	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-edd1a298.js">
-	<link rel="modulepreload" href="/_app/pages/_slug_.svelte-3eae9f62.js"><script type="module">
-		import { start } from "/_app/start-48d0bff7.js";
-		start({
-			target: document.querySelector("#svelte"),
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-edd1a298.js"),
-						import("/_app/pages/_slug_.svelte-3eae9f62.js")
-				],
-				url: new URL("http://sveltekit-prerender/quick-select"),
-				params: {slug:"quick-select"}
-			}
-		});
-	</script>
-	</head>
-	<body class="bg-gradient-to-r from-blue-300 to-orange-100">
-		<div id="svelte">
-
-
-<section class="max-w-screen-md mx-auto"><header><nav><a href="/" class="flex"><h3 class="mb-0">HOME</h3></a></nav></header>
-	<section>
-    
-    <h1>Quickselect</h1>
-<h4>Quick select or Hoare’s selection algorithm</h4>
-<p>Time complexity: </p>
-<ul><li>average case O(N)</li>
-<li>worst case O(N^2)</li></ul>
-<p>Algoritm steps:</p>
-<ul><li>figure out k-th index(smallest: k, biggest: n - k)</li>
-<li>add 2 pointers (<code>left</code> and <code>right</code>) for the start and end of the array, similar to binary search </li>
-<li>while <code>left</code> is smaller than <code>right</code> pick a random index as pivot and partition:<ul><li>save the pivot in the right pointer</li>
-<li>starting from left with 2 pointers: <code>storeIndex</code> and <code>i</code>:<ul><li>move <code>i</code> forword untill it reaches the right pointer,</li>
-<li>every time <code>i</code> finds a value smaller than the pivot, swap it with <code>storeIndex</code> and increment <code>storeIndex</code></li>
-<li>at the end swap <code>storeIndex</code> with the pivot stored in right pointer</li>
-<li>return <code>storeIndex</code>, this is our pivot in it’s final ordered position</li></ul></li></ul></li>
-<li>similar to binary search compare pivot index with the k-th index:<ul><li>if they are equal then we found the k-th element</li>
-<li>if pivot index is bigger, seach in the left part of the pivot where there are smaller values</li>
-<li>if pivot index is smaller, search in the right part</li></ul></li></ul>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">FindKthLargest</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> nums<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> k<span class="token punctuation">)</span>
+import{S as Fn,i as Rn,s as jn,e as o,t as a,k as i,c as p,a as l,h as t,d as n,m as r,b as Gn,g as u,F as s,G as dn}from"../../chunks/vendor-cac58433.js";function Kn(qn){let E,ds,as,H,hs,ts,N,fs,es,_,T,vs,ms,A,ws,os,P,Es,ps,k,F,_s,ys,m,xs,R,Is,gs,j,Ls,Os,bs,h,Cs,G,Ds,Ss,K,Hs,Ns,I,M,Ps,Qs,f,Us,z,qs,Ts,B,As,Fs,d,g,Rs,J,js,Gs,Ks,v,Ms,V,zs,Bs,W,Js,Vs,X,Ws,Xs,L,Ys,Y,Zs,$s,sn,O,nn,Z,an,tn,en,Q,on,w,$,pn,ln,ss,cn,rn,ns,un,ls,b,Tn=`<code class="language-cs"><span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">FindKthLargest</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> nums<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> k<span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token class-name"><span class="token keyword">var</span></span> kthIndex <span class="token operator">=</span> nums<span class="token punctuation">.</span>Length <span class="token operator">-</span> k<span class="token punctuation">;</span>
     <span class="token class-name"><span class="token keyword">var</span></span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -96,8 +39,4 @@
     <span class="token class-name"><span class="token keyword">var</span></span> temp <span class="token operator">=</span> nums<span class="token punctuation">[</span>pivot<span class="token punctuation">]</span><span class="token punctuation">;</span>
     nums<span class="token punctuation">[</span>pivot<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">;</span>
     nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></section></section>
-
-</div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`;return{c(){E=o("h1"),ds=a("Quickselect"),as=i(),H=o("h4"),hs=a("Quick select or Hoare\u2019s selection algorithm"),ts=i(),N=o("p"),fs=a("Time complexity:"),es=i(),_=o("ul"),T=o("li"),vs=a("average case O(N)"),ms=i(),A=o("li"),ws=a("worst case O(N^2)"),os=i(),P=o("p"),Es=a("Algoritm steps:"),ps=i(),k=o("ul"),F=o("li"),_s=a("figure out k-th index(smallest: k, biggest: n - k)"),ys=i(),m=o("li"),xs=a("add 2 pointers ("),R=o("code"),Is=a("left"),gs=a(" and "),j=o("code"),Ls=a("right"),Os=a(") for the start and end of the array, similar to binary search"),bs=i(),h=o("li"),Cs=a("while "),G=o("code"),Ds=a("left"),Ss=a(" is smaller than "),K=o("code"),Hs=a("right"),Ns=a(" pick a random index as pivot and partition:"),I=o("ul"),M=o("li"),Ps=a("save the pivot in the right pointer"),Qs=i(),f=o("li"),Us=a("starting from left with 2 pointers: "),z=o("code"),qs=a("storeIndex"),Ts=a(" and "),B=o("code"),As=a("i"),Fs=a(":"),d=o("ul"),g=o("li"),Rs=a("move "),J=o("code"),js=a("i"),Gs=a(" forword untill it reaches the right pointer,"),Ks=i(),v=o("li"),Ms=a("every time "),V=o("code"),zs=a("i"),Bs=a(" finds a value smaller than the pivot, swap it with "),W=o("code"),Js=a("storeIndex"),Vs=a(" and increment "),X=o("code"),Ws=a("storeIndex"),Xs=i(),L=o("li"),Ys=a("at the end swap "),Y=o("code"),Zs=a("storeIndex"),$s=a(" with the pivot stored in right pointer"),sn=i(),O=o("li"),nn=a("return "),Z=o("code"),an=a("storeIndex"),tn=a(", this is our pivot in it\u2019s final ordered position"),en=i(),Q=o("li"),on=a("similar to binary search compare pivot index with the k-th index:"),w=o("ul"),$=o("li"),pn=a("if they are equal then we found the k-th element"),ln=i(),ss=o("li"),cn=a("if pivot index is bigger, seach in the left part of the pivot where there are smaller values"),rn=i(),ns=o("li"),un=a("if pivot index is smaller, search in the right part"),ls=i(),b=o("pre"),this.h()},l(e){E=p(e,"H1",{});var c=l(E);ds=t(c,"Quickselect"),c.forEach(n),as=r(e),H=p(e,"H4",{});var hn=l(H);hs=t(hn,"Quick select or Hoare\u2019s selection algorithm"),hn.forEach(n),ts=r(e),N=p(e,"P",{});var fn=l(N);fs=t(fn,"Time complexity:"),fn.forEach(n),es=r(e),_=p(e,"UL",{});var cs=l(_);T=p(cs,"LI",{});var vn=l(T);vs=t(vn,"average case O(N)"),vn.forEach(n),ms=r(cs),A=p(cs,"LI",{});var mn=l(A);ws=t(mn,"worst case O(N^2)"),mn.forEach(n),cs.forEach(n),os=r(e),P=p(e,"P",{});var wn=l(P);Es=t(wn,"Algoritm steps:"),wn.forEach(n),ps=r(e),k=p(e,"UL",{});var y=l(k);F=p(y,"LI",{});var En=l(F);_s=t(En,"figure out k-th index(smallest: k, biggest: n - k)"),En.forEach(n),ys=r(y),m=p(y,"LI",{});var U=l(m);xs=t(U,"add 2 pointers ("),R=p(U,"CODE",{});var _n=l(R);Is=t(_n,"left"),_n.forEach(n),gs=t(U," and "),j=p(U,"CODE",{});var yn=l(j);Ls=t(yn,"right"),yn.forEach(n),Os=t(U,") for the start and end of the array, similar to binary search"),U.forEach(n),bs=r(y),h=p(y,"LI",{});var C=l(h);Cs=t(C,"while "),G=p(C,"CODE",{});var xn=l(G);Ds=t(xn,"left"),xn.forEach(n),Ss=t(C," is smaller than "),K=p(C,"CODE",{});var In=l(K);Hs=t(In,"right"),In.forEach(n),Ns=t(C," pick a random index as pivot and partition:"),I=p(C,"UL",{});var is=l(I);M=p(is,"LI",{});var gn=l(M);Ps=t(gn,"save the pivot in the right pointer"),gn.forEach(n),Qs=r(is),f=p(is,"LI",{});var D=l(f);Us=t(D,"starting from left with 2 pointers: "),z=p(D,"CODE",{});var Ln=l(z);qs=t(Ln,"storeIndex"),Ln.forEach(n),Ts=t(D," and "),B=p(D,"CODE",{});var On=l(B);As=t(On,"i"),On.forEach(n),Fs=t(D,":"),d=p(D,"UL",{});var x=l(d);g=p(x,"LI",{});var rs=l(g);Rs=t(rs,"move "),J=p(rs,"CODE",{});var bn=l(J);js=t(bn,"i"),bn.forEach(n),Gs=t(rs," forword untill it reaches the right pointer,"),rs.forEach(n),Ks=r(x),v=p(x,"LI",{});var S=l(v);Ms=t(S,"every time "),V=p(S,"CODE",{});var Cn=l(V);zs=t(Cn,"i"),Cn.forEach(n),Bs=t(S," finds a value smaller than the pivot, swap it with "),W=p(S,"CODE",{});var Dn=l(W);Js=t(Dn,"storeIndex"),Dn.forEach(n),Vs=t(S," and increment "),X=p(S,"CODE",{});var Sn=l(X);Ws=t(Sn,"storeIndex"),Sn.forEach(n),S.forEach(n),Xs=r(x),L=p(x,"LI",{});var us=l(L);Ys=t(us,"at the end swap "),Y=p(us,"CODE",{});var Hn=l(Y);Zs=t(Hn,"storeIndex"),Hn.forEach(n),$s=t(us," with the pivot stored in right pointer"),us.forEach(n),sn=r(x),O=p(x,"LI",{});var ks=l(O);nn=t(ks,"return "),Z=p(ks,"CODE",{});var Nn=l(Z);an=t(Nn,"storeIndex"),Nn.forEach(n),tn=t(ks,", this is our pivot in it\u2019s final ordered position"),ks.forEach(n),x.forEach(n),D.forEach(n),is.forEach(n),C.forEach(n),en=r(y),Q=p(y,"LI",{});var kn=l(Q);on=t(kn,"similar to binary search compare pivot index with the k-th index:"),w=p(kn,"UL",{});var q=l(w);$=p(q,"LI",{});var Pn=l($);pn=t(Pn,"if they are equal then we found the k-th element"),Pn.forEach(n),ln=r(q),ss=p(q,"LI",{});var Qn=l(ss);cn=t(Qn,"if pivot index is bigger, seach in the left part of the pivot where there are smaller values"),Qn.forEach(n),rn=r(q),ns=p(q,"LI",{});var Un=l(ns);un=t(Un,"if pivot index is smaller, search in the right part"),Un.forEach(n),q.forEach(n),kn.forEach(n),y.forEach(n),ls=r(e),b=p(e,"PRE",{class:!0});var An=l(b);An.forEach(n),this.h()},h(){Gn(b,"class","language-cs")},m(e,c){u(e,E,c),s(E,ds),u(e,as,c),u(e,H,c),s(H,hs),u(e,ts,c),u(e,N,c),s(N,fs),u(e,es,c),u(e,_,c),s(_,T),s(T,vs),s(_,ms),s(_,A),s(A,ws),u(e,os,c),u(e,P,c),s(P,Es),u(e,ps,c),u(e,k,c),s(k,F),s(F,_s),s(k,ys),s(k,m),s(m,xs),s(m,R),s(R,Is),s(m,gs),s(m,j),s(j,Ls),s(m,Os),s(k,bs),s(k,h),s(h,Cs),s(h,G),s(G,Ds),s(h,Ss),s(h,K),s(K,Hs),s(h,Ns),s(h,I),s(I,M),s(M,Ps),s(I,Qs),s(I,f),s(f,Us),s(f,z),s(z,qs),s(f,Ts),s(f,B),s(B,As),s(f,Fs),s(f,d),s(d,g),s(g,Rs),s(g,J),s(J,js),s(g,Gs),s(d,Ks),s(d,v),s(v,Ms),s(v,V),s(V,zs),s(v,Bs),s(v,W),s(W,Js),s(v,Vs),s(v,X),s(X,Ws),s(d,Xs),s(d,L),s(L,Ys),s(L,Y),s(Y,Zs),s(L,$s),s(d,sn),s(d,O),s(O,nn),s(O,Z),s(Z,an),s(O,tn),s(k,en),s(k,Q),s(Q,on),s(Q,w),s(w,$),s($,pn),s(w,ln),s(w,ss),s(ss,cn),s(w,rn),s(w,ns),s(ns,un),u(e,ls,c),u(e,b,c),b.innerHTML=Tn},p:dn,i:dn,o:dn,d(e){e&&n(E),e&&n(as),e&&n(H),e&&n(ts),e&&n(N),e&&n(es),e&&n(_),e&&n(os),e&&n(P),e&&n(ps),e&&n(k),e&&n(ls),e&&n(b)}}}class zn extends Fn{constructor(E){super();Rn(this,E,null,Kn,jn,{})}}export{zn as default};
