@@ -7,30 +7,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-c9a870e9.css">
-	<link rel="modulepreload" href="/_app/start-f0336cf7.js">
+	<link rel="modulepreload" href="/_app/start-512e0fbd.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-c3a7f499.js">
-	<link rel="modulepreload" href="/_app/pages/index.svelte-8d2e9012.js"><script type="module">
-		import { start } from "/_app/start-f0336cf7.js";
-		start({
-			target: document.querySelector("#svelte"),
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-c3a7f499.js"),
-						import("/_app/pages/index.svelte-8d2e9012.js")
-				],
-				url: new URL("http://sveltekit-prerender/"),
-				params: {}
-			}
-		});
-	</script>
+	<link rel="modulepreload" href="/_app/pages/index.svelte-0610054b.js">
 	</head>
 	<body>
 		<div id="svelte">
@@ -42,12 +22,33 @@
 
     <div class="mt-20"></div>
     <h1>Data Structures</h1>
-    <div class="flex"><a href="/data-structures/heap" class="text-2xl my-auto"><div class="mr-3 mb-3 shadow rounded-lg text-center border-solid p-3 border-cyan-900">Heap</div></a><a href="/data-structures/disjoint-sets" class="text-2xl my-auto"><div class="mr-3 mb-3 shadow rounded-lg text-center border-solid p-3 border-cyan-900">Disjoint sets</div></a><a href="/data-structures/trie" class="text-2xl my-auto"><div class="mr-3 mb-3 shadow rounded-lg text-center border-solid p-3 border-cyan-900">Trie</div></a></div></div></main>
+    <div class="flex items-center flex-wrap"><a href="/data-structures/heap" class="text-2xl my-auto"><div class="mr-3 mb-3 shadow rounded-lg text-center border-solid p-3 border-cyan-900">Heap</div></a><a href="/data-structures/disjoint-sets" class="text-2xl my-auto"><div class="mr-3 mb-3 shadow rounded-lg text-center border-solid p-3 border-cyan-900">Disjoint sets</div></a><a href="/data-structures/trie" class="text-2xl my-auto"><div class="mr-3 mb-3 shadow rounded-lg text-center border-solid p-3 border-cyan-900">Trie</div></a><a href="/data-structures/hashmap" class="text-2xl my-auto"><div class="mr-3 mb-3 shadow rounded-lg text-center border-solid p-3 border-cyan-900">Hashmap</div></a></div></div></main>
 	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
     </p>
     <div><a href="https://github.com/danielmititelu/danielmititelu.github.io">Github repo
         </a></div></footer></section>
 
-</div>
+
+		<script type="module" data-hydrate="1hw28ud">
+		import { start } from "/_app/start-512e0fbd.js";
+		start({
+			target: document.querySelector('[data-hydrate="1hw28ud"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-c3a7f499.js"),
+						import("/_app/pages/index.svelte-0610054b.js")
+				],
+				url: new URL("http://sveltekit-prerender/"),
+				params: {}
+			}
+		});
+	</script></div>
 	</body>
 </html>

@@ -7,30 +7,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-c9a870e9.css">
-	<link rel="modulepreload" href="/_app/start-f0336cf7.js">
+	<link rel="modulepreload" href="/_app/start-512e0fbd.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-c3a7f499.js">
-	<link rel="modulepreload" href="/_app/pages/algorithms/topological-sort.svelte.md-880345c8.js"><script type="module">
-		import { start } from "/_app/start-f0336cf7.js";
-		start({
-			target: document.querySelector("#svelte"),
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-c3a7f499.js"),
-						import("/_app/pages/algorithms/topological-sort.svelte.md-880345c8.js")
-				],
-				url: new URL("http://sveltekit-prerender/algorithms/topological-sort"),
-				params: {}
-			}
-		});
-	</script>
+	<link rel="modulepreload" href="/_app/pages/algorithms/topological-sort.svelte.md-35197438.js">
 	</head>
 	<body>
 		<div id="svelte">
@@ -44,60 +24,60 @@
 <li>should be a DAG(directed acyclic graph)</li></ul>
 <p>Khan’s algorithm BFS</p>
 <pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> <span class="token function">FindOrder</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> numCourses<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> prerequisites<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> ans <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> graph <span class="token operator">=</span> <span class="token function">BuildGraph</span><span class="token punctuation">(</span>numCourses<span class="token punctuation">,</span> prerequisites<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> indegrees <span class="token operator">=</span> <span class="token function">CountIndegrees</span><span class="token punctuation">(</span>graph<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name"><span class="token keyword">var</span></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Queue<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numCourses<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
     <span class="token punctuation">&#123;</span>
-        <span class="token class-name"><span class="token keyword">var</span></span> ans <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name"><span class="token keyword">var</span></span> graph <span class="token operator">=</span> <span class="token function">BuildGraph</span><span class="token punctuation">(</span>numCourses<span class="token punctuation">,</span> prerequisites<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name"><span class="token keyword">var</span></span> indegrees <span class="token operator">=</span> <span class="token function">CountIndegrees</span><span class="token punctuation">(</span>graph<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token class-name"><span class="token keyword">var</span></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Queue<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numCourses<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>indegrees<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
-				queue<span class="token punctuation">.</span><span class="token function">Enqueue</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-
-        <span class="token class-name"><span class="token keyword">var</span></span> index <span class="token operator">=</span> numCourses <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>queue<span class="token punctuation">.</span><span class="token function">Any</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token punctuation">&#123;</span>
-            <span class="token class-name"><span class="token keyword">var</span></span> courseDone <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">Dequeue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            ans<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>courseDone<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-            <span class="token comment">// remove it from the graph</span>
-            <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> adj <span class="token keyword">in</span> graph<span class="token punctuation">[</span>courseDone<span class="token punctuation">]</span><span class="token punctuation">)</span>
-            <span class="token punctuation">&#123;</span>
-                indegrees<span class="token punctuation">[</span>adj<span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>indegrees<span class="token punctuation">[</span>adj<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
-					queue<span class="token punctuation">.</span><span class="token function">Enqueue</span><span class="token punctuation">(</span>adj<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span>
-        <span class="token punctuation">&#125;</span>
-        ans<span class="token punctuation">.</span><span class="token function">Reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> ans<span class="token punctuation">.</span>Count <span class="token operator">==</span> <span class="token return-type class-name">numCourses <span class="token punctuation">?</span></span> 
-			ans<span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">int</span></span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>indegrees<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
+            queue<span class="token punctuation">.</span><span class="token function">Enqueue</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> <span class="token function">CountIndegrees</span><span class="token punctuation">(</span><span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">)</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> index <span class="token operator">=</span> numCourses <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>queue<span class="token punctuation">.</span><span class="token function">Any</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token punctuation">&#123;</span>
-        <span class="token class-name"><span class="token keyword">var</span></span> indegrees <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">int</span></span><span class="token punctuation">[</span>graph<span class="token punctuation">.</span>Count<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> course <span class="token keyword">in</span> graph<span class="token punctuation">)</span>
-            <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> adj <span class="token keyword">in</span> course<span class="token punctuation">.</span>Value<span class="token punctuation">)</span>
-                indegrees<span class="token punctuation">[</span>adj<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
-                
-        <span class="token keyword">return</span> indegrees<span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> courseDone <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">Dequeue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ans<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>courseDone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// remove it from the graph</span>
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> adj <span class="token keyword">in</span> graph<span class="token punctuation">[</span>courseDone<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            indegrees<span class="token punctuation">[</span>adj<span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>indegrees<span class="token punctuation">[</span>adj<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
+                queue<span class="token punctuation">.</span><span class="token function">Enqueue</span><span class="token punctuation">(</span>adj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
+    ans<span class="token punctuation">.</span><span class="token function">Reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">.</span>Count <span class="token operator">==</span> <span class="token return-type class-name">numCourses <span class="token punctuation">?</span></span> 
+        ans<span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">int</span></span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">private</span> <span class="token return-type class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token function">BuildGraph</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> numCourses<span class="token punctuation">,</span>
-        <span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> prerequisites<span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token class-name"><span class="token keyword">var</span></span> graph <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numCourses<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-            graph<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> <span class="token function">CountIndegrees</span><span class="token punctuation">(</span><span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> indegrees <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">int</span></span><span class="token punctuation">[</span>graph<span class="token punctuation">.</span>Count<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> course <span class="token keyword">in</span> graph<span class="token punctuation">)</span>
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> adj <span class="token keyword">in</span> course<span class="token punctuation">.</span>Value<span class="token punctuation">)</span>
+            indegrees<span class="token punctuation">[</span>adj<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            
+    <span class="token keyword">return</span> indegrees<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> prereq <span class="token keyword">in</span> prerequisites<span class="token punctuation">)</span>
-            graph<span class="token punctuation">[</span>prereq<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>prereq<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token return-type class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token function">BuildGraph</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> numCourses<span class="token punctuation">,</span>
+    <span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> prerequisites<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> graph <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numCourses<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        graph<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        <span class="token keyword">return</span> graph<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+    <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> prereq <span class="token keyword">in</span> prerequisites<span class="token punctuation">)</span>
+        graph<span class="token punctuation">[</span>prereq<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>prereq<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> graph<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
 <p>DFS</p>
 <pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">CanFinish</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> numCourses<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> prerequisites<span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -155,6 +135,27 @@
     <div><a href="https://github.com/danielmititelu/danielmititelu.github.io">Github repo
         </a></div></footer></section>
 
-</div>
+
+		<script type="module" data-hydrate="12h9ogf">
+		import { start } from "/_app/start-512e0fbd.js";
+		start({
+			target: document.querySelector('[data-hydrate="12h9ogf"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-c3a7f499.js"),
+						import("/_app/pages/algorithms/topological-sort.svelte.md-35197438.js")
+				],
+				url: new URL("http://sveltekit-prerender/algorithms/topological-sort"),
+				params: {}
+			}
+		});
+	</script></div>
 	</body>
 </html>
