@@ -5,7 +5,8 @@
         { title: "Quickselect", path: "quick-select" },
         { title: "Boyer-Moore Voting Algorithm", path: "voting-algo" },
         { title: "Binary tree traversals", path: "binary-tree-traversals"},
-        { title: "Graph traversals", path: "graph-traversals"}
+        { title: "Graph traversals", path: "graph-traversals"},
+        { title: "Topological sort", path: "topological-sort"}
     ];
 
     export let dataStructures = [

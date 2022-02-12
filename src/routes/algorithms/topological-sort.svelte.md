@@ -52,7 +52,8 @@ public int[] FindOrder(int numCourses, int[][] prerequisites)
         return indegrees;
     }
 
-    private Dictionary<int, List<int>> BuildGraph(int numCourses, int[][] prerequisites)
+    private Dictionary<int, List<int>> BuildGraph(int numCourses,
+        int[][] prerequisites)
     {
         var graph = new Dictionary<int, List<int>>();
         for (var i = 0; i < numCourses; i++)
@@ -83,7 +84,8 @@ public bool CanFinish(int numCourses, int[][] prerequisites)
 	return true;
 }
 
-private bool HasCycle(Dictionary<int, List<int>> graph, int i, bool[] visited, bool[] visiting)
+private bool HasCycle(Dictionary<int, List<int>> graph,
+    int i, bool[] visited, bool[] visiting)
 {
 	if (visited[i])
 		return false;
@@ -103,7 +105,8 @@ private bool HasCycle(Dictionary<int, List<int>> graph, int i, bool[] visited, b
 	return false;
 }
 
-private Dictionary<int, List<int>> BuildGraph(int numCourses, int[][] prerequisites)
+private Dictionary<int, List<int>> BuildGraph(int numCourses,
+    int[][] prerequisites)
 {
 	var graph = new Dictionary<int, List<int>>();
 	for (int i = 0; i < numCourses; i++)
