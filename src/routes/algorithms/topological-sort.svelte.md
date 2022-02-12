@@ -10,60 +10,60 @@ Sort a graph so that any node on the left will point only to the nodes in the ri
 Khan's algorithm BFS
 ```cs
 public int[] FindOrder(int numCourses, int[][] prerequisites)
+{
+    var ans = new List<int>();
+    var graph = BuildGraph(numCourses, prerequisites);
+    var indegrees = CountIndegrees(graph);
+
+    var queue = new Queue<int>();
+
+    for (var i = 0; i < numCourses; i++)
     {
-        var ans = new List<int>();
-        var graph = BuildGraph(numCourses, prerequisites);
-        var indegrees = CountIndegrees(graph);
+        if (indegrees[i] == 0) 
+            queue.Enqueue(i);
+    }
 
-        var queue = new Queue<int>();
+    var index = numCourses - 1;
+    while (queue.Any())
+    {
+        var courseDone = queue.Dequeue();
+        ans.Add(courseDone);
 
-        for (var i = 0; i < numCourses; i++)
+        // remove it from the graph
+        foreach (var adj in graph[courseDone])
         {
-            if (indegrees[i] == 0) 
-				queue.Enqueue(i);
+            indegrees[adj]--;
+            if (indegrees[adj] == 0) 
+                queue.Enqueue(adj);
         }
-
-        var index = numCourses - 1;
-        while (queue.Any())
-        {
-            var courseDone = queue.Dequeue();
-            ans.Add(courseDone);
-
-            // remove it from the graph
-            foreach (var adj in graph[courseDone])
-            {
-                indegrees[adj]--;
-                if (indegrees[adj] == 0) 
-					queue.Enqueue(adj);
-            }
-        }
-        ans.Reverse();
-        return ans.Count == numCourses ? 
-			ans.ToArray() : new int[0];
     }
+    ans.Reverse();
+    return ans.Count == numCourses ? 
+        ans.ToArray() : new int[0];
+}
 
-    private int[] CountIndegrees(Dictionary<int, List<int>> graph)
-    {
-        var indegrees = new int[graph.Count];
-        foreach (var course in graph)
-            foreach (var adj in course.Value)
-                indegrees[adj]++;
-                
-        return indegrees;
-    }
+private int[] CountIndegrees(Dictionary<int, List<int>> graph)
+{
+    var indegrees = new int[graph.Count];
+    foreach (var course in graph)
+        foreach (var adj in course.Value)
+            indegrees[adj]++;
+            
+    return indegrees;
+}
 
-    private Dictionary<int, List<int>> BuildGraph(int numCourses,
-        int[][] prerequisites)
-    {
-        var graph = new Dictionary<int, List<int>>();
-        for (var i = 0; i < numCourses; i++)
-            graph[i] = new List<int>();
+private Dictionary<int, List<int>> BuildGraph(int numCourses,
+    int[][] prerequisites)
+{
+    var graph = new Dictionary<int, List<int>>();
+    for (var i = 0; i < numCourses; i++)
+        graph[i] = new List<int>();
 
-        foreach (var prereq in prerequisites)
-            graph[prereq[1]].Add(prereq[0]);
+    foreach (var prereq in prerequisites)
+        graph[prereq[1]].Add(prereq[0]);
 
-        return graph;
-    }
+    return graph;
+}
 ```
 
 DFS
