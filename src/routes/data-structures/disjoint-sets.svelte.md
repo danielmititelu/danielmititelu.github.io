@@ -14,7 +14,7 @@ Time complexity for both find and union is smaller than O(log n) or amortized O(
 
 An array is used to represent the parents of the disjointed sets. This is how the parents array would look after the union operation is performed on the blue and red nodes:
 
-![image](/DisjointSetsImg.svg)
+![image](/disjoint-sets.svg)
 
 #### Code example:
 ```cs
@@ -50,7 +50,7 @@ public class UnionFind {
 #### Path compression
 An optimization that aims to flatten the traveral tree to the height of one so that all find operation would be completed in constant time.
 
-![image](/DisjointSetCompImg.svg)
+![image](/disjoint-sets-copmleted.svg)
 
 ```cs
 public int Find(int x) {

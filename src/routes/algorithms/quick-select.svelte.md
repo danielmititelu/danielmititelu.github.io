@@ -1,6 +1,5 @@
 # Quickselect
 
-
 #### Quick select or Hoare's selection algorithm
 Time complexity: 
 	- average case O(N)
