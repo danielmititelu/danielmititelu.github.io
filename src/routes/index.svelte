@@ -13,6 +13,7 @@
         { title: "Heap", path: "heap" },
         { title: "Disjoint sets", path: "disjoint-sets" },
         { title: "Trie", path: "trie" },
+        { title: "Hashmap", path: "hashmap"}
     ];
 </script>
 
@@ -29,7 +30,7 @@
 
     <div class="mt-20" />
     <h1>Data Structures</h1>
-    <div class="flex">
+    <div class="flex items-center flex-wrap">
         {#each dataStructures as dataStructure}
             <NoteLink
                 href={`/data-structures/${dataStructure.path}`}
