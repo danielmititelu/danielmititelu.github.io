@@ -6,12 +6,12 @@
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-cf6e22d2.css">
-	<link rel="modulepreload" href="/_app/start-09f6e931.js">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-26e4e9a4.css">
+	<link rel="modulepreload" href="/_app/start-f5056d55.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-5c197553.js">
-	<link rel="modulepreload" href="/_app/pages/data-structures/disjoint-sets.svelte.md-3ef619fd.js"><script type="module">
-		import { start } from "/_app/start-09f6e931.js";
+	<link rel="modulepreload" href="/_app/pages/data-structures/disjoint-sets.svelte.md-4f1870a7.js"><script type="module">
+		import { start } from "/_app/start-f5056d55.js";
 		start({
 			target: document.querySelector("#svelte"),
 			paths: {"base":"","assets":""},
@@ -24,7 +24,7 @@
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-5c197553.js"),
-						import("/_app/pages/data-structures/disjoint-sets.svelte.md-3ef619fd.js")
+						import("/_app/pages/data-structures/disjoint-sets.svelte.md-4f1870a7.js")
 				],
 				url: new URL("http://sveltekit-prerender/data-structures/disjoint-sets"),
 				params: {}
@@ -47,7 +47,7 @@
 <li>union - connects two nodes</li></ul>
 <p>Time complexity for both find and union is smaller than O(log n) or amortized O(1) if union by rank and path compression is used.</p>
 <p>An array is used to represent the parents of the disjointed sets. This is how the parents array would look after the union operation is performed on the blue and red nodes:</p>
-<p><img src="/DisjointSetsImg.svg" alt="image"></p>
+<p><img src="/disjoint-sets.svg" alt="image"></p>
 <h4>Code example:</h4>
 <pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UnionFind</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> _parents<span class="token punctuation">;</span>
@@ -78,7 +78,7 @@
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
 <h4>Path compression</h4>
 <p>An optimization that aims to flatten the traveral tree to the height of one so that all find operation would be completed in constant time.</p>
-<p><img src="/DisjointSetCompImg.svg" alt="image"></p>
+<p><img src="/disjoint-sets-copmleted.svg" alt="image"></p>
 <pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">Find</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token keyword">if</span> <span class="token punctuation">(</span>_parents<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">==</span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 		<span class="token keyword">return</span> x<span class="token punctuation">;</span>
