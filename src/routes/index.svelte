@@ -7,7 +7,8 @@
         { title: "Binary tree traversals", path: "binary-tree-traversals"},
         { title: "Graph traversals", path: "graph-traversals"},
         { title: "Topological sort", path: "topological-sort"},
-        { title: "Three way partitioning", path: "three-way-partitioning"}
+        { title: "Three way partitioning", path: "three-way-partitioning"},
+        { title: "Dijsktra algorithm", path: "dijkstra-algorithm"}
     ];
 
     export let dataStructures = [
