@@ -16,23 +16,40 @@ An array is used to represent the parents of the disjointed sets. This is how th
 
 ![image](/disjoint-sets.svg)
 
+## Optimazations 
+
+#### Path compression
+An optimization that aims to flatten the traveral tree to the height of one so that all find operation would be completed in constant time.
+
+#### Union by rank
+This optimization aims to always attached the smaller tree to the bigger one. An additional array is required to store the ranks of each tree.
+
+![image](/disjoint-sets-copmleted.svg)
 #### Code example:
 ```cs
-public class UnionFind {
+public class DisjointSets {
     private int[] _parents;
+    private int[] _ranks;
+    
+	public int Count { get; set; }
 
-    public UnionFind(int n) {
+    public DisjointSets(int n) {
         _parents = new int[n];
-        for (int i = 0; i < n; i++) {
+        _ranks = new int[n];
+        Count = n;
+        for(var i = 0; i < n; i++) {
             _parents[i] = i;
+            _ranks[i] = 1;
         }
     }
-
+    
     public int Find(int x) {
         if (_parents[x] == x) {
             return x;
         }
-        return Find(_parents[x]);
+        // path compression
+        _parents[x] = Find(_parents[x]);
+        return _parents[x];
     }
 
     public void Union(int x, int y) {
@@ -41,63 +58,22 @@ public class UnionFind {
         if (xRoot == yRoot) {
             return;
         }
-        _parents[xRoot] = yRoot;
-        _count--;
+
+        // union by rank
+        if (_ranks[xRoot] < _ranks[yRoot]) {
+            _parents[xRoot] = yRoot;
+        } else if (_ranks[xRoot] > _ranks[yRoot]) {
+            _parents[yRoot] = xRoot;
+        } else {
+            _parents[yRoot] = xRoot;
+            _ranks[xRoot] += 1;
+        }
+        Count--;
     }
 }
 ```
 
-#### Path compression
-An optimization that aims to flatten the traveral tree to the height of one so that all find operation would be completed in constant time.
-
-![image](/disjoint-sets-copmleted.svg)
-
-```cs
-public int Find(int x) {
-	if (_parents[x] == x) {
-		return x;
-	}
-	// path compression
-	_parents[x] = Find(_parents[x]);
-	return _parents[x];
-}
-```
-
-#### Union by rank
-This optimization aims to always attached the smaller tree to the bigger one. An additional array is required to store the ranks of each tree.
-```cs
-//...
-private int[] _parents;
-private int[] _ranks;
-
-public UnionFind(int n) {
-	_parents = new int[n];
-	for (int i = 0; i < n; i++) {
-		_parents[i] = i;
-	    _ranks[i] = 1;
-	}
-}
-//...
-
-public void Union(int x, int y) {
-	int xRoot = Find(x);
-	int yRoot = Find(y);
-	if (xRoot == yRoot) {
-		return;
-	}
-
-	// union by rank
-	if (_ranks[xRoot] < _ranks[yRoot]) {
-		_parents[xRoot] = yRoot;
-	} else if (_ranks[xRoot] > _ranks[yRoot]) {
-		_parents[yRoot] = xRoot;
-	} else {
-		_parents[yRoot] = xRoot;
-		_ranks[xRoot] += 1;
-	}
-}
-```
-
 #### Problems that could be solved with union find
-- https://leetcode.com/problems/number-of-provinces/submissions/
-- https://leetcode.com/problems/longest-consecutive-sequence/submissions/
+- https://leetcode.com/problems/number-of-provinces/
+- https://leetcode.com/problems/longest-consecutive-sequence/
+- https://leetcode.com/problems/accounts-merge/
