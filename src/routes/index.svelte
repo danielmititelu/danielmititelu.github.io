@@ -8,7 +8,8 @@
         { title: "Graph traversals", path: "graph-traversals"},
         { title: "Topological sort", path: "topological-sort"},
         { title: "Three way partitioning", path: "three-way-partitioning"},
-        { title: "Dijsktra algorithm", path: "dijkstra-algorithm"}
+        { title: "Dijsktra's algorithm", path: "dijkstra-algorithm"},
+        { title: "Kruskal's algorithm", path: "kruskal-algorithm"}
     ];
 
     export let dataStructures = [
