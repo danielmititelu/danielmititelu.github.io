@@ -1,3 +1,6 @@
+---
+title: Trie
+---
 # Trie
 Created: 2021-11-30 12:43
 

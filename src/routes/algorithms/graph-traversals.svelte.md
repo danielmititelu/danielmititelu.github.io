@@ -1,3 +1,6 @@
+---
+title: Graph traversals
+---
 # Graph traversals
 
 ## Breadth-first search

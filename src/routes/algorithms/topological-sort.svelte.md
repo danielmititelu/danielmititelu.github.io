@@ -1,3 +1,6 @@
+---
+title: Topological sort
+---
 # Topological sort
 
 Time Complexity: O(V+E) // V = vertex (or node), E = edge

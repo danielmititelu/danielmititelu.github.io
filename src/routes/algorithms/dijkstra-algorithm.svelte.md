@@ -1,3 +1,6 @@
+---
+title: Dijkstra Algorithm
+---
 # Dijkstra Algorithm
 
 Greedy alghorithm used to find the shortest path in a weighted graph.

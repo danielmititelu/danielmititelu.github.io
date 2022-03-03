@@ -1,3 +1,6 @@
+---
+title: Heap
+---
 # Heap
 
 A heap is a complete binary tree where the any given node is smaller/bigger than it's descendents depending if it's a min/max heap

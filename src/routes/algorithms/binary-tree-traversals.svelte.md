@@ -1,3 +1,6 @@
+---
+title: Binary tree traversals
+---
 # Binary tree traversals
 
 ## Preorder traversal

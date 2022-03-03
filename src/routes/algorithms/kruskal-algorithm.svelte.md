@@ -1,3 +1,6 @@
+---
+title: Kruskal's Algorithm
+---
 # Kruskal's Algorithm
 
 Greedy alghorithm used to find the minimum spanning tree of a given graph

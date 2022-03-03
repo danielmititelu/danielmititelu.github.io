@@ -1,3 +1,6 @@
+---
+title: Disjoint sets
+---
 # Disjoint sets
 
 Disjoint Sets or Union find is a data structure used for finding relationships between nodes.

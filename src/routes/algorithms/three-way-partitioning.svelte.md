@@ -1,3 +1,6 @@
+---
+title: Three way partitioning
+---
 # Three way partitioning
 
 A partition strategy that is sometime used in quicksort.

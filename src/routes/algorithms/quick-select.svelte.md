@@ -1,3 +1,6 @@
+---
+title: Quickselect
+---
 # Quickselect
 
 #### Quick select or Hoare's selection algorithm

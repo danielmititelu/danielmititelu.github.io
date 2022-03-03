@@ -1,3 +1,6 @@
+---
+title: Boyer-Moore Voting Algorithm
+---
 # Boyer-Moore Voting Algorithm
 
 Time complexity : O(n)

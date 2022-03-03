@@ -1,44 +1,21 @@
-<script>
+<script lang="ts">
     import NoteLink from "$lib/NoteLink.svelte";
+    import type { PostsGroup } from "./index.json";
 
-    export let algorithms = [
-        { title: "Quickselect", path: "quick-select" },
-        { title: "Boyer-Moore Voting Algorithm", path: "voting-algo" },
-        { title: "Binary tree traversals", path: "binary-tree-traversals"},
-        { title: "Graph traversals", path: "graph-traversals"},
-        { title: "Topological sort", path: "topological-sort"},
-        { title: "Three way partitioning", path: "three-way-partitioning"},
-        { title: "Dijsktra's algorithm", path: "dijkstra-algorithm"},
-        { title: "Kruskal's algorithm", path: "kruskal-algorithm"}
-    ];
-
-    export let dataStructures = [
-        { title: "Heap", path: "heap" },
-        { title: "Disjoint sets", path: "disjoint-sets" },
-        { title: "Trie", path: "trie" },
-        { title: "Hashmap", path: "hashmap"}
-    ];
+    export let postGroups: PostsGroup[];
 </script>
 
 <div>
-    <h1>Algorithms</h1>
-    <div class="flex items-center flex-wrap">
-        {#each algorithms as algorithm}
-            <NoteLink
-                href={`/algorithms/${algorithm.path}`}
-                title={algorithm.title}
-            />
-        {/each}
-    </div>
-
-    <div class="mt-20" />
-    <h1>Data Structures</h1>
-    <div class="flex items-center flex-wrap">
-        {#each dataStructures as dataStructure}
-            <NoteLink
-                href={`/data-structures/${dataStructure.path}`}
-                title={dataStructure.title}
-            />
-        {/each}
-    </div>
+    {#each postGroups as postGroup}
+        <h1>{postGroup.title}</h1>
+        <div class="flex items-center flex-wrap">
+            {#each postGroup.posts as post}
+                <NoteLink
+                    href={post.path}
+                    title={post.title}
+                />
+            {/each}
+        </div>
+        <div class="mt-20" />
+    {/each}
 </div>

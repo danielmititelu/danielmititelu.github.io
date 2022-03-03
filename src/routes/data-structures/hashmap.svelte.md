@@ -1,3 +1,6 @@
+---
+title: Hash map
+---
 # Hash map / Hash table
 
 Time complexity: 
