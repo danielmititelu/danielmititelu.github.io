@@ -4,14 +4,14 @@ title: A few words about bit manipulation
 
 # A few words about bit manipulation
 
-# Bit manipulation
-This aspect is usually abstracted in the higher level languages but every object in a language can be break down to primitives types which can be break down further to a bit pattern of 32 or 64 bits.
+This aspect is usually abstracted in the higher level languages but every object in a language can be broken down to primitives types which can be further broken down to a bit pattern of 32 or 64 bits.
 
+### 6 representation in 8-bit:
 ![image](/bits.svg)
 
 ## Bit operations
 
-### Bitwise copmlement ( `~` )
+### Bitwise complement ( `~` )
 Caclulates the complement of a bit pattern by reversing each bit
 
 ### Bitwise logical AND ( `&` )
@@ -34,14 +34,12 @@ Bitwise right shift (`>> x`) operation will shift all bits to the right by x pos
 
 ![image](/right-shift.svg)
 
-Left shift (`<< x`) / Right shift(`>> x`) will shift all the bits to left/right by x positions
-
 When shifting bits left/right the left-most/right-most bit will fall in the void of nothingness and disappears out of existence (dramatic music starts playing)
 
 ## Terminology
 
 - Least siginificant bit (LSB) is the right most bit
-- Most significant bit (MSB) is the highest or right most bit that is 1
+- Most significant bit (MSB) is the highest or left most bit that is 1
 
 ## Bit manipulation tricks
 
