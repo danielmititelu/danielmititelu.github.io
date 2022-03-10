@@ -34,6 +34,6 @@ h4 {
 }
 
 p, ul {
-    @apply text-xl font-light leading-normal tracking-wide text-gray-300; 
+    @apply text-xl font-light leading-normal tracking-normal text-white; 
 
 } 

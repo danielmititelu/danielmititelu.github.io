@@ -7,8 +7,8 @@
 
 <div>
     {#each postGroups as postGroup}
-        <h1>{postGroup.title}</h1>
-        <div class="flex items-center flex-wrap">
+        <h1 class="text-center">{postGroup.title}</h1>
+        <div class="flex items-center flex-wrap justify-center">
             {#each postGroup.posts as post}
                 <NoteLink
                     href={post.path}
