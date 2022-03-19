@@ -4,6 +4,8 @@ title: A few words about bit manipulation
 
 # A few words about bit manipulation
 
+Bit manipulation is not a technique that comes often when writing code especially when dealing with higher level languages, regardless it is useful to understand how computers work behind the scene.
+
 ## Bit
 The smallest data use to represent a piece of information in computers are bits and they represent an electrical current that is stored in a memory chip. This bit can either be on or off and the notation 1 and 0 from binary system is used to denote it's state.
 
