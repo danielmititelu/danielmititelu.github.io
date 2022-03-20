@@ -15,22 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v3
-        with:
-          ref: 'gh-pages'
-          path: 'build'
-
-      - name: Clean install dependencies and build
-        run: |
-          npm ci
-          npm run build
-
       - name: Deploy to github pages
         run: |
-          cd build
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "Deploy to gh-pages"
-          git push
+          npm ci
+          npm run deploy
