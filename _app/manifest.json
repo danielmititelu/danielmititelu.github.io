@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-9026b6e6.js",
+    "file": "start-b50a4ae7.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -19,7 +19,6 @@
       "src/routes/algorithms/dijkstra-algorithm.svelte.md",
       "src/routes/algorithms/kruskal-algorithm.svelte.md",
       "src/routes/algorithms/graph-traversals.svelte.md",
-      "src/routes/algorithms/multi-source-bfs.svelte.md",
       "src/routes/algorithms/topological-sort.svelte.md",
       "src/routes/algorithms/quick-select.svelte.md",
       "src/routes/algorithms/voting-algo.svelte.md",
@@ -37,7 +36,7 @@
       "_vendor-cac58433.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-0a496caa.css"
+      "assets/pages/__layout.svelte-4eca02ab.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -59,7 +58,7 @@
     ]
   },
   "src/routes/data-structures/disjoint-sets.svelte.md": {
-    "file": "pages/data-structures/disjoint-sets.svelte.md-ea9b3c0e.js",
+    "file": "pages/data-structures/disjoint-sets.svelte.md-604c662e.js",
     "src": "src/routes/data-structures/disjoint-sets.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -139,15 +138,6 @@
       "_vendor-cac58433.js"
     ]
   },
-  "src/routes/algorithms/multi-source-bfs.svelte.md": {
-    "file": "pages/algorithms/multi-source-bfs.svelte.md-4ab209e3.js",
-    "src": "src/routes/algorithms/multi-source-bfs.svelte.md",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-cac58433.js"
-    ]
-  },
   "src/routes/algorithms/topological-sort.svelte.md": {
     "file": "pages/algorithms/topological-sort.svelte.md-65e1ebe5.js",
     "src": "src/routes/algorithms/topological-sort.svelte.md",
@@ -185,7 +175,7 @@
     ]
   },
   "src/routes/blogs/system-design.svelte.md": {
-    "file": "pages/blogs/system-design.svelte.md-69ce3a20.js",
+    "file": "pages/blogs/system-design.svelte.md-59d2984b.js",
     "src": "src/routes/blogs/system-design.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
