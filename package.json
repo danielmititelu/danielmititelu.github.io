@@ -1,12 +1,9 @@
 {
-  "name": "blog",
+  "name": "danielmititelu.github.io",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
-    "builds": "svelte-kit build",
- 
-    "build": "rm -rf build && svelte-kit build && touch build/.nojekyll",
-    "deploy": "npm run build && npm run deploy-gh-pages",
+    "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
