@@ -13,7 +13,7 @@ a {
     @apply no-underline hover:text-blue-600;
 }
 
-h1, h2, h3, h4, h5, p, a, ul {
+h1, h2, h3, h4, h5 {
     @apply text-white font-sans;
 }
 
@@ -33,7 +33,7 @@ h4 {
     @apply text-xl;
 }
 
-p, ul {
-    @apply text-xl font-light leading-normal tracking-normal text-white; 
+p, ul, li, li::marker {
+    @apply text-xl font-light leading-normal tracking-normal text-white font-sans; 
 
 } 

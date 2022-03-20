@@ -72,6 +72,62 @@ Document-oriented databases organize database in collection of documents where e
 Disadvantages
 - does not supports joins 
 
+## Networking
+---
+
+### Open System Interconnect (OSI) model
+
+1. Physical
+
+Handles transferring bits from one computer to another
+
+2. Data link
+
+Handles framing which groups a set of bits together in a frame and retransmits this frame if it's lost or corrupted
+
+3. Network
+
+Determines the best route to transmit the frame and attaches the sender and receiver IP addresses 
+
+4. Transport
+
+Transports the message through the network using segments.
+
+5. Session
+
+This layer starts, maintains and ends a connection between two nodes
+
+6. Presentation
+
+It will translate, encrypt and compress the data being transmitted. It is also know as the translation layer  
+
+7. Application
+Applications generate and receive data that must go through the network
+
+### TCP/IP Model 
+
+- Application layer - process to process communication
+- Transport Layer - host to host communication
+- Internet Layer - handles communication between networks
+- Network access/Link Layer - handles communication in a local network
+
+### TCP three-way handshake
+1. (SYN) Clients initiate the connection and sends a SYN (Synchronize Sequence Number) segment which tels with what sequence number to start
+
+2. (SYN-ACK) Server responds with a SYN-ACK that it's acknowledging the SYN it received 
+
+3. (ACK) The client responds to the server with ACK and they establish a connection and can start data transfer 
+
+### TCP/IP
+
+What happens when you enter a URL in a browser?
+- if the URL content is in the cache and it's fresh then retrieve it from cache
+- else perform DNS resolution on the URL
+- search the browser cache, OS cache, local DNS server for IP of URL
+- once the IP is resolved browser initiate a three-way handshake to connect via TCP
+- browser sends the request
+- when it receives a response it will render 
+
 ## Load balancers
 ---
 WIP
