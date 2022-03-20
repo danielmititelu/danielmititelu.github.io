@@ -23,7 +23,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+            fetch-depth: 0
 
       - name: Add git worktree
         run: git worktree add build gh-pages
@@ -36,7 +38,8 @@ jobs:
       - name: Deploy to github pages
         run: |
           cd build
-          git add --all
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
           git commit -m "Deploy to gh-pages"
           git push origin gh-pages
-          
