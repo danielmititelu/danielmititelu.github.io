@@ -17,8 +17,9 @@ jobs:
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v3
-        ref: 'gh-pages'
-        with: 'build'
+        with:
+          ref: 'gh-pages'
+          path: 'build'
 
       - name: Clean install dependencies and build
         run: |
