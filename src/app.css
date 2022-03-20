@@ -13,7 +13,7 @@ a {
     @apply no-underline hover:text-blue-600;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, a {
     @apply text-white font-sans;
 }
 
