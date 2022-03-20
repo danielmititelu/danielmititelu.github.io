@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-0a496caa.css">
+	<link rel="modulepreload" href="/_app/start-9026b6e6.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-c3a7f499.js">
+	<link rel="modulepreload" href="/_app/pages/algorithms/dijkstra-algorithm.svelte.md-67e5a670.js">
+	</head>
+	<body class="m-0">
+		<div id="svelte">
+
+
+<section><nav class="fixed flex top-0 w-full bg-slate-800 h-16 left-0 right-0"><div class="ml-4 my-auto text-xl"><a href="/">HOME </a></div></nav>
+	<main class="max-w-screen-md mx-auto mt-24 min-h-screen"><h1>Dijkstra Algorithm</h1>
+<p>Greedy alghorithm used to find the shortest path in a weighted graph.</p>
+<ul><li><p>Time complexity: O(V + Elog(E))</p></li>
+<li><p>Space complexity: O(V + E)</p></li></ul>
+<p>Restrictions: only for non-decreasing weights (all weights &gt;= 0)</p>
+<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">Dijkstra</span><span class="token punctuation">(</span>
+    <span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span> dest<span class="token punctuation">,</span> <span class="token keyword">int</span> dist<span class="token punctuation">)</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">,</span> <span class="token keyword">int</span> source
+    <span class="token comment">/*, int target*/</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> minHeap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PriorityQueue<span class="token punctuation">&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span> node<span class="token punctuation">,</span> <span class="token keyword">int</span> dist<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> distances <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> visited <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">HashSet<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// initialize every node with infinity</span>
+    <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> node <span class="token keyword">in</span> graph<span class="token punctuation">.</span>Keys<span class="token punctuation">)</span>
+        distances<span class="token punctuation">[</span>node<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">int</span><span class="token punctuation">.</span>MaxValue<span class="token punctuation">;</span>
+
+    <span class="token comment">// the distance from source node to itself is always 0</span>
+    distances<span class="token punctuation">[</span>source<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    minHeap<span class="token punctuation">.</span><span class="token function">Enqueue</span><span class="token punctuation">(</span><span class="token punctuation">(</span>source<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>minHeap<span class="token punctuation">.</span>Count <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">// get the node with the minimum distance</span>
+        <span class="token comment">// from the previous visited node</span>
+        <span class="token keyword">var</span> <span class="token punctuation">(</span>curNode<span class="token punctuation">,</span> curDist<span class="token punctuation">)</span> <span class="token operator">=</span> minHeap<span class="token punctuation">.</span><span class="token function">Dequeue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>visited<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span>curNode<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        visited<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>curNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// if we need a target node</span>
+        <span class="token comment">// if(node == target) return curDist;</span>
+
+        <span class="token comment">// relax the edges of the current node,</span>
+        <span class="token comment">// update the distances of all the adjacent nodes</span>
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token keyword">var</span> <span class="token punctuation">(</span>nextNode<span class="token punctuation">,</span> nextWeight<span class="token punctuation">)</span> <span class="token keyword">in</span> graph<span class="token punctuation">[</span>curNode<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> nextDist <span class="token operator">=</span> curDist <span class="token operator">+</span> nextWeight<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nextDist <span class="token operator">&lt;</span> distances<span class="token punctuation">[</span>nextNode<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                distances<span class="token punctuation">[</span>nextNode<span class="token punctuation">]</span> <span class="token operator">=</span> nextDist<span class="token punctuation">;</span>
+                minHeap<span class="token punctuation">.</span><span class="token function">Enqueue</span><span class="token punctuation">(</span><span class="token punctuation">(</span>nextNode<span class="token punctuation">,</span> nextDist<span class="token punctuation">)</span><span class="token punctuation">,</span> nextDist<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">// return the shortest distance</span>
+    <span class="token comment">// from source node to all other nodes</span>
+    <span class="token keyword">return</span> distances<span class="token punctuation">;</span>
+
+    <span class="token comment">// if we need a target node</span>
+    <span class="token comment">// return -1;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h2>Problems</h2>
+<ul><li><a href="https://leetcode.com/problems/network-delay-time/" rel="nofollow">https://leetcode.com/problems/network-delay-time/</a></li>
+<li><a href="https://leetcode.com/problems/path-with-maximum-probability/" rel="nofollow">https://leetcode.com/problems/path-with-maximum-probability/</a></li>
+<li><a href="https://leetcode.com/problems/cheapest-flights-within-k-stops/" rel="nofollow">https://leetcode.com/problems/cheapest-flights-within-k-stops/</a></li></ul></main>
+	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
+    </p>
+    <div><a href="https://github.com/danielmititelu/danielmititelu.github.io">Github repo
+        </a></div></footer></section>
+
+
+		<script type="module" data-hydrate="1v9r7k">
+		import { start } from "/_app/start-9026b6e6.js";
+		start({
+			target: document.querySelector('[data-hydrate="1v9r7k"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-c3a7f499.js"),
+						import("/_app/pages/algorithms/dijkstra-algorithm.svelte.md-67e5a670.js")
+				],
+				url: new URL("http://sveltekit-prerender/algorithms/dijkstra-algorithm"),
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>

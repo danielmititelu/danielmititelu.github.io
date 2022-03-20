@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-e62421fc.js",
+    "file": "start-9026b6e6.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -16,10 +16,16 @@
       "src/routes/data-structures/trie.svelte.md",
       "src/routes/algorithms/binary-tree-traversals.svelte.md",
       "src/routes/algorithms/three-way-partitioning.svelte.md",
+      "src/routes/algorithms/dijkstra-algorithm.svelte.md",
+      "src/routes/algorithms/kruskal-algorithm.svelte.md",
       "src/routes/algorithms/graph-traversals.svelte.md",
+      "src/routes/algorithms/multi-source-bfs.svelte.md",
       "src/routes/algorithms/topological-sort.svelte.md",
       "src/routes/algorithms/quick-select.svelte.md",
-      "src/routes/algorithms/voting-algo.svelte.md"
+      "src/routes/algorithms/voting-algo.svelte.md",
+      "src/routes/blogs/bit-manipulation.svelte.md",
+      "src/routes/blogs/system-design.svelte.md",
+      "src/routes/blogs/graphs.svelte.md"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -31,7 +37,7 @@
       "_vendor-cac58433.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-c9a870e9.css"
+      "assets/pages/__layout.svelte-0a496caa.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -44,7 +50,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-84faa253.js",
+    "file": "pages/index.svelte-51cf8332.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -53,7 +59,7 @@
     ]
   },
   "src/routes/data-structures/disjoint-sets.svelte.md": {
-    "file": "pages/data-structures/disjoint-sets.svelte.md-4f1870a7.js",
+    "file": "pages/data-structures/disjoint-sets.svelte.md-ea9b3c0e.js",
     "src": "src/routes/data-structures/disjoint-sets.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -62,7 +68,7 @@
     ]
   },
   "src/routes/data-structures/hashmap.svelte.md": {
-    "file": "pages/data-structures/hashmap.svelte.md-fdc52c13.js",
+    "file": "pages/data-structures/hashmap.svelte.md-7bdcc218.js",
     "src": "src/routes/data-structures/hashmap.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -71,7 +77,7 @@
     ]
   },
   "src/routes/data-structures/heap.svelte.md": {
-    "file": "pages/data-structures/heap.svelte.md-63ccdf08.js",
+    "file": "pages/data-structures/heap.svelte.md-b602e219.js",
     "src": "src/routes/data-structures/heap.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -80,7 +86,7 @@
     ]
   },
   "src/routes/data-structures/trie.svelte.md": {
-    "file": "pages/data-structures/trie.svelte.md-651970e3.js",
+    "file": "pages/data-structures/trie.svelte.md-c1cd8284.js",
     "src": "src/routes/data-structures/trie.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -89,7 +95,7 @@
     ]
   },
   "src/routes/algorithms/binary-tree-traversals.svelte.md": {
-    "file": "pages/algorithms/binary-tree-traversals.svelte.md-71b6fe74.js",
+    "file": "pages/algorithms/binary-tree-traversals.svelte.md-a1f71941.js",
     "src": "src/routes/algorithms/binary-tree-traversals.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -98,7 +104,7 @@
     ]
   },
   "src/routes/algorithms/three-way-partitioning.svelte.md": {
-    "file": "pages/algorithms/three-way-partitioning.svelte.md-5adf3cc0.js",
+    "file": "pages/algorithms/three-way-partitioning.svelte.md-3124b4f8.js",
     "src": "src/routes/algorithms/three-way-partitioning.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -106,8 +112,26 @@
       "_vendor-cac58433.js"
     ]
   },
+  "src/routes/algorithms/dijkstra-algorithm.svelte.md": {
+    "file": "pages/algorithms/dijkstra-algorithm.svelte.md-67e5a670.js",
+    "src": "src/routes/algorithms/dijkstra-algorithm.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
+  "src/routes/algorithms/kruskal-algorithm.svelte.md": {
+    "file": "pages/algorithms/kruskal-algorithm.svelte.md-d19b18ad.js",
+    "src": "src/routes/algorithms/kruskal-algorithm.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
   "src/routes/algorithms/graph-traversals.svelte.md": {
-    "file": "pages/algorithms/graph-traversals.svelte.md-050f2155.js",
+    "file": "pages/algorithms/graph-traversals.svelte.md-318bbef4.js",
     "src": "src/routes/algorithms/graph-traversals.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -115,8 +139,17 @@
       "_vendor-cac58433.js"
     ]
   },
+  "src/routes/algorithms/multi-source-bfs.svelte.md": {
+    "file": "pages/algorithms/multi-source-bfs.svelte.md-4ab209e3.js",
+    "src": "src/routes/algorithms/multi-source-bfs.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
   "src/routes/algorithms/topological-sort.svelte.md": {
-    "file": "pages/algorithms/topological-sort.svelte.md-35197438.js",
+    "file": "pages/algorithms/topological-sort.svelte.md-65e1ebe5.js",
     "src": "src/routes/algorithms/topological-sort.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -125,7 +158,7 @@
     ]
   },
   "src/routes/algorithms/quick-select.svelte.md": {
-    "file": "pages/algorithms/quick-select.svelte.md-0487593f.js",
+    "file": "pages/algorithms/quick-select.svelte.md-0be77738.js",
     "src": "src/routes/algorithms/quick-select.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -134,8 +167,35 @@
     ]
   },
   "src/routes/algorithms/voting-algo.svelte.md": {
-    "file": "pages/algorithms/voting-algo.svelte.md-9d0bb521.js",
+    "file": "pages/algorithms/voting-algo.svelte.md-bce0ad86.js",
     "src": "src/routes/algorithms/voting-algo.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
+  "src/routes/blogs/bit-manipulation.svelte.md": {
+    "file": "pages/blogs/bit-manipulation.svelte.md-989baef7.js",
+    "src": "src/routes/blogs/bit-manipulation.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
+  "src/routes/blogs/system-design.svelte.md": {
+    "file": "pages/blogs/system-design.svelte.md-69ce3a20.js",
+    "src": "src/routes/blogs/system-design.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
+  "src/routes/blogs/graphs.svelte.md": {
+    "file": "pages/blogs/graphs.svelte.md-76828f1b.js",
+    "src": "src/routes/blogs/graphs.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [

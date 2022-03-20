@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-0a496caa.css">
+	<link rel="modulepreload" href="/_app/start-9026b6e6.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-c3a7f499.js">
+	<link rel="modulepreload" href="/_app/pages/blogs/system-design.svelte.md-69ce3a20.js">
+	</head>
+	<body class="m-0">
+		<div id="svelte">
+
+
+<section><nav class="fixed flex top-0 w-full bg-slate-800 h-16 left-0 right-0"><div class="ml-4 my-auto text-xl"><a href="/">HOME </a></div></nav>
+	<main class="max-w-screen-md mx-auto mt-24 min-h-screen"><h1>System design</h1>
+<h2>Databases</h2>
+<hr>
+<p>Database management systems (DBMS) which are usually referred to as just databases are a piece of software that are used stores data in an organized way and offer an API to interact with it.</p>
+<p>Depending on the way data is organized and accessed there can be different databases paradigm and we will explore a few of them here.</p>
+<h3>Relational databases</h3>
+<p>Examples: PostgreSQL, MySql, Oracle, Microsoft SQL Server</p>
+<p>The most common way to store data is using tables with rows, columns and having relations between them. This kind of database requires a schema to be defined before storing data and they are not very flexible.</p>
+<p>Accessing data is done with a domain-specific language called SQL (Structured Query Language).</p>
+<p>Example of SQL</p>
+<pre class="language-sql"><!-- HTML_TAG_START --><code class="language-sql"><span class="token keyword">SELECT</span> id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age <span class="token keyword">FROM</span> persons <span class="token keyword">where</span> age <span class="token operator">>=</span> <span class="token number">21</span></code><!-- HTML_TAG_END --></pre>
+<p>Relational databases use ACID transactions</p>
+<ul><li><p>Atomicity -&gt; all or nothing</p></li>
+<li><p>Consistency -&gt; ensures data remains valid according to all defined rules (Primary Key, Foreign Key, Constraints etc.)</p></li>
+<li><p>Isolation -&gt; one database transaction is not affected by another one running concurrently and the end result will appear as if the transactions were executed sequentially</p></li>
+<li><p>Durability -&gt; data persists even in case of power failure</p></li></ul>
+<p>Advantages</p>
+<ul><li>data integrity since transactions are ACID</li></ul>
+<p>Disadvantages</p>
+<ul><li>schema definition is required up front</li>
+<li>difficult to scale horizontally </li></ul>
+<h3>Key-value databases</h3>
+<p>Examples: Redis, Memcached</p>
+<p>Simple type of database where the data is stored similar to a HashMap with a key pointing to a value. They are very limited but very fast since usually all the data is kept in memory.</p>
+<p>These are usually used as a caching layer on applications.</p>
+<p>Advantages</p>
+<ul><li>very fast response time</li>
+<li>easy to manage, no schema required</li>
+<li>can scale horizontally </li></ul>
+<p>Disadvantages</p>
+<ul><li>does not supports joins  </li>
+<li>searching values with anything else but the key (also called a scan) is slow</li></ul>
+<h3>Document-oriented databases</h3>
+<p>Examples: MongoDB, Firestore, DynamoDB</p>
+<p>Document-oriented databases organize database in collection of documents where each document can be considered a JSON file and supports indexing on the JSON properties for fast searching but does not support joining collections.</p>
+<p>Advantages</p>
+<ul><li>easy to manage, no schema required</li>
+<li>can scale horizontally</li>
+<li>requires data to be denormalized or embedded in a single document</li></ul>
+<p>Disadvantages</p>
+<ul><li>does not supports joins </li></ul>
+<h2>Networking</h2>
+<hr>
+<h3>Open System Interconnect (OSI) model</h3>
+<ol><li>Physical</li></ol>
+<p>Handles transferring bits from one computer to another</p>
+<ol start="2"><li>Data link</li></ol>
+<p>Handles framing which groups a set of bits together in a frame and retransmits this frame if it’s lost or corrupted</p>
+<ol start="3"><li>Network</li></ol>
+<p>Determines the best route to transmit the frame and attaches the sender and receiver IP addresses </p>
+<ol start="4"><li>Transport</li></ol>
+<p>Transports the message through the network using segments.</p>
+<ol start="5"><li>Session</li></ol>
+<p>This layer starts, maintains and ends a connection between two nodes</p>
+<ol start="6"><li>Presentation</li></ol>
+<p>It will translate, encrypt and compress the data being transmitted. It is also know as the translation layer  </p>
+<ol start="7"><li>Application
+Applications generate and receive data that must go through the network</li></ol>
+<h3>TCP/IP Model</h3>
+<ul><li>Application layer - process to process communication</li>
+<li>Transport Layer - host to host communication</li>
+<li>Internet Layer - handles communication between networks</li>
+<li>Network access/Link Layer - handles communication in a local network</li></ul>
+<h3>TCP three-way handshake</h3>
+<ol><li><p>(SYN) Clients initiate the connection and sends a SYN (Synchronize Sequence Number) segment which tels with what sequence number to start</p></li>
+<li><p>(SYN-ACK) Server responds with a SYN-ACK that it’s acknowledging the SYN it received </p></li>
+<li><p>(ACK) The client responds to the server with ACK and they establish a connection and can start data transfer </p></li></ol>
+<h3>TCP/IP</h3>
+<p>What happens when you enter a URL in a browser?</p>
+<ul><li>if the URL content is in the cache and it’s fresh then retrieve it from cache</li>
+<li>else perform DNS resolution on the URL</li>
+<li>search the browser cache, OS cache, local DNS server for IP of URL</li>
+<li>once the IP is resolved browser initiate a three-way handshake to connect via TCP</li>
+<li>browser sends the request</li>
+<li>when it receives a response it will render </li></ul>
+<h2>Load balancers</h2>
+<hr>
+<p>WIP</p>
+<h2>Microservice</h2>
+<hr>
+<p>WIP</p>
+<h2>Logging</h2>
+<hr>
+<p>WIP</p>
+<h2>Monitoring and Alerts</h2>
+<hr>
+<p>WIP</p>
+<h3>Tools</h3>
+<ul><li>Munin</li>
+<li>Data dog</li>
+<li>Splunk</li>
+<li>Prometheous</li>
+<li>Grafana</li></ul>
+<h2></h2>
+<h2>Security</h2>
+<hr>
+<p>WIP</p>
+<h3>DDOS attack (Distributed denial of service)</h3>
+<h3>Zero day exploits</h3>
+<h3>Cross site scripting(XSS)</h3>
+<h3>Sql injection</h3>
+<h3>Principle of least privilege</h3>
+<h3>CIA triage</h3>
+<ul><li>confidentiality</li>
+<li>integrity</li>
+<li>availability</li></ul></main>
+	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
+    </p>
+    <div><a href="https://github.com/danielmititelu/danielmititelu.github.io">Github repo
+        </a></div></footer></section>
+
+
+		<script type="module" data-hydrate="11x79xn">
+		import { start } from "/_app/start-9026b6e6.js";
+		start({
+			target: document.querySelector('[data-hydrate="11x79xn"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-c3a7f499.js"),
+						import("/_app/pages/blogs/system-design.svelte.md-69ce3a20.js")
+				],
+				url: new URL("http://sveltekit-prerender/blogs/system-design"),
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>

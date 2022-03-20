@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-0a496caa.css">
-	<link rel="modulepreload" href="/_app/start-9026b6e6.js">
-	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-c3a7f499.js">
-	<link rel="modulepreload" href="/_app/pages/algorithms/topological-sort.svelte.md-65e1ebe5.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section><nav class="fixed flex top-0 w-full bg-slate-800 h-16 left-0 right-0"><div class="ml-4 my-auto text-xl"><a href="/">HOME </a></div></nav>
-	<main class="max-w-screen-md mx-auto mt-24 min-h-screen"><h1>Topological sort</h1>
-<p>Time Complexity: O(V+E) // V = vertex (or node), E = edge</p>
-<p>Sort a graph so that any node on the left will point only to the nodes in the right</p>
-<ul><li>cannot be done for graphs that have a cycle</li>
-<li>should be a DAG(directed acyclic graph)</li></ul>
-<p>Khan’s algorithm</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">TopologicalSort</span><span class="token punctuation">(</span><span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+import{S as sn,i as an,s as tn,e as o,t as i,k,c as e,a as c,h as r,d as s,m as d,b as U,g as t,F as p,G as F}from"../../chunks/vendor-cac58433.js";function pn(Z){let l,O,x,w,S,b,h,P,L,u,E,V,G,g,H,T,m,N,D,y,$=`<code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">TopologicalSort</span><span class="token punctuation">(</span><span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token class-name"><span class="token keyword">var</span></span> indegrees <span class="token operator">=</span> <span class="token function">CountIndegrees</span><span class="token punctuation">(</span>graph<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token class-name"><span class="token keyword">var</span></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Queue<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
@@ -63,35 +38,4 @@
     <span class="token punctuation">&#125;</span>
 
     <span class="token keyword">return</span> indegrees<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3>References</h3>
-<ul><li><a href="https://leetcode.com/problems/course-schedule/" rel="nofollow">https://leetcode.com/problems/course-schedule/</a></li></ul></main>
-	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
-    </p>
-    <div><a href="https://github.com/danielmititelu/danielmititelu.github.io">Github repo
-        </a></div></footer></section>
-
-
-		<script type="module" data-hydrate="109tcjd">
-		import { start } from "/_app/start-9026b6e6.js";
-		start({
-			target: document.querySelector('[data-hydrate="109tcjd"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-c3a7f499.js"),
-						import("/_app/pages/algorithms/topological-sort.svelte.md-65e1ebe5.js")
-				],
-				url: new URL("http://sveltekit-prerender/algorithms/topological-sort"),
-				params: {}
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`,A,v,R,C,_,q,f,K;return{c(){l=o("h1"),O=i("Topological sort"),x=k(),w=o("p"),S=i("Time Complexity: O(V+E) // V = vertex (or node), E = edge"),b=k(),h=o("p"),P=i("Sort a graph so that any node on the left will point only to the nodes in the right"),L=k(),u=o("ul"),E=o("li"),V=i("cannot be done for graphs that have a cycle"),G=k(),g=o("li"),H=i("should be a DAG(directed acyclic graph)"),T=k(),m=o("p"),N=i("Khan\u2019s algorithm"),D=k(),y=o("pre"),A=k(),v=o("h3"),R=i("References"),C=k(),_=o("ul"),q=o("li"),f=o("a"),K=i("https://leetcode.com/problems/course-schedule/"),this.h()},l(n){l=e(n,"H1",{});var a=c(l);O=r(a,"Topological sort"),a.forEach(s),x=d(n),w=e(n,"P",{});var M=c(w);S=r(M,"Time Complexity: O(V+E) // V = vertex (or node), E = edge"),M.forEach(s),b=d(n),h=e(n,"P",{});var Q=c(h);P=r(Q,"Sort a graph so that any node on the left will point only to the nodes in the right"),Q.forEach(s),L=d(n),u=e(n,"UL",{});var I=c(u);E=e(I,"LI",{});var j=c(E);V=r(j,"cannot be done for graphs that have a cycle"),j.forEach(s),G=d(I),g=e(I,"LI",{});var z=c(g);H=r(z,"should be a DAG(directed acyclic graph)"),z.forEach(s),I.forEach(s),T=d(n),m=e(n,"P",{});var B=c(m);N=r(B,"Khan\u2019s algorithm"),B.forEach(s),D=d(n),y=e(n,"PRE",{class:!0});var nn=c(y);nn.forEach(s),A=d(n),v=e(n,"H3",{});var J=c(v);R=r(J,"References"),J.forEach(s),C=d(n),_=e(n,"UL",{});var W=c(_);q=e(W,"LI",{});var X=c(q);f=e(X,"A",{href:!0,rel:!0});var Y=c(f);K=r(Y,"https://leetcode.com/problems/course-schedule/"),Y.forEach(s),X.forEach(s),W.forEach(s),this.h()},h(){U(y,"class","language-cs"),U(f,"href","https://leetcode.com/problems/course-schedule/"),U(f,"rel","nofollow")},m(n,a){t(n,l,a),p(l,O),t(n,x,a),t(n,w,a),p(w,S),t(n,b,a),t(n,h,a),p(h,P),t(n,L,a),t(n,u,a),p(u,E),p(E,V),p(u,G),p(u,g),p(g,H),t(n,T,a),t(n,m,a),p(m,N),t(n,D,a),t(n,y,a),y.innerHTML=$,t(n,A,a),t(n,v,a),p(v,R),t(n,C,a),t(n,_,a),p(_,q),p(q,f),p(f,K)},p:F,i:F,o:F,d(n){n&&s(l),n&&s(x),n&&s(w),n&&s(b),n&&s(h),n&&s(L),n&&s(u),n&&s(T),n&&s(m),n&&s(D),n&&s(y),n&&s(A),n&&s(v),n&&s(C),n&&s(_)}}}const en={title:"Topological sort"};class cn extends sn{constructor(l){super();an(this,l,null,pn,tn,{})}}export{cn as default,en as metadata};
