@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "rm -rf build && svelte-kit build && touch build/.nojekyll",
-    "deploy": "npm run build && npx gh-pages -d build -t true",
+    "deploy-gh-pages": "git push origin `git subtree split --prefix build master`:gh-pages --force",
+    "deploy": "npm run build && npm run deploy-gh-pages",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
