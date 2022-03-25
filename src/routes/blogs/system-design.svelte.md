@@ -104,7 +104,13 @@ It will translate, encrypt and compress the data being transmitted. It is also k
 7. Application
 Applications generate and receive data that must go through the network
 
-### TCP/IP Model 
+### TCP/IP
+
+IP (Internet Protocol) - responsible for transferring packets from source to destination using a IP address
+
+TCP (Transfer Control Protocol) - IP packets can be lost, corrupted or come out of order, TCP corrects these errors and make communication reliable. It also assign the communication to a TCP port 
+
+HTTP (Hypertext transfer protocol) it defines encoding between two application that supports the HTTP standard
 
 - Application layer - process to process communication
 - Transport Layer - host to host communication
@@ -118,7 +124,6 @@ Applications generate and receive data that must go through the network
 
 3. (ACK) The client responds to the server with ACK and they establish a connection and can start data transfer 
 
-### TCP/IP
 
 What happens when you enter a URL in a browser?
 - if the URL content is in the cache and it's fresh then retrieve it from cache
@@ -128,9 +133,20 @@ What happens when you enter a URL in a browser?
 - browser sends the request
 - when it receives a response it will render 
 
-## Load balancers
+## Load balancing
 ---
-WIP
+#### Methods
+- Round Robin - assign request to each server in order
+- Least connections
+- 
+
+## Reverse proxy 
+A server that sits behind a firewall in a private network and acts as an intermediary between a client and one or more servers in the private network
+
+Responsibilities
+- load balancing
+- cache static data and SSL encryption
+- security and anonymity
 
 ## Microservice
 ---

@@ -1,9 +1,11 @@
 ---
-title: Dijkstra Algorithm
+title: Dijkstra's Algorithm
 ---
 # Dijkstra Algorithm
 
-Greedy alghorithm used to find the shortest path in a weighted graph.
+Greedy algorithm used to find the shortest path in a weighted graph.
+
+Undirected Single source shortest paths with positive integer weights in linear time
 
 - Time complexity: O(V + Elog(E))
 

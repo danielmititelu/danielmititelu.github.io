@@ -80,3 +80,4 @@ public class DisjointSets {
 - https://leetcode.com/problems/number-of-provinces/
 - https://leetcode.com/problems/longest-consecutive-sequence/
 - https://leetcode.com/problems/accounts-merge/
+- https://leetcode.com/problems/redundant-connection/
