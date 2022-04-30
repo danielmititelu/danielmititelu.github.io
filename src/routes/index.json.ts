@@ -20,7 +20,7 @@ async function getPosts(): Promise<PostsGroup[]> {
     const allPosts = await Promise.all(
         iterablePostFiles.map(async ([path, resolver]) => {
             const { metadata } = await resolver();
-            const postPath = path.slice(2, -10);
+            const postPath = path.slice(2, -3);
             const groupTitle = postPath
                 .match(/.*\//)[0] // take everything before the last slash
                 .slice(0, -1) // remove the last slash
