@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-1f49081a.css">
+	<link rel="modulepreload" href="/_app/start-bee4200f.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-cac58433.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8e082429.js">
+	<link rel="modulepreload" href="/_app/pages/algorithms/cycle-detection.svelte.md-44adb1c0.js">
+	</head>
+	<body class="m-0">
+		<div id="svelte">
+
+
+<section><nav class="fixed flex top-0 w-full bg-slate-800 h-16 left-0 right-0"><div class="ml-4 my-auto text-xl"><a href="/">HOME </a></div></nav>
+	<main class="max-w-screen-md mx-auto mt-24 min-h-screen"><pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">Colors</span> <span class="token punctuation">&#123;</span>
+    White<span class="token punctuation">,</span>
+    Gray<span class="token punctuation">,</span>
+    Black
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">HasCycle</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> graph<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> start<span class="token punctuation">,</span> <span class="token class-name">Colors<span class="token punctuation">[</span><span class="token punctuation">]</span></span> colors<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>colors<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token operator">==</span> Colors<span class="token punctuation">.</span>Gray<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>colors<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token operator">==</span> Colors<span class="token punctuation">.</span>Black<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    
+    colors<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token operator">=</span> Colors<span class="token punctuation">.</span>Gray<span class="token punctuation">;</span>
+    <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> neighbor <span class="token keyword">in</span> graph<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">HasCycle</span><span class="token punctuation">(</span>graph<span class="token punctuation">,</span> neighbor<span class="token punctuation">,</span> colors<span class="token punctuation">)</span><span class="token punctuation">)</span> 
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    
+    colors<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token operator">=</span> Colors<span class="token punctuation">.</span>Black<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h2>Problems</h2>
+<ul><li><a href="https://leetcode.com/problems/find-eventual-safe-states" rel="nofollow">https://leetcode.com/problems/find-eventual-safe-states</a></li></ul></main>
+	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
+    </p>
+    <div><a href="https://github.com/danielmititelu/danielmititelu.github.io">Github repo
+        </a></div></footer></section>
+
+
+		<script type="module" data-hydrate="13hwj0o">
+		import { start } from "/_app/start-bee4200f.js";
+		start({
+			target: document.querySelector('[data-hydrate="13hwj0o"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-8e082429.js"),
+						import("/_app/pages/algorithms/cycle-detection.svelte.md-44adb1c0.js")
+				],
+				url: new URL("http://sveltekit-prerender/algorithms/cycle-detection"),
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>

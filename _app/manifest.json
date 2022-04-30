@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-18cf137b.js",
+    "file": "start-bee4200f.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -21,10 +21,12 @@
       "src/routes/algorithms/graph-traversals.svelte.md",
       "src/routes/algorithms/multi-source-bfs.svelte.md",
       "src/routes/algorithms/topological-sort.svelte.md",
+      "src/routes/algorithms/cycle-detection.svelte.md",
       "src/routes/algorithms/quick-select.svelte.md",
       "src/routes/algorithms/voting-algo.svelte.md",
       "src/routes/blogs/bit-manipulation.svelte.md",
       "src/routes/blogs/system-design.svelte.md",
+      "src/routes/blogs/cool-quotes.svelte.md",
       "src/routes/blogs/graphs.svelte.md"
     ]
   },
@@ -157,6 +159,15 @@
       "_vendor-cac58433.js"
     ]
   },
+  "src/routes/algorithms/cycle-detection.svelte.md": {
+    "file": "pages/algorithms/cycle-detection.svelte.md-44adb1c0.js",
+    "src": "src/routes/algorithms/cycle-detection.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
   "src/routes/algorithms/quick-select.svelte.md": {
     "file": "pages/algorithms/quick-select.svelte.md-f50f31a7.js",
     "src": "src/routes/algorithms/quick-select.svelte.md",
@@ -187,6 +198,15 @@
   "src/routes/blogs/system-design.svelte.md": {
     "file": "pages/blogs/system-design.svelte.md-6921cc76.js",
     "src": "src/routes/blogs/system-design.svelte.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
+  "src/routes/blogs/cool-quotes.svelte.md": {
+    "file": "pages/blogs/cool-quotes.svelte.md-0211cfda.js",
+    "src": "src/routes/blogs/cool-quotes.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
