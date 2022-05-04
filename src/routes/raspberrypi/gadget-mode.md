@@ -36,7 +36,7 @@ iwlist wlan0 scan | grep ESSID
 Commands to stop and start wpa_supplicant manually
 ```
 sudo killall wpa_supplicant
-sudo wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant/conf -iwlan0 -d
+sudo wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
 ``` 
 
 ### Internet via usb cable
