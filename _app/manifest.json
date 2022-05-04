@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-d33b627d.js",
+    "file": "start-d155b677.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -14,6 +14,9 @@
       "src/routes/data-structures/hashmap.md",
       "src/routes/data-structures/heap.md",
       "src/routes/data-structures/trie.md",
+      "src/routes/cheatsheets/linux-commands.md",
+      "src/routes/cheatsheets/ansible.md",
+      "src/routes/raspberrypi/ssh-key-auth.md",
       "src/routes/raspberrypi/gadget-mode.md",
       "src/routes/algorithms/binary-tree-traversals.md",
       "src/routes/algorithms/three-way-partitioning.md",
@@ -97,8 +100,35 @@
       "_vendor-cac58433.js"
     ]
   },
+  "src/routes/cheatsheets/linux-commands.md": {
+    "file": "pages/cheatsheets/linux-commands.md-6e565b17.js",
+    "src": "src/routes/cheatsheets/linux-commands.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
+  "src/routes/cheatsheets/ansible.md": {
+    "file": "pages/cheatsheets/ansible.md-84d80d7b.js",
+    "src": "src/routes/cheatsheets/ansible.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
+  "src/routes/raspberrypi/ssh-key-auth.md": {
+    "file": "pages/raspberrypi/ssh-key-auth.md-b2127545.js",
+    "src": "src/routes/raspberrypi/ssh-key-auth.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-cac58433.js"
+    ]
+  },
   "src/routes/raspberrypi/gadget-mode.md": {
-    "file": "pages/raspberrypi/gadget-mode.md-7c9bd3a9.js",
+    "file": "pages/raspberrypi/gadget-mode.md-391e05dc.js",
     "src": "src/routes/raspberrypi/gadget-mode.md",
     "isEntry": true,
     "isDynamicEntry": true,
