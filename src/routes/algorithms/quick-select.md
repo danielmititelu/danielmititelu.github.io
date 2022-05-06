@@ -1,5 +1,7 @@
 ---
 title: Quickselect
+tags:
+- algorithm
 ---
 # Quickselect
 

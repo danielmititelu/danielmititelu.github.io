@@ -1,5 +1,7 @@
 ---
 title: Binary tree traversals
+tags:
+- algorithm
 ---
 # Binary tree traversals
 

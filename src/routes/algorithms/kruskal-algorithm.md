@@ -1,5 +1,7 @@
 ---
 title: Kruskal's Algorithm
+tags:
+- algorithm
 ---
 # Kruskal's Algorithm
 

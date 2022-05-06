@@ -1,5 +1,7 @@
 ---
 title: Multi-source Bread-first search
+tags:
+- algorithm
 ---
 
 

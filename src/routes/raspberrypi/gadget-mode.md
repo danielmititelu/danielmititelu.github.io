@@ -1,5 +1,8 @@
 ---
 title: Gadget mode on raspberry pi
+tags:
+- raspberrypi
+- linux
 ---
 
 # Gadget mode on raspberry pi

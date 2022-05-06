@@ -1,64 +1,67 @@
-export async function get() {
-    var postGroups = await getPosts();
+import type { Article, Tag } from "$lib/types";
 
+export async function get() {
+    let tags = await getTags();
 
     return {
         status: 200,
         body: {
-            message: "hello world",
-            postGroups
+            tags
         }
     };
 }
 
-async function getPosts(): Promise<PostsGroup[]> {
-    const postGroups: PostsGroup[] = [];
+async function getTags(): Promise<Tag[]> {
+    let tags: Tag[] = [
+        {
+            name: "data-structure",
+            title: "Data Structures",
+            articles: []
+        },
+        {
+            name: "algorithm",
+            title: "Algorithms",
+            articles: []
+        },
+        {
+            name: "cheat-sheet",
+            title: "Cheat Sheets",
+            articles: []
+        },
+        {
+            name: "raspberrypi",
+            title: "Raspberry Pi",
+            articles: []
+        },
+        {
+            name: "blog",
+            title: "Blogs",
+            articles: []
+        },
 
-    const allPostFiles = import.meta.glob(`./*/*.md`);
-    const iterablePostFiles = Object.entries(allPostFiles);
+    ];
 
-    const allPosts = await Promise.all(
-        iterablePostFiles.map(async ([path, resolver]) => {
-            const { metadata } = await resolver();
-            const postPath = path.slice(2, -3);
-            const groupTitle = postPath
-                .match(/.*\//)[0] // take everything before the last slash
-                .slice(0, -1) // remove the last slash
-                .replace("-", " ") // replace dashes with spaces
-                // uppercase the first letter of each word
-                .replace(/\b\w/g, function (l) { return l.toUpperCase() });
+    const tagDict: { [name: string]: Article[] } = {}
 
-            return {
-                groupTitle,
-                title: metadata.title,
-                path: postPath,
+    const articles = import.meta.globEager(`./**.md`);
+    for (const path in articles) {
+        const { metadata } = articles[path];
+        if (!metadata.tags) continue;
+
+        for (const tag of metadata.tags) {
+            if (!tagDict[tag]) {
+                tagDict[tag] = [];
             }
-        })
-    );
-
-    allPosts.forEach(post => {
-        const group = postGroups.find(group => group.title === post.groupTitle);
-        var postMeta = { title: post.title, path: post.path };
-        if (group) {
-            group.posts.push(postMeta);
-        } else {
-            postGroups.push({
-                title: post.groupTitle,
-                posts: [postMeta]
+            tagDict[tag].push({
+                title: metadata.title,
+                path: path.slice(2, -3)
             });
         }
-    });
+    }
 
-    return postGroups;
-}
+    for (const tag of tags) {
+        tag.articles = tagDict[tag.name];
+    }
 
-
-export type PostsGroup = {
-    title: string;
-    posts: Post[];
-}
-
-export type Post = {
-    title: string;
-    path: string;
+    return tags;
 }

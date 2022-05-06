@@ -1,5 +1,7 @@
 ---
 title: Topological sort
+tags:
+- algorithm
 ---
 # Topological sort
 

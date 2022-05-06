@@ -1,5 +1,7 @@
 ---
 title: Heap
+tags:
+- data-structure
 ---
 # Heap
 

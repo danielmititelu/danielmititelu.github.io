@@ -1,5 +1,7 @@
 ---
 title: Hash map
+tags:
+- data-structure
 ---
 # Hash map / Hash table
 

@@ -1,5 +1,8 @@
 ---
 title: SSH key-based auth
+tags:
+- raspberrypi
+- linux
 ---
 
 # SSH key-based auth

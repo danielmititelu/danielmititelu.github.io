@@ -1,5 +1,7 @@
 ---
 title: A few words about Graph theory
+tags:
+- blog
 ---
 # A few words about Graph theory
 

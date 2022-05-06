@@ -1,5 +1,7 @@
 ---
 title: Cool quotes
+tags:
+- blog
 ---
 # Cool quotes
 

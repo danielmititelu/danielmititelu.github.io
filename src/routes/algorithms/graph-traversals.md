@@ -1,5 +1,7 @@
 ---
 title: Graph traversals
+tags:
+- algorithm
 ---
 # Graph traversals
 

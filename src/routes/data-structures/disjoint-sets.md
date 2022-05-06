@@ -1,5 +1,7 @@
 ---
 title: Disjoint sets
+tags:
+- data-structure
 ---
 # Disjoint sets
 

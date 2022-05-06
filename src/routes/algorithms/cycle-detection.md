@@ -1,5 +1,7 @@
 ---
 title: Cycle detection
+tags:
+- algorithm
 ---
 ```cs
 public enum Colors {

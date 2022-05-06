@@ -1,5 +1,7 @@
 ---
 title: System design
+tags:
+- blog
 ---
 
 # System design

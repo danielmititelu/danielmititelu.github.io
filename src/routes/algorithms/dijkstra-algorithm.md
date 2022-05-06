@@ -1,5 +1,7 @@
 ---
 title: Dijkstra's Algorithm
+tags:
+- algorithm
 ---
 # Dijkstra Algorithm
 

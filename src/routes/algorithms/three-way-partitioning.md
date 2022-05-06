@@ -1,5 +1,7 @@
 ---
 title: Three way partitioning
+tags:
+- algorithm
 ---
 # Three way partitioning
 

@@ -1,5 +1,7 @@
 ---
 title: Linux commands cheat sheet
+tags:
+- cheat-sheet
 ---
 
 # Linux commands cheat sheet

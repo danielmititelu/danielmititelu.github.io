@@ -1,5 +1,7 @@
 ---
 title: A few words about bit manipulation
+tags:
+- blog
 ---
 
 # A few words about bit manipulation

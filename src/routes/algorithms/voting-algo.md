@@ -1,5 +1,7 @@
 ---
 title: Boyer-Moore Voting Algorithm
+tags:
+- algorithm
 ---
 # Boyer-Moore Voting Algorithm
 
