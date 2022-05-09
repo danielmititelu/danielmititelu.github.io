@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-3a88ab04.css">
-	<link rel="modulepreload" href="/_app/start-69216751.js">
-	<link rel="modulepreload" href="/_app/chunks/vendor-0a633d05.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-cf3fcafe.js">
-	<link rel="modulepreload" href="/_app/pages/data-structures/hashmap.md-5b52a40d.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto min-h-screen mt-6"><h1>Hash map / Hash table</h1>
-<p>Time complexity: </p>
-<ul><li>average case: insert, lookup O(1)</li>
-<li>worst case: insert, lookup O(N)</li></ul>
-<p>A hash map, hash table or dictionary organizes data in key/value pairs with constant lookup time for the keys. It is similar to an array where indexes are used to access values but the key difference (no pun intended) is that any type of object can be used as the key and not just integers.</p>
-<p>In fact hash tables are built with array as the backing field but in order to support strings or custom object in keys a <code>hashing function</code> is used to convert the string/custom object to an integer index. </p>
-<p>One problem using hash functions is that two keys can convert to the same index, and here <code>hash colisions</code> appear. One way to solve this is in each element in array to store a linked list and everytime we get a hash collision we store the key/value pair in the next node in the likned list.</p>
-<p>Sample implementation:</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyHashMap</span>
+import{S as pn,i as en,s as on,e,t as o,k as y,c,a as l,h as u,d as s,m as w,b as cn,g as p,H as t,I as J}from"../../chunks/vendor-0a633d05.js";function ln(sn){let k,B,I,h,L,E,i,v,S,V,x,T,H,f,g,O,r,z,_,A,D,j,d,R,N,q,U,C,b,F,P,m,an=`<code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyHashMap</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">private</span> <span class="token class-name">Node<span class="token punctuation">[</span><span class="token punctuation">]</span></span> _buckets<span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">int</span></span> _bucketCount<span class="token punctuation">;</span>
@@ -123,31 +94,4 @@
         Key <span class="token operator">=</span> key<span class="token punctuation">;</span>
         Value <span class="token operator">=</span> <span class="token keyword">value</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></main>
-	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-hydrate="1m3rkak">
-		import { start } from "/_app/start-69216751.js";
-		start({
-			target: document.querySelector('[data-hydrate="1m3rkak"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-cf3fcafe.js"),
-						import("/_app/pages/data-structures/hashmap.md-5b52a40d.js")
-				],
-				url: new URL("http://sveltekit-prerender/data-structures/hashmap"),
-				params: {}
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`;return{c(){k=e("h1"),B=o("Hash map / Hash table"),I=y(),h=e("p"),L=o("Time complexity:"),E=y(),i=e("ul"),v=e("li"),S=o("average case: insert, lookup O(1)"),V=y(),x=e("li"),T=o("worst case: insert, lookup O(N)"),H=y(),f=e("p"),g=o("A hash map, hash table or dictionary organizes data in key/value pairs with constant lookup time for the keys. It is similar to an array where indexes are used to access values but the key difference (no pun intended) is that any type of object can be used as the key and not just integers."),O=y(),r=e("p"),z=o("In fact hash tables are built with array as the backing field but in order to support strings or custom object in keys a "),_=e("code"),A=o("hashing function"),D=o(" is used to convert the string/custom object to an integer index."),j=y(),d=e("p"),R=o("One problem using hash functions is that two keys can convert to the same index, and here "),N=e("code"),q=o("hash colisions"),U=o(" appear. One way to solve this is in each element in array to store a linked list and everytime we get a hash collision we store the key/value pair in the next node in the likned list."),C=y(),b=e("p"),F=o("Sample implementation:"),P=y(),m=e("pre"),this.h()},l(n){k=c(n,"H1",{});var a=l(k);B=u(a,"Hash map / Hash table"),a.forEach(s),I=w(n),h=c(n,"P",{});var Q=l(h);L=u(Q,"Time complexity:"),Q.forEach(s),E=w(n),i=c(n,"UL",{});var K=l(i);v=c(K,"LI",{});var W=l(v);S=u(W,"average case: insert, lookup O(1)"),W.forEach(s),V=w(K),x=c(K,"LI",{});var X=l(x);T=u(X,"worst case: insert, lookup O(N)"),X.forEach(s),K.forEach(s),H=w(n),f=c(n,"P",{});var Y=l(f);g=u(Y,"A hash map, hash table or dictionary organizes data in key/value pairs with constant lookup time for the keys. It is similar to an array where indexes are used to access values but the key difference (no pun intended) is that any type of object can be used as the key and not just integers."),Y.forEach(s),O=w(n),r=c(n,"P",{});var G=l(r);z=u(G,"In fact hash tables are built with array as the backing field but in order to support strings or custom object in keys a "),_=c(G,"CODE",{});var Z=l(_);A=u(Z,"hashing function"),Z.forEach(s),D=u(G," is used to convert the string/custom object to an integer index."),G.forEach(s),j=w(n),d=c(n,"P",{});var M=l(d);R=u(M,"One problem using hash functions is that two keys can convert to the same index, and here "),N=c(M,"CODE",{});var $=l(N);q=u($,"hash colisions"),$.forEach(s),U=u(M," appear. One way to solve this is in each element in array to store a linked list and everytime we get a hash collision we store the key/value pair in the next node in the likned list."),M.forEach(s),C=w(n),b=c(n,"P",{});var nn=l(b);F=u(nn,"Sample implementation:"),nn.forEach(s),P=w(n),m=c(n,"PRE",{class:!0});var tn=l(m);tn.forEach(s),this.h()},h(){cn(m,"class","language-cs")},m(n,a){p(n,k,a),t(k,B),p(n,I,a),p(n,h,a),t(h,L),p(n,E,a),p(n,i,a),t(i,v),t(v,S),t(i,V),t(i,x),t(x,T),p(n,H,a),p(n,f,a),t(f,g),p(n,O,a),p(n,r,a),t(r,z),t(r,_),t(_,A),t(r,D),p(n,j,a),p(n,d,a),t(d,R),t(d,N),t(N,q),t(d,U),p(n,C,a),p(n,b,a),t(b,F),p(n,P,a),p(n,m,a),m.innerHTML=an},p:J,i:J,o:J,d(n){n&&s(k),n&&s(I),n&&s(h),n&&s(E),n&&s(i),n&&s(H),n&&s(f),n&&s(O),n&&s(r),n&&s(j),n&&s(d),n&&s(C),n&&s(b),n&&s(P),n&&s(m)}}}const kn={title:"Hash map",tags:["data-structure"]};class rn extends pn{constructor(k){super();en(this,k,null,ln,on,{})}}export{rn as default,kn as metadata};

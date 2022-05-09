@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-3a88ab04.css">
-	<link rel="modulepreload" href="/_app/start-69216751.js">
-	<link rel="modulepreload" href="/_app/chunks/vendor-0a633d05.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-cf3fcafe.js">
-	<link rel="modulepreload" href="/_app/pages/algorithms/topological-sort.md-1cbe5c49.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto min-h-screen mt-6"><h1>Topological sort</h1>
-<p>Time Complexity: O(V+E) // V = vertex (or node), E = edge</p>
-<p>Sort a graph so that any node on the left will point only to the nodes in the right</p>
-<ul><li>cannot be done for graphs that have a cycle</li>
-<li>should be a DAG(directed acyclic graph)</li></ul>
-<p>Khan’s algorithm</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">TopologicalSort</span><span class="token punctuation">(</span><span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+import{S as sn,i as an,s as tn,e as o,t as i,k,c as e,a as c,h as r,d as s,m as d,b as U,g as t,H as p,I as M}from"../../chunks/vendor-0a633d05.js";function pn(Z){let l,O,x,w,S,b,h,H,L,u,E,P,V,g,N,T,m,R,D,y,$=`<code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">TopologicalSort</span><span class="token punctuation">(</span><span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token class-name"><span class="token keyword">var</span></span> indegrees <span class="token operator">=</span> <span class="token function">CountIndegrees</span><span class="token punctuation">(</span>graph<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token class-name"><span class="token keyword">var</span></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Queue<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
@@ -65,33 +38,4 @@
     <span class="token punctuation">&#125;</span>
 
     <span class="token keyword">return</span> indegrees<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3>References</h3>
-<ul><li><a href="https://leetcode.com/problems/course-schedule/" rel="nofollow">https://leetcode.com/problems/course-schedule/</a></li></ul></main>
-	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-hydrate="lye5we">
-		import { start } from "/_app/start-69216751.js";
-		start({
-			target: document.querySelector('[data-hydrate="lye5we"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-cf3fcafe.js"),
-						import("/_app/pages/algorithms/topological-sort.md-1cbe5c49.js")
-				],
-				url: new URL("http://sveltekit-prerender/algorithms/topological-sort"),
-				params: {}
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`,I,v,G,A,_,q,f,K;return{c(){l=o("h1"),O=i("Topological sort"),x=k(),w=o("p"),S=i("Time Complexity: O(V+E) // V = vertex (or node), E = edge"),b=k(),h=o("p"),H=i("Sort a graph so that any node on the left will point only to the nodes in the right"),L=k(),u=o("ul"),E=o("li"),P=i("cannot be done for graphs that have a cycle"),V=k(),g=o("li"),N=i("should be a DAG(directed acyclic graph)"),T=k(),m=o("p"),R=i("Khan\u2019s algorithm"),D=k(),y=o("pre"),I=k(),v=o("h3"),G=i("References"),A=k(),_=o("ul"),q=o("li"),f=o("a"),K=i("https://leetcode.com/problems/course-schedule/"),this.h()},l(n){l=e(n,"H1",{});var a=c(l);O=r(a,"Topological sort"),a.forEach(s),x=d(n),w=e(n,"P",{});var Q=c(w);S=r(Q,"Time Complexity: O(V+E) // V = vertex (or node), E = edge"),Q.forEach(s),b=d(n),h=e(n,"P",{});var j=c(h);H=r(j,"Sort a graph so that any node on the left will point only to the nodes in the right"),j.forEach(s),L=d(n),u=e(n,"UL",{});var C=c(u);E=e(C,"LI",{});var z=c(E);P=r(z,"cannot be done for graphs that have a cycle"),z.forEach(s),V=d(C),g=e(C,"LI",{});var B=c(g);N=r(B,"should be a DAG(directed acyclic graph)"),B.forEach(s),C.forEach(s),T=d(n),m=e(n,"P",{});var F=c(m);R=r(F,"Khan\u2019s algorithm"),F.forEach(s),D=d(n),y=e(n,"PRE",{class:!0});var nn=c(y);nn.forEach(s),I=d(n),v=e(n,"H3",{});var J=c(v);G=r(J,"References"),J.forEach(s),A=d(n),_=e(n,"UL",{});var W=c(_);q=e(W,"LI",{});var X=c(q);f=e(X,"A",{href:!0,rel:!0});var Y=c(f);K=r(Y,"https://leetcode.com/problems/course-schedule/"),Y.forEach(s),X.forEach(s),W.forEach(s),this.h()},h(){U(y,"class","language-cs"),U(f,"href","https://leetcode.com/problems/course-schedule/"),U(f,"rel","nofollow")},m(n,a){t(n,l,a),p(l,O),t(n,x,a),t(n,w,a),p(w,S),t(n,b,a),t(n,h,a),p(h,H),t(n,L,a),t(n,u,a),p(u,E),p(E,P),p(u,V),p(u,g),p(g,N),t(n,T,a),t(n,m,a),p(m,R),t(n,D,a),t(n,y,a),y.innerHTML=$,t(n,I,a),t(n,v,a),p(v,G),t(n,A,a),t(n,_,a),p(_,q),p(q,f),p(f,K)},p:M,i:M,o:M,d(n){n&&s(l),n&&s(x),n&&s(w),n&&s(b),n&&s(h),n&&s(L),n&&s(u),n&&s(T),n&&s(m),n&&s(D),n&&s(y),n&&s(I),n&&s(v),n&&s(A),n&&s(_)}}}const en={title:"Topological sort",tags:["algorithm"]};class cn extends sn{constructor(l){super();an(this,l,null,pn,tn,{})}}export{cn as default,en as metadata};

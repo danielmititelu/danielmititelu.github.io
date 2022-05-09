@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-3a88ab04.css">
-	<link rel="modulepreload" href="/_app/start-69216751.js">
-	<link rel="modulepreload" href="/_app/chunks/vendor-0a633d05.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-cf3fcafe.js">
-	<link rel="modulepreload" href="/_app/pages/data-structures/trie.md-4fd53e07.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto min-h-screen mt-6"><h1>Trie</h1>
-<p>Created: 2021-11-30 12:43</p>
-<p>A trie or prefix tree is tree data structure that allows for fast searching of a key or string prefix in a dataset of strings. It is used in word completion like google search or intellisense</p>
-<p><img src="/trie.svg" alt="image"></p>
-<h3>Example implementation</h3>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Trie</span> <span class="token punctuation">&#123;</span>
+import{S as M,i as L,s as R,e,t as x,k as w,c,a as d,h as C,d as n,m as y,N as j,b as T,g as p,H as f,I as G}from"../../chunks/vendor-0a633d05.js";function z(A){let t,N,m,l,E,h,u,g,_,k,i,H,v,r,I,b,o,D=`<code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Trie</span> <span class="token punctuation">&#123;</span>
 
     <span class="token keyword">private</span> <span class="token class-name">Node</span> _root<span class="token punctuation">;</span>
     
@@ -79,31 +53,4 @@
     <span class="token keyword">public</span> <span class="token function">Node</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         Children <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span> Node<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></main>
-	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-hydrate="1ovg31o">
-		import { start } from "/_app/start-69216751.js";
-		start({
-			target: document.querySelector('[data-hydrate="1ovg31o"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-cf3fcafe.js"),
-						import("/_app/pages/data-structures/trie.md-4fd53e07.js")
-				],
-				url: new URL("http://sveltekit-prerender/data-structures/trie"),
-				params: {}
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`;return{c(){t=e("h1"),N=x("Trie"),m=w(),l=e("p"),E=x("Created: 2021-11-30 12:43"),h=w(),u=e("p"),g=x("A trie or prefix tree is tree data structure that allows for fast searching of a key or string prefix in a dataset of strings. It is used in word completion like google search or intellisense"),_=w(),k=e("p"),i=e("img"),v=w(),r=e("h3"),I=x("Example implementation"),b=w(),o=e("pre"),this.h()},l(s){t=c(s,"H1",{});var a=d(t);N=C(a,"Trie"),a.forEach(n),m=y(s),l=c(s,"P",{});var P=d(l);E=C(P,"Created: 2021-11-30 12:43"),P.forEach(n),h=y(s),u=c(s,"P",{});var S=d(u);g=C(S,"A trie or prefix tree is tree data structure that allows for fast searching of a key or string prefix in a dataset of strings. It is used in word completion like google search or intellisense"),S.forEach(n),_=y(s),k=c(s,"P",{});var W=d(k);i=c(W,"IMG",{src:!0,alt:!0}),W.forEach(n),v=y(s),r=c(s,"H3",{});var q=d(r);I=C(q,"Example implementation"),q.forEach(n),b=y(s),o=c(s,"PRE",{class:!0});var K=d(o);K.forEach(n),this.h()},h(){j(i.src,H="/trie.svg")||T(i,"src",H),T(i,"alt","image"),T(o,"class","language-cs")},m(s,a){p(s,t,a),f(t,N),p(s,m,a),p(s,l,a),f(l,E),p(s,h,a),p(s,u,a),f(u,g),p(s,_,a),p(s,k,a),f(k,i),p(s,v,a),p(s,r,a),f(r,I),p(s,b,a),p(s,o,a),o.innerHTML=D},p:G,i:G,o:G,d(s){s&&n(t),s&&n(m),s&&n(l),s&&n(h),s&&n(u),s&&n(_),s&&n(k),s&&n(v),s&&n(r),s&&n(b),s&&n(o)}}}const F={title:"Trie",tags:["data-structure"]};class J extends M{constructor(t){super();L(this,t,null,z,R,{})}}export{J as default,F as metadata};

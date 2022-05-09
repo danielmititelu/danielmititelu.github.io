@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-3a88ab04.css">
-	<link rel="modulepreload" href="/_app/start-69216751.js">
-	<link rel="modulepreload" href="/_app/chunks/vendor-0a633d05.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-cf3fcafe.js">
-	<link rel="modulepreload" href="/_app/pages/algorithms/graph-traversals.md-2ee8052f.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto min-h-screen mt-6"><h1>Graph traversals</h1>
-<h2>Breadth-first search</h2>
-<p>We scan through the graph level by level starting with the nodes closest to the starting node.</p>
-<h4>Examples:</h4>
-<ul><li>BFS can only be implemented in iterative manner:</li></ul>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">BFS</span><span class="token punctuation">(</span><span class="token class-name">Node</span> node<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+import{S as hs,i as ys,s as ws,e as p,t as u,k as c,c as e,a as o,h as k,d as n,m as l,b as Z,g as t,H as i,I as $}from"../../chunks/vendor-0a633d05.js";function _s(us){let r,W,P,v,Q,H,h,U,q,y,j,C,w,F,z,V,f,ks=`<code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">BFS</span><span class="token punctuation">(</span><span class="token class-name">Node</span> node<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token class-name"><span class="token keyword">var</span></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Queue<span class="token punctuation">&lt;</span>Node<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	queue<span class="token punctuation">.</span><span class="token function">Enqueue</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">while</span><span class="token punctuation">(</span>queue<span class="token punctuation">.</span>Count <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -35,13 +9,7 @@
 			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>child<span class="token punctuation">.</span>Visited<span class="token punctuation">)</span>
 				stack<span class="token punctuation">.</span><span class="token function">Enqueue</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h2>Depth-first search</h2>
-<p>DFS for short is going to search a graph or matrix by depth first meaning it will pick a direction and go in that direction before coming back to visit other directions</p>
-<p>DFS can be implemented either recursively or iterative</p>
-<h4>Examples:</h4>
-<p>Recursive implementation:</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DFS</span><span class="token punctuation">(</span><span class="token class-name">Node</span> node<span class="token punctuation">)</span> 
+<span class="token punctuation">&#125;</span></code>`,B,_,A,L,E,J,N,b,K,R,S,O,G,x,X,I,d,rs=`<code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DFS</span><span class="token punctuation">(</span><span class="token class-name">Node</span> node<span class="token punctuation">)</span> 
 <span class="token punctuation">&#123;</span>
 	<span class="token keyword">if</span><span class="token punctuation">(</span>node <span class="token keyword">is</span> <span class="token keyword">null</span><span class="token punctuation">)</span> 
 		<span class="token keyword">return</span><span class="token punctuation">;</span>
@@ -52,9 +20,7 @@
 		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>child<span class="token punctuation">.</span>Visited<span class="token punctuation">)</span>
 			<span class="token function">DFS</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span>
-</code><!-- HTML_TAG_END --></pre>
-<p>Iterative implementation:</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DFS</span><span class="token punctuation">(</span><span class="token class-name">Node</span> node<span class="token punctuation">)</span> 
+</code>`,M,D,Y,T,m,fs=`<code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DFS</span><span class="token punctuation">(</span><span class="token class-name">Node</span> node<span class="token punctuation">)</span> 
 <span class="token punctuation">&#123;</span>
 	<span class="token class-name"><span class="token keyword">var</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Stack<span class="token punctuation">&lt;</span>Node<span class="token punctuation">></span></span><span class="token punctuation">&#123;</span> node <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 	
@@ -66,31 +32,4 @@
 			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>child<span class="token punctuation">.</span>Visited<span class="token punctuation">)</span>
 				stack<span class="token punctuation">.</span><span class="token function">Push</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></main>
-	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-hydrate="x8tu8u">
-		import { start } from "/_app/start-69216751.js";
-		start({
-			target: document.querySelector('[data-hydrate="x8tu8u"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-cf3fcafe.js"),
-						import("/_app/pages/algorithms/graph-traversals.md-2ee8052f.js")
-				],
-				url: new URL("http://sveltekit-prerender/algorithms/graph-traversals"),
-				params: {}
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`;return{c(){r=p("h1"),W=u("Graph traversals"),P=c(),v=p("h2"),Q=u("Breadth-first search"),H=c(),h=p("p"),U=u("We scan through the graph level by level starting with the nodes closest to the starting node."),q=c(),y=p("h4"),j=u("Examples:"),C=c(),w=p("ul"),F=p("li"),z=u("BFS can only be implemented in iterative manner:"),V=c(),f=p("pre"),B=c(),_=p("h2"),A=u("Depth-first search"),L=c(),E=p("p"),J=u("DFS for short is going to search a graph or matrix by depth first meaning it will pick a direction and go in that direction before coming back to visit other directions"),N=c(),b=p("p"),K=u("DFS can be implemented either recursively or iterative"),R=c(),S=p("h4"),O=u("Examples:"),G=c(),x=p("p"),X=u("Recursive implementation:"),I=c(),d=p("pre"),M=c(),D=p("p"),Y=u("Iterative implementation:"),T=c(),m=p("pre"),this.h()},l(s){r=e(s,"H1",{});var a=o(r);W=k(a,"Graph traversals"),a.forEach(n),P=l(s),v=e(s,"H2",{});var g=o(v);Q=k(g,"Breadth-first search"),g.forEach(n),H=l(s),h=e(s,"P",{});var ss=o(h);U=k(ss,"We scan through the graph level by level starting with the nodes closest to the starting node."),ss.forEach(n),q=l(s),y=e(s,"H4",{});var ns=o(y);j=k(ns,"Examples:"),ns.forEach(n),C=l(s),w=e(s,"UL",{});var as=o(w);F=e(as,"LI",{});var ts=o(F);z=k(ts,"BFS can only be implemented in iterative manner:"),ts.forEach(n),as.forEach(n),V=l(s),f=e(s,"PRE",{class:!0});var ds=o(f);ds.forEach(n),B=l(s),_=e(s,"H2",{});var ps=o(_);A=k(ps,"Depth-first search"),ps.forEach(n),L=l(s),E=e(s,"P",{});var es=o(E);J=k(es,"DFS for short is going to search a graph or matrix by depth first meaning it will pick a direction and go in that direction before coming back to visit other directions"),es.forEach(n),N=l(s),b=e(s,"P",{});var os=o(b);K=k(os,"DFS can be implemented either recursively or iterative"),os.forEach(n),R=l(s),S=e(s,"H4",{});var cs=o(S);O=k(cs,"Examples:"),cs.forEach(n),G=l(s),x=e(s,"P",{});var ls=o(x);X=k(ls,"Recursive implementation:"),ls.forEach(n),I=l(s),d=e(s,"PRE",{class:!0});var ms=o(d);ms.forEach(n),M=l(s),D=e(s,"P",{});var is=o(D);Y=k(is,"Iterative implementation:"),is.forEach(n),T=l(s),m=e(s,"PRE",{class:!0});var vs=o(m);vs.forEach(n),this.h()},h(){Z(f,"class","language-cs"),Z(d,"class","language-cs"),Z(m,"class","language-cs")},m(s,a){t(s,r,a),i(r,W),t(s,P,a),t(s,v,a),i(v,Q),t(s,H,a),t(s,h,a),i(h,U),t(s,q,a),t(s,y,a),i(y,j),t(s,C,a),t(s,w,a),i(w,F),i(F,z),t(s,V,a),t(s,f,a),f.innerHTML=ks,t(s,B,a),t(s,_,a),i(_,A),t(s,L,a),t(s,E,a),i(E,J),t(s,N,a),t(s,b,a),i(b,K),t(s,R,a),t(s,S,a),i(S,O),t(s,G,a),t(s,x,a),i(x,X),t(s,I,a),t(s,d,a),d.innerHTML=rs,t(s,M,a),t(s,D,a),i(D,Y),t(s,T,a),t(s,m,a),m.innerHTML=fs},p:$,i:$,o:$,d(s){s&&n(r),s&&n(P),s&&n(v),s&&n(H),s&&n(h),s&&n(q),s&&n(y),s&&n(C),s&&n(w),s&&n(V),s&&n(f),s&&n(B),s&&n(_),s&&n(L),s&&n(E),s&&n(N),s&&n(b),s&&n(R),s&&n(S),s&&n(G),s&&n(x),s&&n(I),s&&n(d),s&&n(M),s&&n(D),s&&n(T),s&&n(m)}}}const bs={title:"Graph traversals",tags:["algorithm"]};class Ss extends hs{constructor(r){super();ys(this,r,null,_s,ws,{})}}export{Ss as default,bs as metadata};

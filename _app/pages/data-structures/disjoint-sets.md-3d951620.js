@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-3a88ab04.css">
-	<link rel="modulepreload" href="/_app/start-69216751.js">
-	<link rel="modulepreload" href="/_app/chunks/vendor-0a633d05.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-cf3fcafe.js">
-	<link rel="modulepreload" href="/_app/pages/data-structures/disjoint-sets.md-3d951620.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto min-h-screen mt-6"><h1>Disjoint sets</h1>
-<p>Disjoint Sets or Union find is a data structure used for finding relationships between nodes.</p>
-<p>For example disjointed sets are ideal for the following scenarios:</p>
-<ul><li>find if a person is a direct or indirect friend of another person in a social platform</li>
-<li>given a list of flights find if there is a way to reach a destination starting from a given city</li></ul>
-<p>Disjoint Sets or Union find implements 2 methods:</p>
-<ul><li>find - returns the union representative</li>
-<li>union - connects two nodes</li></ul>
-<p>Time complexity for both find and union is smaller than O(log n) or amortized O(1) if union by rank and path compression is used.</p>
-<p>An array is used to represent the parents of the disjointed sets. This is how the parents array would look after the union operation is performed on the blue and red nodes:</p>
-<p><img src="/disjoint-sets.svg" alt="image"></p>
-<h2>Optimazations</h2>
-<h4>Path compression</h4>
-<p>An optimization that aims to flatten the traveral tree to the height of one so that all find operation would be completed in constant time.</p>
-<h4>Union by rank</h4>
-<p>This optimization aims to always attached the smaller tree to the bigger one. An additional array is required to store the ranks of each tree.</p>
-<p><img src="/disjoint-sets-copmleted.svg" alt="image"></p>
-<h4>Code example:</h4>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DisjointSets</span> <span class="token punctuation">&#123;</span>
+import{S as wn,i as vn,s as bn,e,t as u,k as i,c as p,a as l,h as r,d as n,m as c,N as dn,b as k,g as o,H as t,I as Os}from"../../chunks/vendor-0a633d05.js";function En(hn){let m,fs,V,x,ms,W,j,ds,X,d,O,hs,ys,M,_s,Y,R,ws,Z,h,G,vs,bs,N,Es,$,P,xs,g,L,js,ss,I,A,Ms,ns,D,Rs,as,U,Ps,ts,z,Ls,os,H,Is,es,S,As,ps,q,T,Gs,ls,C,Ds,is,_,yn=`<code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DisjointSets</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> _parents<span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> _ranks<span class="token punctuation">;</span>
     
@@ -80,36 +41,4 @@
         <span class="token punctuation">&#125;</span>
         Count<span class="token operator">--</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h4>Problems that could be solved with union find</h4>
-<ul><li><a href="https://leetcode.com/problems/number-of-provinces/" rel="nofollow">https://leetcode.com/problems/number-of-provinces/</a></li>
-<li><a href="https://leetcode.com/problems/longest-consecutive-sequence/" rel="nofollow">https://leetcode.com/problems/longest-consecutive-sequence/</a></li>
-<li><a href="https://leetcode.com/problems/accounts-merge/" rel="nofollow">https://leetcode.com/problems/accounts-merge/</a></li>
-<li><a href="https://leetcode.com/problems/redundant-connection/" rel="nofollow">https://leetcode.com/problems/redundant-connection/</a></li></ul></main>
-	<footer class="flex justify-center content-center flex-col text-center mt-14 mb-8"><p class="text-center">Created with SvelteKit by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-hydrate="1w69d3j">
-		import { start } from "/_app/start-69216751.js";
-		start({
-			target: document.querySelector('[data-hydrate="1w69d3j"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-cf3fcafe.js"),
-						import("/_app/pages/data-structures/disjoint-sets.md-3d951620.js")
-				],
-				url: new URL("http://sveltekit-prerender/data-structures/disjoint-sets"),
-				params: {}
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`,cs,F,Us,us,f,B,w,zs,Hs,J,v,Ss,qs,K,b,Ts,Cs,Q,E,Fs;return{c(){m=e("h1"),fs=u("Disjoint sets"),V=i(),x=e("p"),ms=u("Disjoint Sets or Union find is a data structure used for finding relationships between nodes."),W=i(),j=e("p"),ds=u("For example disjointed sets are ideal for the following scenarios:"),X=i(),d=e("ul"),O=e("li"),hs=u("find if a person is a direct or indirect friend of another person in a social platform"),ys=i(),M=e("li"),_s=u("given a list of flights find if there is a way to reach a destination starting from a given city"),Y=i(),R=e("p"),ws=u("Disjoint Sets or Union find implements 2 methods:"),Z=i(),h=e("ul"),G=e("li"),vs=u("find - returns the union representative"),bs=i(),N=e("li"),Es=u("union - connects two nodes"),$=i(),P=e("p"),xs=u("Time complexity for both find and union is smaller than O(log n) or amortized O(1) if union by rank and path compression is used."),g=i(),L=e("p"),js=u("An array is used to represent the parents of the disjointed sets. This is how the parents array would look after the union operation is performed on the blue and red nodes:"),ss=i(),I=e("p"),A=e("img"),ns=i(),D=e("h2"),Rs=u("Optimazations"),as=i(),U=e("h4"),Ps=u("Path compression"),ts=i(),z=e("p"),Ls=u("An optimization that aims to flatten the traveral tree to the height of one so that all find operation would be completed in constant time."),os=i(),H=e("h4"),Is=u("Union by rank"),es=i(),S=e("p"),As=u("This optimization aims to always attached the smaller tree to the bigger one. An additional array is required to store the ranks of each tree."),ps=i(),q=e("p"),T=e("img"),ls=i(),C=e("h4"),Ds=u("Code example:"),is=i(),_=e("pre"),cs=i(),F=e("h4"),Us=u("Problems that could be solved with union find"),us=i(),f=e("ul"),B=e("li"),w=e("a"),zs=u("https://leetcode.com/problems/number-of-provinces/"),Hs=i(),J=e("li"),v=e("a"),Ss=u("https://leetcode.com/problems/longest-consecutive-sequence/"),qs=i(),K=e("li"),b=e("a"),Ts=u("https://leetcode.com/problems/accounts-merge/"),Cs=i(),Q=e("li"),E=e("a"),Fs=u("https://leetcode.com/problems/redundant-connection/"),this.h()},l(s){m=p(s,"H1",{});var a=l(m);fs=r(a,"Disjoint sets"),a.forEach(n),V=c(s),x=p(s,"P",{});var Ns=l(x);ms=r(Ns,"Disjoint Sets or Union find is a data structure used for finding relationships between nodes."),Ns.forEach(n),W=c(s),j=p(s,"P",{});var Bs=l(j);ds=r(Bs,"For example disjointed sets are ideal for the following scenarios:"),Bs.forEach(n),X=c(s),d=p(s,"UL",{});var rs=l(d);O=p(rs,"LI",{});var Js=l(O);hs=r(Js,"find if a person is a direct or indirect friend of another person in a social platform"),Js.forEach(n),ys=c(rs),M=p(rs,"LI",{});var Ks=l(M);_s=r(Ks,"given a list of flights find if there is a way to reach a destination starting from a given city"),Ks.forEach(n),rs.forEach(n),Y=c(s),R=p(s,"P",{});var Qs=l(R);ws=r(Qs,"Disjoint Sets or Union find implements 2 methods:"),Qs.forEach(n),Z=c(s),h=p(s,"UL",{});var ks=l(h);G=p(ks,"LI",{});var Vs=l(G);vs=r(Vs,"find - returns the union representative"),Vs.forEach(n),bs=c(ks),N=p(ks,"LI",{});var Ws=l(N);Es=r(Ws,"union - connects two nodes"),Ws.forEach(n),ks.forEach(n),$=c(s),P=p(s,"P",{});var Xs=l(P);xs=r(Xs,"Time complexity for both find and union is smaller than O(log n) or amortized O(1) if union by rank and path compression is used."),Xs.forEach(n),g=c(s),L=p(s,"P",{});var Ys=l(L);js=r(Ys,"An array is used to represent the parents of the disjointed sets. This is how the parents array would look after the union operation is performed on the blue and red nodes:"),Ys.forEach(n),ss=c(s),I=p(s,"P",{});var Zs=l(I);A=p(Zs,"IMG",{src:!0,alt:!0}),Zs.forEach(n),ns=c(s),D=p(s,"H2",{});var $s=l(D);Rs=r($s,"Optimazations"),$s.forEach(n),as=c(s),U=p(s,"H4",{});var gs=l(U);Ps=r(gs,"Path compression"),gs.forEach(n),ts=c(s),z=p(s,"P",{});var sn=l(z);Ls=r(sn,"An optimization that aims to flatten the traveral tree to the height of one so that all find operation would be completed in constant time."),sn.forEach(n),os=c(s),H=p(s,"H4",{});var nn=l(H);Is=r(nn,"Union by rank"),nn.forEach(n),es=c(s),S=p(s,"P",{});var an=l(S);As=r(an,"This optimization aims to always attached the smaller tree to the bigger one. An additional array is required to store the ranks of each tree."),an.forEach(n),ps=c(s),q=p(s,"P",{});var tn=l(q);T=p(tn,"IMG",{src:!0,alt:!0}),tn.forEach(n),ls=c(s),C=p(s,"H4",{});var on=l(C);Ds=r(on,"Code example:"),on.forEach(n),is=c(s),_=p(s,"PRE",{class:!0});var _n=l(_);_n.forEach(n),cs=c(s),F=p(s,"H4",{});var en=l(F);Us=r(en,"Problems that could be solved with union find"),en.forEach(n),us=c(s),f=p(s,"UL",{});var y=l(f);B=p(y,"LI",{});var pn=l(B);w=p(pn,"A",{href:!0,rel:!0});var ln=l(w);zs=r(ln,"https://leetcode.com/problems/number-of-provinces/"),ln.forEach(n),pn.forEach(n),Hs=c(y),J=p(y,"LI",{});var cn=l(J);v=p(cn,"A",{href:!0,rel:!0});var un=l(v);Ss=r(un,"https://leetcode.com/problems/longest-consecutive-sequence/"),un.forEach(n),cn.forEach(n),qs=c(y),K=p(y,"LI",{});var rn=l(K);b=p(rn,"A",{href:!0,rel:!0});var kn=l(b);Ts=r(kn,"https://leetcode.com/problems/accounts-merge/"),kn.forEach(n),rn.forEach(n),Cs=c(y),Q=p(y,"LI",{});var fn=l(Q);E=p(fn,"A",{href:!0,rel:!0});var mn=l(E);Fs=r(mn,"https://leetcode.com/problems/redundant-connection/"),mn.forEach(n),fn.forEach(n),y.forEach(n),this.h()},h(){dn(A.src,Ms="/disjoint-sets.svg")||k(A,"src",Ms),k(A,"alt","image"),dn(T.src,Gs="/disjoint-sets-copmleted.svg")||k(T,"src",Gs),k(T,"alt","image"),k(_,"class","language-cs"),k(w,"href","https://leetcode.com/problems/number-of-provinces/"),k(w,"rel","nofollow"),k(v,"href","https://leetcode.com/problems/longest-consecutive-sequence/"),k(v,"rel","nofollow"),k(b,"href","https://leetcode.com/problems/accounts-merge/"),k(b,"rel","nofollow"),k(E,"href","https://leetcode.com/problems/redundant-connection/"),k(E,"rel","nofollow")},m(s,a){o(s,m,a),t(m,fs),o(s,V,a),o(s,x,a),t(x,ms),o(s,W,a),o(s,j,a),t(j,ds),o(s,X,a),o(s,d,a),t(d,O),t(O,hs),t(d,ys),t(d,M),t(M,_s),o(s,Y,a),o(s,R,a),t(R,ws),o(s,Z,a),o(s,h,a),t(h,G),t(G,vs),t(h,bs),t(h,N),t(N,Es),o(s,$,a),o(s,P,a),t(P,xs),o(s,g,a),o(s,L,a),t(L,js),o(s,ss,a),o(s,I,a),t(I,A),o(s,ns,a),o(s,D,a),t(D,Rs),o(s,as,a),o(s,U,a),t(U,Ps),o(s,ts,a),o(s,z,a),t(z,Ls),o(s,os,a),o(s,H,a),t(H,Is),o(s,es,a),o(s,S,a),t(S,As),o(s,ps,a),o(s,q,a),t(q,T),o(s,ls,a),o(s,C,a),t(C,Ds),o(s,is,a),o(s,_,a),_.innerHTML=yn,o(s,cs,a),o(s,F,a),t(F,Us),o(s,us,a),o(s,f,a),t(f,B),t(B,w),t(w,zs),t(f,Hs),t(f,J),t(J,v),t(v,Ss),t(f,qs),t(f,K),t(K,b),t(b,Ts),t(f,Cs),t(f,Q),t(Q,E),t(E,Fs)},p:Os,i:Os,o:Os,d(s){s&&n(m),s&&n(V),s&&n(x),s&&n(W),s&&n(j),s&&n(X),s&&n(d),s&&n(Y),s&&n(R),s&&n(Z),s&&n(h),s&&n($),s&&n(P),s&&n(g),s&&n(L),s&&n(ss),s&&n(I),s&&n(ns),s&&n(D),s&&n(as),s&&n(U),s&&n(ts),s&&n(z),s&&n(os),s&&n(H),s&&n(es),s&&n(S),s&&n(ps),s&&n(q),s&&n(ls),s&&n(C),s&&n(is),s&&n(_),s&&n(cs),s&&n(F),s&&n(us),s&&n(f)}}}const jn={title:"Disjoint sets",tags:["data-structure"]};class Rn extends wn{constructor(m){super();vn(this,m,null,En,bn,{})}}export{Rn as default,jn as metadata};
