@@ -1,9 +1,7 @@
-name: CI
+name: Deploy to github pages on merge
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
   workflow_dispatch:
