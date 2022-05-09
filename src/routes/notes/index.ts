@@ -1,18 +1,18 @@
-import type { Article, Tag } from "$lib/types";
+import type { Note, Notes } from "$lib/types";
 
 export async function get() {
-    let tags = await getTags();
+    let allNotes = await getNotes();
 
     return {
         status: 200,
         body: {
-            tags
+            allNotes
         }
     };
 }
 
-async function getTags(): Promise<Tag[]> {
-    let tags: Tag[] = [
+async function getNotes(): Promise<Notes[]> {
+    let tags: Notes[] = [
         {
             name: "data-structure",
             title: "Data Structures",
@@ -41,9 +41,9 @@ async function getTags(): Promise<Tag[]> {
 
     ];
 
-    const tagDict: { [name: string]: Article[] } = {}
+    const tagDict: { [name: string]: Note[] } = {}
 
-    const articles = import.meta.globEager(`./**.md`);
+    const articles = import.meta.globEager(`../**.md`);
     for (const path in articles) {
         const { metadata } = articles[path];
         if (!metadata.tags) continue;

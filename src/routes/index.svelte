@@ -1,37 +1,12 @@
-<script lang="ts">
-    import ArticleLink from "$lib/ArticleLink.svelte";
-    import TagLink from "$lib/TagLink.svelte";
-    import type { Article, Tag } from "$lib/types";
-
-    export let tags: Tag[];
-    let selectedTag: Tag;
-    let selectedArticles: Article[];
-    $: selectedArticles = tags.filter(
-        (tag) => tag.name === selectedTag?.name
-    )[0]?.articles;
-
-    function onTagClick(name: Tag) {
-        selectedTag = name;
-    }
+<script>
+    import Icon from "$lib/Icon.svelte";
 </script>
 
-<div>
-    <h1>Tags</h1>
-    <div class="flex">
-        {#each tags as tag}
-            <TagLink
-                {tag}
-                selected={selectedTag?.name == tag.name}
-                on:click={() => onTagClick(tag)}
-            />
-        {/each}
-    </div>
-    {#if selectedTag && selectedArticles}
-        <h2>{selectedTag.title}</h2>
-        <div class="flex flex-wrap">
-            {#each selectedArticles as article}
-                <ArticleLink {article} />
-            {/each}
-        </div>
-    {/if}
-</div>
+<h1>Hello there!</h1>
+<p>
+    This is my personal site where I take notes and share my thoughts.
+</p>
+<p>
+    I am not the best with words, but this website is a good place to train the habbit of writing.
+    A digital garden or working in public, whichever term you prefer.
+</p>

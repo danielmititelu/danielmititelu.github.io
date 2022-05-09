@@ -6,7 +6,7 @@
 
 <section >
 	<Header />
-	<main class="max-w-screen-md mx-auto mt-24 min-h-screen">
+	<main class="max-w-screen-md mx-auto min-h-screen mt-6">
 		<slot />
 	</main>
 	<Footer />

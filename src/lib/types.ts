@@ -1,10 +1,10 @@
-export type Tag = {
+export type Notes = {
     name: string;
     title: string;
-    articles: Article[];
+    articles: Note[];
 }
 
-export type Article = {
+export type Note = {
     title: string;
     path: string;
 }
