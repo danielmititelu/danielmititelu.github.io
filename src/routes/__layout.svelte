@@ -4,10 +4,12 @@
 	import Footer from '$lib/Footer.svelte';
 </script>
 
-<section >
+<section class="min-h-screen flex flex-col">
 	<Header />
-	<main class="max-w-screen-md mx-auto min-h-screen mt-6">
+	<main class="max-w-screen-md mx-auto">
 		<slot />
 	</main>
-	<Footer />
+	<div class="mt-auto">
+		<Footer />
+	</div>
 </section>

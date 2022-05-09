@@ -1,6 +1,11 @@
-<footer class="flex justify-center content-center 
-               flex-col text-center mt-14 mb-8">
-    <p class="text-center">
-        Created with SvelteKit by Dumitru-Daniel Mititelu
+<script>
+    import Icon from "./Icon.svelte";
+</script>
+<footer class="text-center">
+    
+    <p>
+        Created with 
+        <Icon name="svelte" /> 
+        by Dumitru-Daniel Mititelu
     </p>
 </footer>

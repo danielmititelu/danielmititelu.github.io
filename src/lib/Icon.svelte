@@ -2,4 +2,4 @@
     export let name;
 </script>
 
-<img class="w-[32px] h-[32px]" src={`icons/${name}.svg`} alt={name}/>
+<img title={name} class="w-[24px] h-[24px]" src={`icons/${name}.svg`} alt={name}/>
