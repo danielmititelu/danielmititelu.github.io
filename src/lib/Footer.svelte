@@ -1,11 +1,11 @@
 <script>
-    import Icon from "./Icon.svelte";
+    import SvelteIcon from "./Icons/SvelteIcon.svelte";
 </script>
+
 <footer class="text-center">
-    
     <p>
         Created with 
-        <Icon name="svelte" /> 
+        <SvelteIcon />
         by Dumitru-Daniel Mititelu
     </p>
 </footer>
