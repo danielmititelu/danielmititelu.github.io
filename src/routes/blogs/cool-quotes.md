@@ -1,5 +1,6 @@
 ---
 title: Cool quotes
+draft: true
 tags:
 - blog
 ---

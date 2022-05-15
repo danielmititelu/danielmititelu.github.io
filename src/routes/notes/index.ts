@@ -14,6 +14,11 @@ export async function get() {
 async function getNotes(): Promise<Notes[]> {
     let tags: Notes[] = [
         {
+            name: "cheat-sheet",
+            title: "Cheat Sheets",
+            articles: []
+        },
+        {
             name: "data-structure",
             title: "Data Structures",
             articles: []
@@ -21,11 +26,6 @@ async function getNotes(): Promise<Notes[]> {
         {
             name: "algorithm",
             title: "Algorithms",
-            articles: []
-        },
-        {
-            name: "cheat-sheet",
-            title: "Cheat Sheets",
             articles: []
         },
         {
@@ -47,6 +47,7 @@ async function getNotes(): Promise<Notes[]> {
     for (const path in articles) {
         const { metadata } = articles[path];
         if (!metadata.tags) continue;
+        if(metadata?.draft) continue;
 
         for (const tag of metadata.tags) {
             if (!tagDict[tag]) {
