@@ -2,6 +2,7 @@
 title: Ansible cheat sheet
 tags:
 - cheat-sheet
+draft: true
 ---
 
 ## Install Ansible

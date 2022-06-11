@@ -5,7 +5,7 @@
     export let allNotes: Notes[];
 </script>
 
-<div class="flex flex-wrap ">
+<div class="flex flex-wrap">
     {#each allNotes as note}
         <NotesGroup notes={note} />
     {/each}

@@ -9,7 +9,5 @@
 	<main class="max-w-screen-md mx-auto">
 		<slot />
 	</main>
-	<div class="mt-auto">
-		<Footer />
-	</div>
+	<Footer />
 </section>
