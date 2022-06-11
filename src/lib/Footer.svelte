@@ -2,7 +2,7 @@
     import SvelteIcon from "./Icons/SvelteIcon.svelte";
 </script>
 
-<footer class="m-auto">
+<footer class="mx-auto mt-auto">
     <p class="flex items-center">
         Created with 
         <SvelteIcon />
