@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/pages/__layout.svelte-9705f1aa.css">
-	<link rel="modulepreload" href="/_app/immutable/start-8aee7907.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-337353e1.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-f4e73c6b.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/cheatsheets/svelte.md-2b7a853b.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section class="min-h-screen flex flex-col"><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" width="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto"><h1>Svelte cheat sheet</h1>
-<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+import{S as m,i as v,s as h,e as k,t as y,k as w,c as u,a as i,h as f,d as p,m as j,b as x,g as c,H as b,n as l}from"../../chunks/index-337353e1.js";function _(r){let a,o,e,n,g=`<code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
     <span class="token keyword">export</span> <span class="token keyword">let</span> componentProp<span class="token punctuation">;</span>
     
     <span class="token keyword">export</span> <span class="token punctuation">&#123;</span> className <span class="token keyword">as</span> <span class="token keyword">class</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
@@ -54,40 +32,4 @@
     <span class="token selector">.disabled</span> <span class="token punctuation">&#123;</span>
         <span class="token property">cursor</span><span class="token punctuation">:</span> not-allowed<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre></main>
-	<footer class="mx-auto mt-auto"><p class="flex items-center">Created with 
-        <svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
-	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
-	c-2.4,3.6-4,7.6-4.7,11.8c-1.6,8.9,0.5,18.1,5.7,25.4c11,15.7,32.6,20.3,48.2,10.4l27.5-17.5c7.5-4.7,12.7-12.4,14.2-21.1
-	c1.3-7.3,0.2-14.8-3.3-21.3c2.4-3.6,4-7.6,4.7-11.8C99.2,32.1,97.1,22.9,91.8,15.6"></path><path class="st1" d="M40.9,103.9c-8.9,2.3-18.2-1.2-23.4-8.7c-3.2-4.4-4.4-9.9-3.5-15.3c0.2-0.9,0.4-1.7,0.6-2.6l0.5-1.6l1.4,1
-	c3.3,2.4,6.9,4.2,10.8,5.4l1,0.3l-0.1,1c-0.1,1.4,0.3,2.9,1.1,4.1c1.6,2.3,4.4,3.4,7.1,2.7c0.6-0.2,1.2-0.4,1.7-0.7L65.5,72
-	c1.4-0.9,2.3-2.2,2.6-3.8c0.3-1.6-0.1-3.3-1-4.6c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7l-10.5,6.7
-	c-1.7,1.1-3.6,1.9-5.6,2.4c-8.9,2.3-18.2-1.2-23.4-8.7c-3.1-4.4-4.4-9.9-3.4-15.3c0.9-5.2,4.1-9.9,8.6-12.7l27.5-17.5
-	c1.7-1.1,3.6-1.9,5.6-2.5c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.2,0.9-0.4,1.7-0.7,2.6l-0.5,1.6l-1.4-1
-	c-3.3-2.4-6.9-4.2-10.8-5.4l-1-0.3l0.1-1c0.1-1.4-0.3-2.9-1.1-4.1c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7L32.4,46.1
-	c-1.4,0.9-2.3,2.2-2.6,3.8s0.1,3.3,1,4.6c1.6,2.3,4.4,3.3,7.1,2.6c0.6-0.2,1.2-0.4,1.7-0.7l10.5-6.7c1.7-1.1,3.6-1.9,5.6-2.5
-	c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-27.5,17.5C44.8,102.5,42.9,103.3,40.9,103.9"></path></svg>
-        by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-sveltekit-hydrate="9ao227">
-		import { start } from "/_app/immutable/start-8aee7907.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="9ao227"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 19],
-				params: {},
-				routeId: "cheatsheets/svelte"
-			}
-		});
-	</script></div>
-	</body>
-</html>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code>`;return{c(){a=k("h1"),o=y("Svelte cheat sheet"),e=w(),n=k("pre"),this.h()},l(s){a=u(s,"H1",{});var t=i(a);o=f(t,"Svelte cheat sheet"),t.forEach(p),e=j(s),n=u(s,"PRE",{class:!0});var d=i(n);d.forEach(p),this.h()},h(){x(n,"class","language-svelte")},m(s,t){c(s,a,t),b(a,o),c(s,e,t),c(s,n,t),n.innerHTML=g},p:l,i:l,o:l,d(s){s&&p(a),s&&p(e),s&&p(n)}}}const N={title:"Svelte cheat sheet",tags:["cheat-sheet"]};class E extends m{constructor(a){super(),v(this,a,null,_,h,{})}}export{E as default,N as metadata};
