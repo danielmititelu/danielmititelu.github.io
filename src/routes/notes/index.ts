@@ -1,6 +1,6 @@
 import type { Note, Notes } from "$lib/types";
 
-export async function get() {
+export async function GET() {
     let allNotes = await getNotes();
 
     return {
@@ -43,9 +43,10 @@ async function getNotes(): Promise<Notes[]> {
 
     const tagDict: { [name: string]: Note[] } = {}
 
-    const articles = import.meta.globEager(`../**.md`);
+    const articles: any = import.meta.glob('../*/*.md', { eager: true });
     for (const path in articles) {
         const { metadata } = articles[path];
+      
         if (!metadata.tags) continue;
         if(metadata?.draft) continue;
 
