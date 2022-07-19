@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-52bfdee6.css">
-	<link rel="modulepreload" href="/_app/immutable/start-7cfe7d95.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-d3fa6a4c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-301884e2.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/algorithms/binary-tree-traversals.md-7bb883f0.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section class="min-h-screen flex flex-col"><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" width="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto"><h1>Binary tree traversals</h1>
-<h2>Preorder traversal</h2>
-<p><img src="/preorder.svg" alt="image"></p>
-<p>Order of visiting: parent -&gt; left child -&gt; right child</p>
-<p>Recursive implementation:</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">PreorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+import{S as nn,i as an,s as tn,l as p,u as k,a as c,m as o,p as e,v as i,h as n,c as l,M as Es,q as r,b as t,H as u,n as Is}from"../../chunks/index-d3fa6a4c.js";function pn(Fs){let f,cs,j,P,ls,z,E,I,Ts,D,T,us,F,L,ks,J,d,Js=`<code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">PreorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token class-name"><span class="token keyword">var</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">Preorder</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">return</span> result<span class="token punctuation">;</span>
@@ -36,9 +10,7 @@
 	result<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">Preorder</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">Preorder</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>Iterative implementation:</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">PreorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,K,b,is,Q,v,Ks=`<code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">PreorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token class-name"><span class="token keyword">var</span></span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">;</span>
 
@@ -53,13 +25,7 @@
 			stack<span class="token punctuation">.</span><span class="token function">Push</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">&#125;</span>
 	<span class="token keyword">return</span> res<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h2>Inorder traversal</h2>
-<p>It’s called inorder since for a binary search tree it traverse the nodes in ascending order.</p>
-<p><img src="/inorder.svg" alt="image"></p>
-<p>Order of visiting: left child -&gt; parent -&gt; right child</p>
-<p>Recursive inorder traversal:</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">InorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,U,H,rs,V,N,fs,W,R,M,Ls,X,x,ds,Y,O,vs,Z,w,Qs=`<code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">InorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token class-name"><span class="token keyword">var</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">Helper</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">return</span> result<span class="token punctuation">;</span>
@@ -71,9 +37,7 @@
 	<span class="token function">Helper</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	result<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">Helper</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>Iterative inorder traversal</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">InorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span></code>`,$,A,ws,g,y,Us=`<code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">InorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token class-name"><span class="token keyword">var</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token class-name"><span class="token keyword">var</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Stack<span class="token punctuation">&lt;</span>TreeNode<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -91,12 +55,7 @@
 	<span class="token punctuation">&#125;</span>
 
     <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h2>Postorder traversal</h2>
-<p><img src="/postorder.svg" alt="image"></p>
-<p>Order of visiting: left child -&gt; right child -&gt; parent</p>
-<p>Recursive implementation:</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">PostorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,ss,S,ys,ns,B,C,bs,as,q,ms,ts,G,_s,ps,m,Vs=`<code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">PostorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token class-name"><span class="token keyword">var</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">Postorder</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">return</span> result<span class="token punctuation">;</span>
@@ -107,9 +66,7 @@
 	<span class="token function">Postorder</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">Postorder</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	result<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>Iterative implementation:</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">PostorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,os,h,Ps,es,_,Ws=`<code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name">IList<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">PostorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 	<span class="token class-name"><span class="token keyword">var</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> result<span class="token punctuation">;</span>
 	
@@ -124,40 +81,4 @@
 			stack<span class="token punctuation">.</span><span class="token function">Push</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">&#125;</span>
 	<span class="token keyword">return</span> result<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></main>
-	<footer class="mx-auto mt-auto"><p class="flex items-center">Created with 
-        <svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
-	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
-	c-2.4,3.6-4,7.6-4.7,11.8c-1.6,8.9,0.5,18.1,5.7,25.4c11,15.7,32.6,20.3,48.2,10.4l27.5-17.5c7.5-4.7,12.7-12.4,14.2-21.1
-	c1.3-7.3,0.2-14.8-3.3-21.3c2.4-3.6,4-7.6,4.7-11.8C99.2,32.1,97.1,22.9,91.8,15.6"></path><path class="st1" d="M40.9,103.9c-8.9,2.3-18.2-1.2-23.4-8.7c-3.2-4.4-4.4-9.9-3.5-15.3c0.2-0.9,0.4-1.7,0.6-2.6l0.5-1.6l1.4,1
-	c3.3,2.4,6.9,4.2,10.8,5.4l1,0.3l-0.1,1c-0.1,1.4,0.3,2.9,1.1,4.1c1.6,2.3,4.4,3.4,7.1,2.7c0.6-0.2,1.2-0.4,1.7-0.7L65.5,72
-	c1.4-0.9,2.3-2.2,2.6-3.8c0.3-1.6-0.1-3.3-1-4.6c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7l-10.5,6.7
-	c-1.7,1.1-3.6,1.9-5.6,2.4c-8.9,2.3-18.2-1.2-23.4-8.7c-3.1-4.4-4.4-9.9-3.4-15.3c0.9-5.2,4.1-9.9,8.6-12.7l27.5-17.5
-	c1.7-1.1,3.6-1.9,5.6-2.5c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.2,0.9-0.4,1.7-0.7,2.6l-0.5,1.6l-1.4-1
-	c-3.3-2.4-6.9-4.2-10.8-5.4l-1-0.3l0.1-1c0.1-1.4-0.3-2.9-1.1-4.1c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7L32.4,46.1
-	c-1.4,0.9-2.3,2.2-2.6,3.8s0.1,3.3,1,4.6c1.6,2.3,4.4,3.3,7.1,2.6c0.6-0.2,1.2-0.4,1.7-0.7l10.5-6.7c1.7-1.1,3.6-1.9,5.6-2.5
-	c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-27.5,17.5C44.8,102.5,42.9,103.3,40.9,103.9"></path></svg>
-        by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-sveltekit-hydrate="2krl10">
-		import { start } from "/_app/immutable/start-7cfe7d95.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="2krl10"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 2],
-				params: {},
-				routeId: "algorithms/binary-tree-traversals"
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`;return{c(){f=p("h1"),cs=k("Binary tree traversals"),j=c(),P=p("h2"),ls=k("Preorder traversal"),z=c(),E=p("p"),I=p("img"),D=c(),T=p("p"),us=k("Order of visiting: parent -> left child -> right child"),F=c(),L=p("p"),ks=k("Recursive implementation:"),J=c(),d=p("pre"),K=c(),b=p("p"),is=k("Iterative implementation:"),Q=c(),v=p("pre"),U=c(),H=p("h2"),rs=k("Inorder traversal"),V=c(),N=p("p"),fs=k("It\u2019s called inorder since for a binary search tree it traverse the nodes in ascending order."),W=c(),R=p("p"),M=p("img"),X=c(),x=p("p"),ds=k("Order of visiting: left child -> parent -> right child"),Y=c(),O=p("p"),vs=k("Recursive inorder traversal:"),Z=c(),w=p("pre"),$=c(),A=p("p"),ws=k("Iterative inorder traversal"),g=c(),y=p("pre"),ss=c(),S=p("h2"),ys=k("Postorder traversal"),ns=c(),B=p("p"),C=p("img"),as=c(),q=p("p"),ms=k("Order of visiting: left child -> right child -> parent"),ts=c(),G=p("p"),_s=k("Recursive implementation:"),ps=c(),m=p("pre"),os=c(),h=p("p"),Ps=k("Iterative implementation:"),es=c(),_=p("pre"),this.h()},l(s){f=o(s,"H1",{});var a=e(f);cs=i(a,"Binary tree traversals"),a.forEach(n),j=l(s),P=o(s,"H2",{});var Hs=e(P);ls=i(Hs,"Preorder traversal"),Hs.forEach(n),z=l(s),E=o(s,"P",{});var Ns=e(E);I=o(Ns,"IMG",{src:!0,alt:!0}),Ns.forEach(n),D=l(s),T=o(s,"P",{});var Rs=e(T);us=i(Rs,"Order of visiting: parent -> left child -> right child"),Rs.forEach(n),F=l(s),L=o(s,"P",{});var Ms=e(L);ks=i(Ms,"Recursive implementation:"),Ms.forEach(n),J=l(s),d=o(s,"PRE",{class:!0});var Xs=e(d);Xs.forEach(n),K=l(s),b=o(s,"P",{});var xs=e(b);is=i(xs,"Iterative implementation:"),xs.forEach(n),Q=l(s),v=o(s,"PRE",{class:!0});var Ys=e(v);Ys.forEach(n),U=l(s),H=o(s,"H2",{});var Os=e(H);rs=i(Os,"Inorder traversal"),Os.forEach(n),V=l(s),N=o(s,"P",{});var As=e(N);fs=i(As,"It\u2019s called inorder since for a binary search tree it traverse the nodes in ascending order."),As.forEach(n),W=l(s),R=o(s,"P",{});var Ss=e(R);M=o(Ss,"IMG",{src:!0,alt:!0}),Ss.forEach(n),X=l(s),x=o(s,"P",{});var Bs=e(x);ds=i(Bs,"Order of visiting: left child -> parent -> right child"),Bs.forEach(n),Y=l(s),O=o(s,"P",{});var Cs=e(O);vs=i(Cs,"Recursive inorder traversal:"),Cs.forEach(n),Z=l(s),w=o(s,"PRE",{class:!0});var Zs=e(w);Zs.forEach(n),$=l(s),A=o(s,"P",{});var qs=e(A);ws=i(qs,"Iterative inorder traversal"),qs.forEach(n),g=l(s),y=o(s,"PRE",{class:!0});var $s=e(y);$s.forEach(n),ss=l(s),S=o(s,"H2",{});var Gs=e(S);ys=i(Gs,"Postorder traversal"),Gs.forEach(n),ns=l(s),B=o(s,"P",{});var hs=e(B);C=o(hs,"IMG",{src:!0,alt:!0}),hs.forEach(n),as=l(s),q=o(s,"P",{});var js=e(q);ms=i(js,"Order of visiting: left child -> right child -> parent"),js.forEach(n),ts=l(s),G=o(s,"P",{});var zs=e(G);_s=i(zs,"Recursive implementation:"),zs.forEach(n),ps=l(s),m=o(s,"PRE",{class:!0});var gs=e(m);gs.forEach(n),os=l(s),h=o(s,"P",{});var Ds=e(h);Ps=i(Ds,"Iterative implementation:"),Ds.forEach(n),es=l(s),_=o(s,"PRE",{class:!0});var sn=e(_);sn.forEach(n),this.h()},h(){Es(I.src,Ts="/preorder.svg")||r(I,"src",Ts),r(I,"alt","image"),r(d,"class","language-cs"),r(v,"class","language-cs"),Es(M.src,Ls="/inorder.svg")||r(M,"src",Ls),r(M,"alt","image"),r(w,"class","language-cs"),r(y,"class","language-cs"),Es(C.src,bs="/postorder.svg")||r(C,"src",bs),r(C,"alt","image"),r(m,"class","language-cs"),r(_,"class","language-cs")},m(s,a){t(s,f,a),u(f,cs),t(s,j,a),t(s,P,a),u(P,ls),t(s,z,a),t(s,E,a),u(E,I),t(s,D,a),t(s,T,a),u(T,us),t(s,F,a),t(s,L,a),u(L,ks),t(s,J,a),t(s,d,a),d.innerHTML=Js,t(s,K,a),t(s,b,a),u(b,is),t(s,Q,a),t(s,v,a),v.innerHTML=Ks,t(s,U,a),t(s,H,a),u(H,rs),t(s,V,a),t(s,N,a),u(N,fs),t(s,W,a),t(s,R,a),u(R,M),t(s,X,a),t(s,x,a),u(x,ds),t(s,Y,a),t(s,O,a),u(O,vs),t(s,Z,a),t(s,w,a),w.innerHTML=Qs,t(s,$,a),t(s,A,a),u(A,ws),t(s,g,a),t(s,y,a),y.innerHTML=Us,t(s,ss,a),t(s,S,a),u(S,ys),t(s,ns,a),t(s,B,a),u(B,C),t(s,as,a),t(s,q,a),u(q,ms),t(s,ts,a),t(s,G,a),u(G,_s),t(s,ps,a),t(s,m,a),m.innerHTML=Vs,t(s,os,a),t(s,h,a),u(h,Ps),t(s,es,a),t(s,_,a),_.innerHTML=Ws},p:Is,i:Is,o:Is,d(s){s&&n(f),s&&n(j),s&&n(P),s&&n(z),s&&n(E),s&&n(D),s&&n(T),s&&n(F),s&&n(L),s&&n(J),s&&n(d),s&&n(K),s&&n(b),s&&n(Q),s&&n(v),s&&n(U),s&&n(H),s&&n(V),s&&n(N),s&&n(W),s&&n(R),s&&n(X),s&&n(x),s&&n(Y),s&&n(O),s&&n(Z),s&&n(w),s&&n($),s&&n(A),s&&n(g),s&&n(y),s&&n(ss),s&&n(S),s&&n(ns),s&&n(B),s&&n(as),s&&n(q),s&&n(ts),s&&n(G),s&&n(ps),s&&n(m),s&&n(os),s&&n(h),s&&n(es),s&&n(_)}}}const en={title:"Binary tree traversals",tags:["algorithm"]};class cn extends nn{constructor(f){super(),an(this,f,null,pn,tn,{})}}export{cn as default,en as metadata};

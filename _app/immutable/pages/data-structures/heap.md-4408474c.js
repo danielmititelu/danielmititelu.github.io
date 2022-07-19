@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-52bfdee6.css">
-	<link rel="modulepreload" href="/_app/immutable/start-7cfe7d95.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-d3fa6a4c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-301884e2.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/data-structures/heap.md-4408474c.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section class="min-h-screen flex flex-col"><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" width="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto"><h1>Heap</h1>
-<p>A heap is a complete binary tree where the any given node is smaller/bigger than it’s descendents depending if it’s a min/max heap</p>
-<h3>Heap represented as array</h3>
-<p>A heap can easily be represented as an array:</p>
-<ul><li>add in array level by level</li>
-<li>if a given node is at index i to find the parent of a node: p = (i - 1) / 2 (floor value of i/2)</li>
-<li>left chlid = 2 * i + 1</li>
-<li>right child = 2 * i + 2</li>
-<li>all leaf nodes are in the last half of the array</li></ul>
-<h3>Insert a value in the heap</h3>
-<ul><li>add element at the end of array</li>
-<li>compare with parent and swap if it’s smaller/bigger</li>
-<li>repeat for all parents of that node</li></ul>
-<h3>Extract min/max value from heap</h3>
-<ul><li>get value from root</li>
-<li>bring the right-most leaf(last element of array) in the root</li>
-<li>push the element down by comparing with it’s children and swapping if neccesary (or [[Heapify]]) </li></ul>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MinHeap</span>
+import{S as Tn,i as jn,s as zn,l as p,u as c,a as u,m as e,p as o,v as i,h as a,c as r,q as Bn,b as l,H as s,n as yn}from"../../chunks/index-d3fa6a4c.js";function Dn(qn){let h,N,g,w,O,T,v,Q,j,_,V,z,k,H,W,X,L,Y,Z,C,$,nn,A,an,sn,P,tn,B,x,pn,D,d,S,en,on,M,ln,cn,G,un,F,I,rn,J,f,U,kn,dn,q,fn,mn,R,hn,K,y,Rn=`<code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MinHeap</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">private</span> <span class="token class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> _heap<span class="token punctuation">;</span>
 
@@ -102,40 +64,4 @@
         _heap<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> _heap<span class="token punctuation">[</span>parentIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
         _heap<span class="token punctuation">[</span>parentIndex<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></main>
-	<footer class="mx-auto mt-auto"><p class="flex items-center">Created with 
-        <svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
-	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
-	c-2.4,3.6-4,7.6-4.7,11.8c-1.6,8.9,0.5,18.1,5.7,25.4c11,15.7,32.6,20.3,48.2,10.4l27.5-17.5c7.5-4.7,12.7-12.4,14.2-21.1
-	c1.3-7.3,0.2-14.8-3.3-21.3c2.4-3.6,4-7.6,4.7-11.8C99.2,32.1,97.1,22.9,91.8,15.6"></path><path class="st1" d="M40.9,103.9c-8.9,2.3-18.2-1.2-23.4-8.7c-3.2-4.4-4.4-9.9-3.5-15.3c0.2-0.9,0.4-1.7,0.6-2.6l0.5-1.6l1.4,1
-	c3.3,2.4,6.9,4.2,10.8,5.4l1,0.3l-0.1,1c-0.1,1.4,0.3,2.9,1.1,4.1c1.6,2.3,4.4,3.4,7.1,2.7c0.6-0.2,1.2-0.4,1.7-0.7L65.5,72
-	c1.4-0.9,2.3-2.2,2.6-3.8c0.3-1.6-0.1-3.3-1-4.6c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7l-10.5,6.7
-	c-1.7,1.1-3.6,1.9-5.6,2.4c-8.9,2.3-18.2-1.2-23.4-8.7c-3.1-4.4-4.4-9.9-3.4-15.3c0.9-5.2,4.1-9.9,8.6-12.7l27.5-17.5
-	c1.7-1.1,3.6-1.9,5.6-2.5c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.2,0.9-0.4,1.7-0.7,2.6l-0.5,1.6l-1.4-1
-	c-3.3-2.4-6.9-4.2-10.8-5.4l-1-0.3l0.1-1c0.1-1.4-0.3-2.9-1.1-4.1c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7L32.4,46.1
-	c-1.4,0.9-2.3,2.2-2.6,3.8s0.1,3.3,1,4.6c1.6,2.3,4.4,3.3,7.1,2.6c0.6-0.2,1.2-0.4,1.7-0.7l10.5-6.7c1.7-1.1,3.6-1.9,5.6-2.5
-	c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-27.5,17.5C44.8,102.5,42.9,103.3,40.9,103.9"></path></svg>
-        by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-sveltekit-hydrate="7ukjn1">
-		import { start } from "/_app/immutable/start-7cfe7d95.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="7ukjn1"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 22],
-				params: {},
-				routeId: "data-structures/heap"
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`;return{c(){h=p("h1"),N=c("Heap"),g=u(),w=p("p"),O=c("A heap is a complete binary tree where the any given node is smaller/bigger than it\u2019s descendents depending if it\u2019s a min/max heap"),T=u(),v=p("h3"),Q=c("Heap represented as array"),j=u(),_=p("p"),V=c("A heap can easily be represented as an array:"),z=u(),k=p("ul"),H=p("li"),W=c("add in array level by level"),X=u(),L=p("li"),Y=c("if a given node is at index i to find the parent of a node: p = (i - 1) / 2 (floor value of i/2)"),Z=u(),C=p("li"),$=c("left chlid = 2 * i + 1"),nn=u(),A=p("li"),an=c("right child = 2 * i + 2"),sn=u(),P=p("li"),tn=c("all leaf nodes are in the last half of the array"),B=u(),x=p("h3"),pn=c("Insert a value in the heap"),D=u(),d=p("ul"),S=p("li"),en=c("add element at the end of array"),on=u(),M=p("li"),ln=c("compare with parent and swap if it\u2019s smaller/bigger"),cn=u(),G=p("li"),un=c("repeat for all parents of that node"),F=u(),I=p("h3"),rn=c("Extract min/max value from heap"),J=u(),f=p("ul"),U=p("li"),kn=c("get value from root"),dn=u(),q=p("li"),fn=c("bring the right-most leaf(last element of array) in the root"),mn=u(),R=p("li"),hn=c("push the element down by comparing with it\u2019s children and swapping if neccesary (or [[Heapify]])"),K=u(),y=p("pre"),this.h()},l(n){h=e(n,"H1",{});var t=o(h);N=i(t,"Heap"),t.forEach(a),g=r(n),w=e(n,"P",{});var wn=o(w);O=i(wn,"A heap is a complete binary tree where the any given node is smaller/bigger than it\u2019s descendents depending if it\u2019s a min/max heap"),wn.forEach(a),T=r(n),v=e(n,"H3",{});var vn=o(v);Q=i(vn,"Heap represented as array"),vn.forEach(a),j=r(n),_=e(n,"P",{});var _n=o(_);V=i(_n,"A heap can easily be represented as an array:"),_n.forEach(a),z=r(n),k=e(n,"UL",{});var m=o(k);H=e(m,"LI",{});var xn=o(H);W=i(xn,"add in array level by level"),xn.forEach(a),X=r(m),L=e(m,"LI",{});var In=o(L);Y=i(In,"if a given node is at index i to find the parent of a node: p = (i - 1) / 2 (floor value of i/2)"),In.forEach(a),Z=r(m),C=e(m,"LI",{});var bn=o(C);$=i(bn,"left chlid = 2 * i + 1"),bn.forEach(a),nn=r(m),A=e(m,"LI",{});var En=o(A);an=i(En,"right child = 2 * i + 2"),En.forEach(a),sn=r(m),P=e(m,"LI",{});var Hn=o(P);tn=i(Hn,"all leaf nodes are in the last half of the array"),Hn.forEach(a),m.forEach(a),B=r(n),x=e(n,"H3",{});var Ln=o(x);pn=i(Ln,"Insert a value in the heap"),Ln.forEach(a),D=r(n),d=e(n,"UL",{});var b=o(d);S=e(b,"LI",{});var Cn=o(S);en=i(Cn,"add element at the end of array"),Cn.forEach(a),on=r(b),M=e(b,"LI",{});var An=o(M);ln=i(An,"compare with parent and swap if it\u2019s smaller/bigger"),An.forEach(a),cn=r(b),G=e(b,"LI",{});var Pn=o(G);un=i(Pn,"repeat for all parents of that node"),Pn.forEach(a),b.forEach(a),F=r(n),I=e(n,"H3",{});var Sn=o(I);rn=i(Sn,"Extract min/max value from heap"),Sn.forEach(a),J=r(n),f=e(n,"UL",{});var E=o(f);U=e(E,"LI",{});var Mn=o(U);kn=i(Mn,"get value from root"),Mn.forEach(a),dn=r(E),q=e(E,"LI",{});var Gn=o(q);fn=i(Gn,"bring the right-most leaf(last element of array) in the root"),Gn.forEach(a),mn=r(E),R=e(E,"LI",{});var Un=o(R);hn=i(Un,"push the element down by comparing with it\u2019s children and swapping if neccesary (or [[Heapify]])"),Un.forEach(a),E.forEach(a),K=r(n),y=e(n,"PRE",{class:!0});var gn=o(y);gn.forEach(a),this.h()},h(){Bn(y,"class","language-cs")},m(n,t){l(n,h,t),s(h,N),l(n,g,t),l(n,w,t),s(w,O),l(n,T,t),l(n,v,t),s(v,Q),l(n,j,t),l(n,_,t),s(_,V),l(n,z,t),l(n,k,t),s(k,H),s(H,W),s(k,X),s(k,L),s(L,Y),s(k,Z),s(k,C),s(C,$),s(k,nn),s(k,A),s(A,an),s(k,sn),s(k,P),s(P,tn),l(n,B,t),l(n,x,t),s(x,pn),l(n,D,t),l(n,d,t),s(d,S),s(S,en),s(d,on),s(d,M),s(M,ln),s(d,cn),s(d,G),s(G,un),l(n,F,t),l(n,I,t),s(I,rn),l(n,J,t),l(n,f,t),s(f,U),s(U,kn),s(f,dn),s(f,q),s(q,fn),s(f,mn),s(f,R),s(R,hn),l(n,K,t),l(n,y,t),y.innerHTML=Rn},p:yn,i:yn,o:yn,d(n){n&&a(h),n&&a(g),n&&a(w),n&&a(T),n&&a(v),n&&a(j),n&&a(_),n&&a(z),n&&a(k),n&&a(B),n&&a(x),n&&a(D),n&&a(d),n&&a(F),n&&a(I),n&&a(J),n&&a(f),n&&a(K),n&&a(y)}}}const Jn={title:"Heap",tags:["data-structure"]};class Kn extends Tn{constructor(h){super(),jn(this,h,null,Dn,zn,{})}}export{Kn as default,Jn as metadata};

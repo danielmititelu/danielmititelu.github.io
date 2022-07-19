@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-52bfdee6.css">
-	<link rel="modulepreload" href="/_app/immutable/start-7cfe7d95.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-d3fa6a4c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-301884e2.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/algorithms/dijkstra-algorithm.md-8bc481ce.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section class="min-h-screen flex flex-col"><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" width="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto"><h1>Dijkstra Algorithm</h1>
-<p>Greedy algorithm used to find the shortest path in a weighted graph.</p>
-<p>Undirected Single source shortest paths with positive integer weights in linear time</p>
-<ul><li><p>Time complexity: O(V + Elog(E))</p></li>
-<li><p>Space complexity: O(V + E)</p></li></ul>
-<p>Restrictions: only for non-decreasing weights (all weights &gt;= 0)</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">Dijkstra</span><span class="token punctuation">(</span>
+import{S as yn,i as vn,s as _n,l as p,u as i,a as u,m as e,p as o,v as k,h as s,c as r,q as v,b as c,H as a,n as $}from"../../chunks/index-d3fa6a4c.js";function En(hn){let m,T,j,_,G,q,E,M,I,d,D,H,W,z,L,P,K,V,x,Q,O,h,fn=`<code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">Dijkstra</span><span class="token punctuation">(</span>
     <span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span> dest<span class="token punctuation">,</span> <span class="token keyword">int</span> dist<span class="token punctuation">)</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">,</span> <span class="token keyword">int</span> source
     <span class="token comment">/*, int target*/</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -71,44 +44,4 @@
 
     <span class="token comment">// if we need a target node</span>
     <span class="token comment">// return -1;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h2>Problems</h2>
-<ul><li><a href="https://leetcode.com/problems/network-delay-time/" rel="nofollow">https://leetcode.com/problems/network-delay-time/</a></li>
-<li><a href="https://leetcode.com/problems/path-with-maximum-probability/" rel="nofollow">https://leetcode.com/problems/path-with-maximum-probability/</a></li>
-<li><a href="https://leetcode.com/problems/cheapest-flights-within-k-stops/" rel="nofollow">https://leetcode.com/problems/cheapest-flights-within-k-stops/</a></li></ul></main>
-	<footer class="mx-auto mt-auto"><p class="flex items-center">Created with 
-        <svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
-	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
-	c-2.4,3.6-4,7.6-4.7,11.8c-1.6,8.9,0.5,18.1,5.7,25.4c11,15.7,32.6,20.3,48.2,10.4l27.5-17.5c7.5-4.7,12.7-12.4,14.2-21.1
-	c1.3-7.3,0.2-14.8-3.3-21.3c2.4-3.6,4-7.6,4.7-11.8C99.2,32.1,97.1,22.9,91.8,15.6"></path><path class="st1" d="M40.9,103.9c-8.9,2.3-18.2-1.2-23.4-8.7c-3.2-4.4-4.4-9.9-3.5-15.3c0.2-0.9,0.4-1.7,0.6-2.6l0.5-1.6l1.4,1
-	c3.3,2.4,6.9,4.2,10.8,5.4l1,0.3l-0.1,1c-0.1,1.4,0.3,2.9,1.1,4.1c1.6,2.3,4.4,3.4,7.1,2.7c0.6-0.2,1.2-0.4,1.7-0.7L65.5,72
-	c1.4-0.9,2.3-2.2,2.6-3.8c0.3-1.6-0.1-3.3-1-4.6c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7l-10.5,6.7
-	c-1.7,1.1-3.6,1.9-5.6,2.4c-8.9,2.3-18.2-1.2-23.4-8.7c-3.1-4.4-4.4-9.9-3.4-15.3c0.9-5.2,4.1-9.9,8.6-12.7l27.5-17.5
-	c1.7-1.1,3.6-1.9,5.6-2.5c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.2,0.9-0.4,1.7-0.7,2.6l-0.5,1.6l-1.4-1
-	c-3.3-2.4-6.9-4.2-10.8-5.4l-1-0.3l0.1-1c0.1-1.4-0.3-2.9-1.1-4.1c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7L32.4,46.1
-	c-1.4,0.9-2.3,2.2-2.6,3.8s0.1,3.3,1,4.6c1.6,2.3,4.4,3.3,7.1,2.6c0.6-0.2,1.2-0.4,1.7-0.7l10.5-6.7c1.7-1.1,3.6-1.9,5.6-2.5
-	c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-27.5,17.5C44.8,102.5,42.9,103.3,40.9,103.9"></path></svg>
-        by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-sveltekit-hydrate="322dl3">
-		import { start } from "/_app/immutable/start-7cfe7d95.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="322dl3"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 4],
-				params: {},
-				routeId: "algorithms/dijkstra-algorithm"
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`,U,b,B,C,l,N,f,F,J,A,w,X,Y,S,y,Z;return{c(){m=p("h1"),T=i("Dijkstra Algorithm"),j=u(),_=p("p"),G=i("Greedy algorithm used to find the shortest path in a weighted graph."),q=u(),E=p("p"),M=i("Undirected Single source shortest paths with positive integer weights in linear time"),I=u(),d=p("ul"),D=p("li"),H=p("p"),W=i("Time complexity: O(V + Elog(E))"),z=u(),L=p("li"),P=p("p"),K=i("Space complexity: O(V + E)"),V=u(),x=p("p"),Q=i("Restrictions: only for non-decreasing weights (all weights >= 0)"),O=u(),h=p("pre"),U=u(),b=p("h2"),B=i("Problems"),C=u(),l=p("ul"),N=p("li"),f=p("a"),F=i("https://leetcode.com/problems/network-delay-time/"),J=u(),A=p("li"),w=p("a"),X=i("https://leetcode.com/problems/path-with-maximum-probability/"),Y=u(),S=p("li"),y=p("a"),Z=i("https://leetcode.com/problems/cheapest-flights-within-k-stops/"),this.h()},l(n){m=e(n,"H1",{});var t=o(m);T=k(t,"Dijkstra Algorithm"),t.forEach(s),j=r(n),_=e(n,"P",{});var nn=o(_);G=k(nn,"Greedy algorithm used to find the shortest path in a weighted graph."),nn.forEach(s),q=r(n),E=e(n,"P",{});var sn=o(E);M=k(sn,"Undirected Single source shortest paths with positive integer weights in linear time"),sn.forEach(s),I=r(n),d=e(n,"UL",{});var R=o(d);D=e(R,"LI",{});var an=o(D);H=e(an,"P",{});var tn=o(H);W=k(tn,"Time complexity: O(V + Elog(E))"),tn.forEach(s),an.forEach(s),z=r(R),L=e(R,"LI",{});var pn=o(L);P=e(pn,"P",{});var en=o(P);K=k(en,"Space complexity: O(V + E)"),en.forEach(s),pn.forEach(s),R.forEach(s),V=r(n),x=e(n,"P",{});var on=o(x);Q=k(on,"Restrictions: only for non-decreasing weights (all weights >= 0)"),on.forEach(s),O=r(n),h=e(n,"PRE",{class:!0});var wn=o(h);wn.forEach(s),U=r(n),b=e(n,"H2",{});var cn=o(b);B=k(cn,"Problems"),cn.forEach(s),C=r(n),l=e(n,"UL",{});var g=o(l);N=e(g,"LI",{});var ln=o(N);f=e(ln,"A",{href:!0,rel:!0});var un=o(f);F=k(un,"https://leetcode.com/problems/network-delay-time/"),un.forEach(s),ln.forEach(s),J=r(g),A=e(g,"LI",{});var kn=o(A);w=e(kn,"A",{href:!0,rel:!0});var rn=o(w);X=k(rn,"https://leetcode.com/problems/path-with-maximum-probability/"),rn.forEach(s),kn.forEach(s),Y=r(g),S=e(g,"LI",{});var mn=o(S);y=e(mn,"A",{href:!0,rel:!0});var dn=o(y);Z=k(dn,"https://leetcode.com/problems/cheapest-flights-within-k-stops/"),dn.forEach(s),mn.forEach(s),g.forEach(s),this.h()},h(){v(h,"class","language-cs"),v(f,"href","https://leetcode.com/problems/network-delay-time/"),v(f,"rel","nofollow"),v(w,"href","https://leetcode.com/problems/path-with-maximum-probability/"),v(w,"rel","nofollow"),v(y,"href","https://leetcode.com/problems/cheapest-flights-within-k-stops/"),v(y,"rel","nofollow")},m(n,t){c(n,m,t),a(m,T),c(n,j,t),c(n,_,t),a(_,G),c(n,q,t),c(n,E,t),a(E,M),c(n,I,t),c(n,d,t),a(d,D),a(D,H),a(H,W),a(d,z),a(d,L),a(L,P),a(P,K),c(n,V,t),c(n,x,t),a(x,Q),c(n,O,t),c(n,h,t),h.innerHTML=fn,c(n,U,t),c(n,b,t),a(b,B),c(n,C,t),c(n,l,t),a(l,N),a(N,f),a(f,F),a(l,J),a(l,A),a(A,w),a(w,X),a(l,Y),a(l,S),a(S,y),a(y,Z)},p:$,i:$,o:$,d(n){n&&s(m),n&&s(j),n&&s(_),n&&s(q),n&&s(E),n&&s(I),n&&s(d),n&&s(V),n&&s(x),n&&s(O),n&&s(h),n&&s(U),n&&s(b),n&&s(C),n&&s(l)}}}const bn={title:"Dijkstra's Algorithm",tags:["algorithm"]};class gn extends yn{constructor(m){super(),vn(this,m,null,En,_n,{})}}export{gn as default,bn as metadata};

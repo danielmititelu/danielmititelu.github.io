@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-52bfdee6.css">
-	<link rel="modulepreload" href="/_app/immutable/start-7cfe7d95.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-d3fa6a4c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-301884e2.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/data-structures/hashmap.md-2e8313eb.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section class="min-h-screen flex flex-col"><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" width="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto"><h1>Hash map / Hash table</h1>
-<p>Time complexity: </p>
-<ul><li>average case: insert, lookup O(1)</li>
-<li>worst case: insert, lookup O(N)</li></ul>
-<p>A hash map, hash table or dictionary organizes data in key/value pairs with constant lookup time for the keys. It is similar to an array where indexes are used to access values but the key difference (no pun intended) is that any type of object can be used as the key and not just integers.</p>
-<p>In fact hash tables are built with array as the backing field but in order to support strings or custom object in keys a <code>hashing function</code> is used to convert the string/custom object to an integer index. </p>
-<p>One problem using hash functions is that two keys can convert to the same index, and here <code>hash colisions</code> appear. One way to solve this is in each element in array to store a linked list and everytime we get a hash collision we store the key/value pair in the next node in the likned list.</p>
-<p>Sample implementation:</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyHashMap</span>
+import{S as pn,i as en,s as on,l as e,u as o,a as y,m as c,p as l,v as u,h as s,c as w,q as cn,b as p,H as t,n as J}from"../../chunks/index-d3fa6a4c.js";function ln(sn){let k,B,I,h,L,E,i,v,S,V,x,T,H,f,q,O,r,z,_,A,D,j,d,R,N,g,U,C,b,F,P,m,an=`<code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyHashMap</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">private</span> <span class="token class-name">Node<span class="token punctuation">[</span><span class="token punctuation">]</span></span> _buckets<span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">int</span></span> _bucketCount<span class="token punctuation">;</span>
@@ -123,40 +94,4 @@
         Key <span class="token operator">=</span> key<span class="token punctuation">;</span>
         Value <span class="token operator">=</span> <span class="token keyword">value</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></main>
-	<footer class="mx-auto mt-auto"><p class="flex items-center">Created with 
-        <svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
-	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
-	c-2.4,3.6-4,7.6-4.7,11.8c-1.6,8.9,0.5,18.1,5.7,25.4c11,15.7,32.6,20.3,48.2,10.4l27.5-17.5c7.5-4.7,12.7-12.4,14.2-21.1
-	c1.3-7.3,0.2-14.8-3.3-21.3c2.4-3.6,4-7.6,4.7-11.8C99.2,32.1,97.1,22.9,91.8,15.6"></path><path class="st1" d="M40.9,103.9c-8.9,2.3-18.2-1.2-23.4-8.7c-3.2-4.4-4.4-9.9-3.5-15.3c0.2-0.9,0.4-1.7,0.6-2.6l0.5-1.6l1.4,1
-	c3.3,2.4,6.9,4.2,10.8,5.4l1,0.3l-0.1,1c-0.1,1.4,0.3,2.9,1.1,4.1c1.6,2.3,4.4,3.4,7.1,2.7c0.6-0.2,1.2-0.4,1.7-0.7L65.5,72
-	c1.4-0.9,2.3-2.2,2.6-3.8c0.3-1.6-0.1-3.3-1-4.6c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7l-10.5,6.7
-	c-1.7,1.1-3.6,1.9-5.6,2.4c-8.9,2.3-18.2-1.2-23.4-8.7c-3.1-4.4-4.4-9.9-3.4-15.3c0.9-5.2,4.1-9.9,8.6-12.7l27.5-17.5
-	c1.7-1.1,3.6-1.9,5.6-2.5c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.2,0.9-0.4,1.7-0.7,2.6l-0.5,1.6l-1.4-1
-	c-3.3-2.4-6.9-4.2-10.8-5.4l-1-0.3l0.1-1c0.1-1.4-0.3-2.9-1.1-4.1c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7L32.4,46.1
-	c-1.4,0.9-2.3,2.2-2.6,3.8s0.1,3.3,1,4.6c1.6,2.3,4.4,3.3,7.1,2.6c0.6-0.2,1.2-0.4,1.7-0.7l10.5-6.7c1.7-1.1,3.6-1.9,5.6-2.5
-	c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-27.5,17.5C44.8,102.5,42.9,103.3,40.9,103.9"></path></svg>
-        by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-sveltekit-hydrate="vztlek">
-		import { start } from "/_app/immutable/start-7cfe7d95.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="vztlek"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 21],
-				params: {},
-				routeId: "data-structures/hashmap"
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`;return{c(){k=e("h1"),B=o("Hash map / Hash table"),I=y(),h=e("p"),L=o("Time complexity:"),E=y(),i=e("ul"),v=e("li"),S=o("average case: insert, lookup O(1)"),V=y(),x=e("li"),T=o("worst case: insert, lookup O(N)"),H=y(),f=e("p"),q=o("A hash map, hash table or dictionary organizes data in key/value pairs with constant lookup time for the keys. It is similar to an array where indexes are used to access values but the key difference (no pun intended) is that any type of object can be used as the key and not just integers."),O=y(),r=e("p"),z=o("In fact hash tables are built with array as the backing field but in order to support strings or custom object in keys a "),_=e("code"),A=o("hashing function"),D=o(" is used to convert the string/custom object to an integer index."),j=y(),d=e("p"),R=o("One problem using hash functions is that two keys can convert to the same index, and here "),N=e("code"),g=o("hash colisions"),U=o(" appear. One way to solve this is in each element in array to store a linked list and everytime we get a hash collision we store the key/value pair in the next node in the likned list."),C=y(),b=e("p"),F=o("Sample implementation:"),P=y(),m=e("pre"),this.h()},l(n){k=c(n,"H1",{});var a=l(k);B=u(a,"Hash map / Hash table"),a.forEach(s),I=w(n),h=c(n,"P",{});var Q=l(h);L=u(Q,"Time complexity:"),Q.forEach(s),E=w(n),i=c(n,"UL",{});var K=l(i);v=c(K,"LI",{});var W=l(v);S=u(W,"average case: insert, lookup O(1)"),W.forEach(s),V=w(K),x=c(K,"LI",{});var X=l(x);T=u(X,"worst case: insert, lookup O(N)"),X.forEach(s),K.forEach(s),H=w(n),f=c(n,"P",{});var Y=l(f);q=u(Y,"A hash map, hash table or dictionary organizes data in key/value pairs with constant lookup time for the keys. It is similar to an array where indexes are used to access values but the key difference (no pun intended) is that any type of object can be used as the key and not just integers."),Y.forEach(s),O=w(n),r=c(n,"P",{});var G=l(r);z=u(G,"In fact hash tables are built with array as the backing field but in order to support strings or custom object in keys a "),_=c(G,"CODE",{});var Z=l(_);A=u(Z,"hashing function"),Z.forEach(s),D=u(G," is used to convert the string/custom object to an integer index."),G.forEach(s),j=w(n),d=c(n,"P",{});var M=l(d);R=u(M,"One problem using hash functions is that two keys can convert to the same index, and here "),N=c(M,"CODE",{});var $=l(N);g=u($,"hash colisions"),$.forEach(s),U=u(M," appear. One way to solve this is in each element in array to store a linked list and everytime we get a hash collision we store the key/value pair in the next node in the likned list."),M.forEach(s),C=w(n),b=c(n,"P",{});var nn=l(b);F=u(nn,"Sample implementation:"),nn.forEach(s),P=w(n),m=c(n,"PRE",{class:!0});var tn=l(m);tn.forEach(s),this.h()},h(){cn(m,"class","language-cs")},m(n,a){p(n,k,a),t(k,B),p(n,I,a),p(n,h,a),t(h,L),p(n,E,a),p(n,i,a),t(i,v),t(v,S),t(i,V),t(i,x),t(x,T),p(n,H,a),p(n,f,a),t(f,q),p(n,O,a),p(n,r,a),t(r,z),t(r,_),t(_,A),t(r,D),p(n,j,a),p(n,d,a),t(d,R),t(d,N),t(N,g),t(d,U),p(n,C,a),p(n,b,a),t(b,F),p(n,P,a),p(n,m,a),m.innerHTML=an},p:J,i:J,o:J,d(n){n&&s(k),n&&s(I),n&&s(h),n&&s(E),n&&s(i),n&&s(H),n&&s(f),n&&s(O),n&&s(r),n&&s(j),n&&s(d),n&&s(C),n&&s(b),n&&s(P),n&&s(m)}}}const kn={title:"Hash map",tags:["data-structure"]};class rn extends pn{constructor(k){super(),en(this,k,null,ln,on,{})}}export{rn as default,kn as metadata};

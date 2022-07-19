@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-52bfdee6.css">
-	<link rel="modulepreload" href="/_app/immutable/start-7cfe7d95.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-d3fa6a4c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-301884e2.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/algorithms/kruskal-algorithm.md-560ce952.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section class="min-h-screen flex flex-col"><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" width="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto"><h1>Kruskal’s Algorithm</h1>
-<p>Greedy alghorithm used to find the minimum spanning tree of a given graph</p>
-<ul><li><p>Time complexity: O(Elog(E))</p></li>
-<li><p>Space complexity: O(E + V)</p></li></ul>
-<h2>Minimum spanning tree</h2>
-<p>A Minimum spanning tree(MST for short) is a subgraph of a cyclic, undirected graph that will connected all the vertices and contain no cycles.</p>
-<p>Number of edges of the MST is equal to V - 1 where V is the number of vertices of the bigger graph</p>
-<h2>Code example</h2>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name"><span class="token punctuation">(</span><span class="token keyword">int</span> cost<span class="token punctuation">,</span> Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span> node<span class="token punctuation">,</span> <span class="token keyword">int</span> dist<span class="token punctuation">)</span><span class="token punctuation">></span><span class="token punctuation">></span><span class="token punctuation">)</span></span> <span class="token function">Kruskal</span><span class="token punctuation">(</span>
+import{S as gn,i as _n,s as En,l as o,u as l,a as u,m as e,p as c,v as i,h as s,c as k,q as T,b as p,H as t,n as sn}from"../../chunks/index-d3fa6a4c.js";function bn(yn){let r,G,K,w,N,C,d,x,L,R,z,A,S,B,H,v,J,V,g,Q,q,_,W,I,E,X,O,f,wn=`<code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name"><span class="token punctuation">(</span><span class="token keyword">int</span> cost<span class="token punctuation">,</span> Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span> node<span class="token punctuation">,</span> <span class="token keyword">int</span> dist<span class="token punctuation">)</span><span class="token punctuation">></span><span class="token punctuation">></span><span class="token punctuation">)</span></span> <span class="token function">Kruskal</span><span class="token punctuation">(</span>
     <span class="token class-name">List<span class="token punctuation">&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span> source<span class="token punctuation">,</span> <span class="token keyword">int</span> dest<span class="token punctuation">,</span> <span class="token keyword">int</span> dist<span class="token punctuation">)</span><span class="token punctuation">></span></span> edges<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> length<span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token comment">// a disjoined set is used for finding cycles</span>
@@ -61,43 +32,4 @@
     <span class="token punctuation">&#125;</span>
 
     <span class="token keyword">return</span> <span class="token punctuation">(</span>cost<span class="token punctuation">,</span> mst<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h2>Problems</h2>
-<ul><li><a href="https://leetcode.com/problems/connecting-cities-with-minimum-cost/" rel="nofollow">https://leetcode.com/problems/connecting-cities-with-minimum-cost/</a></li>
-<li><a href="https://leetcode.com/problems/min-cost-to-connect-all-points/" rel="nofollow">https://leetcode.com/problems/min-cost-to-connect-all-points/</a></li></ul></main>
-	<footer class="mx-auto mt-auto"><p class="flex items-center">Created with 
-        <svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
-	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
-	c-2.4,3.6-4,7.6-4.7,11.8c-1.6,8.9,0.5,18.1,5.7,25.4c11,15.7,32.6,20.3,48.2,10.4l27.5-17.5c7.5-4.7,12.7-12.4,14.2-21.1
-	c1.3-7.3,0.2-14.8-3.3-21.3c2.4-3.6,4-7.6,4.7-11.8C99.2,32.1,97.1,22.9,91.8,15.6"></path><path class="st1" d="M40.9,103.9c-8.9,2.3-18.2-1.2-23.4-8.7c-3.2-4.4-4.4-9.9-3.5-15.3c0.2-0.9,0.4-1.7,0.6-2.6l0.5-1.6l1.4,1
-	c3.3,2.4,6.9,4.2,10.8,5.4l1,0.3l-0.1,1c-0.1,1.4,0.3,2.9,1.1,4.1c1.6,2.3,4.4,3.4,7.1,2.7c0.6-0.2,1.2-0.4,1.7-0.7L65.5,72
-	c1.4-0.9,2.3-2.2,2.6-3.8c0.3-1.6-0.1-3.3-1-4.6c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7l-10.5,6.7
-	c-1.7,1.1-3.6,1.9-5.6,2.4c-8.9,2.3-18.2-1.2-23.4-8.7c-3.1-4.4-4.4-9.9-3.4-15.3c0.9-5.2,4.1-9.9,8.6-12.7l27.5-17.5
-	c1.7-1.1,3.6-1.9,5.6-2.5c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.2,0.9-0.4,1.7-0.7,2.6l-0.5,1.6l-1.4-1
-	c-3.3-2.4-6.9-4.2-10.8-5.4l-1-0.3l0.1-1c0.1-1.4-0.3-2.9-1.1-4.1c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7L32.4,46.1
-	c-1.4,0.9-2.3,2.2-2.6,3.8s0.1,3.3,1,4.6c1.6,2.3,4.4,3.3,7.1,2.6c0.6-0.2,1.2-0.4,1.7-0.7l10.5-6.7c1.7-1.1,3.6-1.9,5.6-2.5
-	c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-27.5,17.5C44.8,102.5,42.9,103.3,40.9,103.9"></path></svg>
-        by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-sveltekit-hydrate="zw76gt">
-		import { start } from "/_app/immutable/start-7cfe7d95.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="zw76gt"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 6],
-				params: {},
-				routeId: "algorithms/kruskal-algorithm"
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`,D,b,Y,U,m,M,h,Z,$,P,y,nn;return{c(){r=o("h1"),G=l("Kruskal\u2019s Algorithm"),K=u(),w=o("p"),N=l("Greedy alghorithm used to find the minimum spanning tree of a given graph"),C=u(),d=o("ul"),x=o("li"),L=o("p"),R=l("Time complexity: O(Elog(E))"),z=u(),A=o("li"),S=o("p"),B=l("Space complexity: O(E + V)"),H=u(),v=o("h2"),J=l("Minimum spanning tree"),V=u(),g=o("p"),Q=l("A Minimum spanning tree(MST for short) is a subgraph of a cyclic, undirected graph that will connected all the vertices and contain no cycles."),q=u(),_=o("p"),W=l("Number of edges of the MST is equal to V - 1 where V is the number of vertices of the bigger graph"),I=u(),E=o("h2"),X=l("Code example"),O=u(),f=o("pre"),D=u(),b=o("h2"),Y=l("Problems"),U=u(),m=o("ul"),M=o("li"),h=o("a"),Z=l("https://leetcode.com/problems/connecting-cities-with-minimum-cost/"),$=u(),P=o("li"),y=o("a"),nn=l("https://leetcode.com/problems/min-cost-to-connect-all-points/"),this.h()},l(n){r=e(n,"H1",{});var a=c(r);G=i(a,"Kruskal\u2019s Algorithm"),a.forEach(s),K=k(n),w=e(n,"P",{});var an=c(w);N=i(an,"Greedy alghorithm used to find the minimum spanning tree of a given graph"),an.forEach(s),C=k(n),d=e(n,"UL",{});var j=c(d);x=e(j,"LI",{});var tn=c(x);L=e(tn,"P",{});var pn=c(L);R=i(pn,"Time complexity: O(Elog(E))"),pn.forEach(s),tn.forEach(s),z=k(j),A=e(j,"LI",{});var on=c(A);S=e(on,"P",{});var en=c(S);B=i(en,"Space complexity: O(E + V)"),en.forEach(s),on.forEach(s),j.forEach(s),H=k(n),v=e(n,"H2",{});var cn=c(v);J=i(cn,"Minimum spanning tree"),cn.forEach(s),V=k(n),g=e(n,"P",{});var ln=c(g);Q=i(ln,"A Minimum spanning tree(MST for short) is a subgraph of a cyclic, undirected graph that will connected all the vertices and contain no cycles."),ln.forEach(s),q=k(n),_=e(n,"P",{});var un=c(_);W=i(un,"Number of edges of the MST is equal to V - 1 where V is the number of vertices of the bigger graph"),un.forEach(s),I=k(n),E=e(n,"H2",{});var kn=c(E);X=i(kn,"Code example"),kn.forEach(s),O=k(n),f=e(n,"PRE",{class:!0});var vn=c(f);vn.forEach(s),D=k(n),b=e(n,"H2",{});var rn=c(b);Y=i(rn,"Problems"),rn.forEach(s),U=k(n),m=e(n,"UL",{});var F=c(m);M=e(F,"LI",{});var dn=c(M);h=e(dn,"A",{href:!0,rel:!0});var mn=c(h);Z=i(mn,"https://leetcode.com/problems/connecting-cities-with-minimum-cost/"),mn.forEach(s),dn.forEach(s),$=k(F),P=e(F,"LI",{});var fn=c(P);y=e(fn,"A",{href:!0,rel:!0});var hn=c(y);nn=i(hn,"https://leetcode.com/problems/min-cost-to-connect-all-points/"),hn.forEach(s),fn.forEach(s),F.forEach(s),this.h()},h(){T(f,"class","language-cs"),T(h,"href","https://leetcode.com/problems/connecting-cities-with-minimum-cost/"),T(h,"rel","nofollow"),T(y,"href","https://leetcode.com/problems/min-cost-to-connect-all-points/"),T(y,"rel","nofollow")},m(n,a){p(n,r,a),t(r,G),p(n,K,a),p(n,w,a),t(w,N),p(n,C,a),p(n,d,a),t(d,x),t(x,L),t(L,R),t(d,z),t(d,A),t(A,S),t(S,B),p(n,H,a),p(n,v,a),t(v,J),p(n,V,a),p(n,g,a),t(g,Q),p(n,q,a),p(n,_,a),t(_,W),p(n,I,a),p(n,E,a),t(E,X),p(n,O,a),p(n,f,a),f.innerHTML=wn,p(n,D,a),p(n,b,a),t(b,Y),p(n,U,a),p(n,m,a),t(m,M),t(M,h),t(h,Z),t(m,$),t(m,P),t(P,y),t(y,nn)},p:sn,i:sn,o:sn,d(n){n&&s(r),n&&s(K),n&&s(w),n&&s(C),n&&s(d),n&&s(H),n&&s(v),n&&s(V),n&&s(g),n&&s(q),n&&s(_),n&&s(I),n&&s(E),n&&s(O),n&&s(f),n&&s(D),n&&s(b),n&&s(U),n&&s(m)}}}const Ln={title:"Kruskal's Algorithm",tags:["algorithm"]};class An extends gn{constructor(r){super(),_n(this,r,null,bn,En,{})}}export{An as default,Ln as metadata};

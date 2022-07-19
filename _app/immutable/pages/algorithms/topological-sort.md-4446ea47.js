@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-52bfdee6.css">
-	<link rel="modulepreload" href="/_app/immutable/start-7cfe7d95.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-d3fa6a4c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-301884e2.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/algorithms/topological-sort.md-4446ea47.js">
-	</head>
-	<body class="m-0">
-		<div id="svelte">
-
-
-<section class="min-h-screen flex flex-col"><div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto" href="/">Home </a>
-        <a class="my-auto" href="/notes">Notes </a>
-        <a class="my-auto ml-auto" href="https://github.com/danielmititelu/danielmititelu.github.io"><svg height="32" width="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="fill-white hover:fill-gray-300"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></div></div>
-	<main class="max-w-screen-md mx-auto"><h1>Topological sort</h1>
-<p>Time Complexity: O(V+E) // V = vertex (or node), E = edge</p>
-<p>Sort a graph so that any node on the left will point only to the nodes in the right</p>
-<ul><li>cannot be done for graphs that have a cycle</li>
-<li>should be a DAG(directed acyclic graph)</li></ul>
-<p>Khan’s algorithm</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">TopologicalSort</span><span class="token punctuation">(</span><span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+import{S as sn,i as an,s as tn,l as o,u as i,a as k,m as e,p as c,v as r,h as s,c as d,q as U,b as t,H as p,n as M}from"../../chunks/index-d3fa6a4c.js";function pn(Z){let l,O,x,w,S,b,h,H,L,u,E,P,V,g,N,T,m,R,D,y,$=`<code class="language-cs"><span class="token keyword">private</span> <span class="token return-type class-name">List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span> <span class="token function">TopologicalSort</span><span class="token punctuation">(</span><span class="token class-name">Dictionary<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> List<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span><span class="token punctuation">></span></span> graph<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token class-name"><span class="token keyword">var</span></span> indegrees <span class="token operator">=</span> <span class="token function">CountIndegrees</span><span class="token punctuation">(</span>graph<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token class-name"><span class="token keyword">var</span></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Queue<span class="token punctuation">&lt;</span><span class="token keyword">int</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
@@ -65,42 +38,4 @@
     <span class="token punctuation">&#125;</span>
 
     <span class="token keyword">return</span> indegrees<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3>References</h3>
-<ul><li><a href="https://leetcode.com/problems/course-schedule/" rel="nofollow">https://leetcode.com/problems/course-schedule/</a></li></ul></main>
-	<footer class="mx-auto mt-auto"><p class="flex items-center">Created with 
-        <svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
-	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
-	c-2.4,3.6-4,7.6-4.7,11.8c-1.6,8.9,0.5,18.1,5.7,25.4c11,15.7,32.6,20.3,48.2,10.4l27.5-17.5c7.5-4.7,12.7-12.4,14.2-21.1
-	c1.3-7.3,0.2-14.8-3.3-21.3c2.4-3.6,4-7.6,4.7-11.8C99.2,32.1,97.1,22.9,91.8,15.6"></path><path class="st1" d="M40.9,103.9c-8.9,2.3-18.2-1.2-23.4-8.7c-3.2-4.4-4.4-9.9-3.5-15.3c0.2-0.9,0.4-1.7,0.6-2.6l0.5-1.6l1.4,1
-	c3.3,2.4,6.9,4.2,10.8,5.4l1,0.3l-0.1,1c-0.1,1.4,0.3,2.9,1.1,4.1c1.6,2.3,4.4,3.4,7.1,2.7c0.6-0.2,1.2-0.4,1.7-0.7L65.5,72
-	c1.4-0.9,2.3-2.2,2.6-3.8c0.3-1.6-0.1-3.3-1-4.6c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7l-10.5,6.7
-	c-1.7,1.1-3.6,1.9-5.6,2.4c-8.9,2.3-18.2-1.2-23.4-8.7c-3.1-4.4-4.4-9.9-3.4-15.3c0.9-5.2,4.1-9.9,8.6-12.7l27.5-17.5
-	c1.7-1.1,3.6-1.9,5.6-2.5c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.2,0.9-0.4,1.7-0.7,2.6l-0.5,1.6l-1.4-1
-	c-3.3-2.4-6.9-4.2-10.8-5.4l-1-0.3l0.1-1c0.1-1.4-0.3-2.9-1.1-4.1c-1.6-2.3-4.4-3.3-7.1-2.6c-0.6,0.2-1.2,0.4-1.7,0.7L32.4,46.1
-	c-1.4,0.9-2.3,2.2-2.6,3.8s0.1,3.3,1,4.6c1.6,2.3,4.4,3.3,7.1,2.6c0.6-0.2,1.2-0.4,1.7-0.7l10.5-6.7c1.7-1.1,3.6-1.9,5.6-2.5
-	c8.9-2.3,18.2,1.2,23.4,8.7c3.2,4.4,4.4,9.9,3.5,15.3c-0.9,5.2-4.1,9.9-8.6,12.7l-27.5,17.5C44.8,102.5,42.9,103.3,40.9,103.9"></path></svg>
-        by Dumitru-Daniel Mititelu
-    </p></footer></section>
-
-
-		<script type="module" data-sveltekit-hydrate="olmake">
-		import { start } from "/_app/immutable/start-7cfe7d95.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="olmake"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 10],
-				params: {},
-				routeId: "algorithms/topological-sort"
-			}
-		});
-	</script></div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`,A,v,G,C,_,q,f,K;return{c(){l=o("h1"),O=i("Topological sort"),x=k(),w=o("p"),S=i("Time Complexity: O(V+E) // V = vertex (or node), E = edge"),b=k(),h=o("p"),H=i("Sort a graph so that any node on the left will point only to the nodes in the right"),L=k(),u=o("ul"),E=o("li"),P=i("cannot be done for graphs that have a cycle"),V=k(),g=o("li"),N=i("should be a DAG(directed acyclic graph)"),T=k(),m=o("p"),R=i("Khan\u2019s algorithm"),D=k(),y=o("pre"),A=k(),v=o("h3"),G=i("References"),C=k(),_=o("ul"),q=o("li"),f=o("a"),K=i("https://leetcode.com/problems/course-schedule/"),this.h()},l(n){l=e(n,"H1",{});var a=c(l);O=r(a,"Topological sort"),a.forEach(s),x=d(n),w=e(n,"P",{});var Q=c(w);S=r(Q,"Time Complexity: O(V+E) // V = vertex (or node), E = edge"),Q.forEach(s),b=d(n),h=e(n,"P",{});var j=c(h);H=r(j,"Sort a graph so that any node on the left will point only to the nodes in the right"),j.forEach(s),L=d(n),u=e(n,"UL",{});var I=c(u);E=e(I,"LI",{});var z=c(E);P=r(z,"cannot be done for graphs that have a cycle"),z.forEach(s),V=d(I),g=e(I,"LI",{});var B=c(g);N=r(B,"should be a DAG(directed acyclic graph)"),B.forEach(s),I.forEach(s),T=d(n),m=e(n,"P",{});var F=c(m);R=r(F,"Khan\u2019s algorithm"),F.forEach(s),D=d(n),y=e(n,"PRE",{class:!0});var nn=c(y);nn.forEach(s),A=d(n),v=e(n,"H3",{});var J=c(v);G=r(J,"References"),J.forEach(s),C=d(n),_=e(n,"UL",{});var W=c(_);q=e(W,"LI",{});var X=c(q);f=e(X,"A",{href:!0,rel:!0});var Y=c(f);K=r(Y,"https://leetcode.com/problems/course-schedule/"),Y.forEach(s),X.forEach(s),W.forEach(s),this.h()},h(){U(y,"class","language-cs"),U(f,"href","https://leetcode.com/problems/course-schedule/"),U(f,"rel","nofollow")},m(n,a){t(n,l,a),p(l,O),t(n,x,a),t(n,w,a),p(w,S),t(n,b,a),t(n,h,a),p(h,H),t(n,L,a),t(n,u,a),p(u,E),p(E,P),p(u,V),p(u,g),p(g,N),t(n,T,a),t(n,m,a),p(m,R),t(n,D,a),t(n,y,a),y.innerHTML=$,t(n,A,a),t(n,v,a),p(v,G),t(n,C,a),t(n,_,a),p(_,q),p(q,f),p(f,K)},p:M,i:M,o:M,d(n){n&&s(l),n&&s(x),n&&s(w),n&&s(b),n&&s(h),n&&s(L),n&&s(u),n&&s(T),n&&s(m),n&&s(D),n&&s(y),n&&s(A),n&&s(v),n&&s(C),n&&s(_)}}}const en={title:"Topological sort",tags:["algorithm"]};class cn extends sn{constructor(l){super(),an(this,l,null,pn,tn,{})}}export{cn as default,en as metadata};
