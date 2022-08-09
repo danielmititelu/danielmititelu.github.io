@@ -1,7 +1,3 @@
-<script>
-    import GithubIcon from "./Icons/GithubIcon.svelte";
-</script>
-
 <div class="top-0 w-full bg-slate-800 left-0 right-0">
     <div
         class="flex max-w-screen-md m-auto 
@@ -9,11 +5,5 @@
     >
         <a class="my-auto" href="/">Home </a>
         <a class="my-auto" href="/notes">Notes </a>
-        <a
-            class="my-auto ml-auto"
-            href="https://github.com/danielmititelu/danielmititelu.github.io"
-        >
-            <GithubIcon />
-        </a>
     </div>
 </div>

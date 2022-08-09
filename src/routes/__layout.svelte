@@ -6,7 +6,7 @@
 
 <section class="min-h-screen flex flex-col">
 	<Header />
-	<main class="max-w-screen-md mx-auto">
+	<main class="max-w-screen-md mx-auto px-3">
 		<slot />
 	</main>
 	<Footer />

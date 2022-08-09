@@ -1,6 +1,6 @@
 <svg
-    height="32"
-    width="32"
+    height="30"
+    width="30"
     aria-hidden="true"
     viewBox="0 0 16 16"
     version="1.1"

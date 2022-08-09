@@ -1,7 +1,7 @@
 /* Write your global styles here, in PostCSS syntax */
 @import "./code-highlight.css";
 
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -37,3 +37,24 @@ p, ul, li, li::marker {
     @apply text-xl font-light leading-normal tracking-normal text-white font-sans; 
 
 } 
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ul {
+    padding-inline-start: 40px;
+    list-style-type: disc;
+}
+
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+h1,h2,h3,h4,h5 {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    font-weight: bold;
+}
