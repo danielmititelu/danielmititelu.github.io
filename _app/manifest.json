@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-7cfe7d95.js",
+    "file": "immutable/start-dbe3020c.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
@@ -27,6 +27,7 @@
       "src/routes/cheatsheets/flexbox.md",
       "src/routes/cheatsheets/linux-commands.md",
       "src/routes/cheatsheets/svelte.md",
+      "src/routes/cheatsheets/vscode.md",
       "src/routes/data-structures/disjoint-sets.md",
       "src/routes/data-structures/hashmap.md",
       "src/routes/data-structures/heap.md",
@@ -39,274 +40,283 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "immutable/pages/__layout.svelte-301884e2.js",
+    "file": "immutable/pages/__layout.svelte-35124736.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ],
     "css": [
-      "immutable/assets/__layout-52bfdee6.css"
+      "immutable/assets/__layout-4d3ebc4b.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "immutable/error.svelte-366cf58d.js",
+    "file": "immutable/error.svelte-e2fa40fb.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/binary-tree-traversals.md": {
-    "file": "immutable/pages/algorithms/binary-tree-traversals.md-7bb883f0.js",
+    "file": "immutable/pages/algorithms/binary-tree-traversals.md-b33991f6.js",
     "src": "src/routes/algorithms/binary-tree-traversals.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/cycle-detection.md": {
-    "file": "immutable/pages/algorithms/cycle-detection.md-29f33a96.js",
+    "file": "immutable/pages/algorithms/cycle-detection.md-1d99c64e.js",
     "src": "src/routes/algorithms/cycle-detection.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/dijkstra-algorithm.md": {
-    "file": "immutable/pages/algorithms/dijkstra-algorithm.md-8bc481ce.js",
+    "file": "immutable/pages/algorithms/dijkstra-algorithm.md-50e7003e.js",
     "src": "src/routes/algorithms/dijkstra-algorithm.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/graph-traversals.md": {
-    "file": "immutable/pages/algorithms/graph-traversals.md-490aa30c.js",
+    "file": "immutable/pages/algorithms/graph-traversals.md-b6aea016.js",
     "src": "src/routes/algorithms/graph-traversals.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/kruskal-algorithm.md": {
-    "file": "immutable/pages/algorithms/kruskal-algorithm.md-560ce952.js",
+    "file": "immutable/pages/algorithms/kruskal-algorithm.md-3baaf7a7.js",
     "src": "src/routes/algorithms/kruskal-algorithm.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/multi-source-bfs.md": {
-    "file": "immutable/pages/algorithms/multi-source-bfs.md-922d1979.js",
+    "file": "immutable/pages/algorithms/multi-source-bfs.md-6514a437.js",
     "src": "src/routes/algorithms/multi-source-bfs.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/quick-select.md": {
-    "file": "immutable/pages/algorithms/quick-select.md-9efc8f1c.js",
+    "file": "immutable/pages/algorithms/quick-select.md-41ae8ada.js",
     "src": "src/routes/algorithms/quick-select.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/three-way-partitioning.md": {
-    "file": "immutable/pages/algorithms/three-way-partitioning.md-3970528f.js",
+    "file": "immutable/pages/algorithms/three-way-partitioning.md-1db257cf.js",
     "src": "src/routes/algorithms/three-way-partitioning.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/topological-sort.md": {
-    "file": "immutable/pages/algorithms/topological-sort.md-4446ea47.js",
+    "file": "immutable/pages/algorithms/topological-sort.md-779329f9.js",
     "src": "src/routes/algorithms/topological-sort.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/algorithms/voting-algo.md": {
-    "file": "immutable/pages/algorithms/voting-algo.md-da6c1b22.js",
+    "file": "immutable/pages/algorithms/voting-algo.md-d9cea896.js",
     "src": "src/routes/algorithms/voting-algo.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/blogs/bit-manipulation.md": {
-    "file": "immutable/pages/blogs/bit-manipulation.md-55ea6a79.js",
+    "file": "immutable/pages/blogs/bit-manipulation.md-f6b35e24.js",
     "src": "src/routes/blogs/bit-manipulation.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/blogs/cool-quotes.md": {
-    "file": "immutable/pages/blogs/cool-quotes.md-fb130b8e.js",
+    "file": "immutable/pages/blogs/cool-quotes.md-c34b9d89.js",
     "src": "src/routes/blogs/cool-quotes.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/blogs/graphs.md": {
-    "file": "immutable/pages/blogs/graphs.md-003608bb.js",
+    "file": "immutable/pages/blogs/graphs.md-21526d57.js",
     "src": "src/routes/blogs/graphs.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/blogs/system-design.md": {
-    "file": "immutable/pages/blogs/system-design.md-7101a675.js",
+    "file": "immutable/pages/blogs/system-design.md-6e02b012.js",
     "src": "src/routes/blogs/system-design.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/cheatsheets/ansible.md": {
-    "file": "immutable/pages/cheatsheets/ansible.md-1e5a586f.js",
+    "file": "immutable/pages/cheatsheets/ansible.md-e2f57246.js",
     "src": "src/routes/cheatsheets/ansible.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/cheatsheets/flexbox.md": {
-    "file": "immutable/pages/cheatsheets/flexbox.md-c0dfb035.js",
+    "file": "immutable/pages/cheatsheets/flexbox.md-b5bd6470.js",
     "src": "src/routes/cheatsheets/flexbox.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/cheatsheets/linux-commands.md": {
-    "file": "immutable/pages/cheatsheets/linux-commands.md-ea35036f.js",
+    "file": "immutable/pages/cheatsheets/linux-commands.md-6d4b0c57.js",
     "src": "src/routes/cheatsheets/linux-commands.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/cheatsheets/svelte.md": {
-    "file": "immutable/pages/cheatsheets/svelte.md-d4596615.js",
+    "file": "immutable/pages/cheatsheets/svelte.md-a8ab32dc.js",
     "src": "src/routes/cheatsheets/svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
+    ]
+  },
+  "src/routes/cheatsheets/vscode.md": {
+    "file": "immutable/pages/cheatsheets/vscode.md-1a5a7055.js",
+    "src": "src/routes/cheatsheets/vscode.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/data-structures/disjoint-sets.md": {
-    "file": "immutable/pages/data-structures/disjoint-sets.md-b32bfdd1.js",
+    "file": "immutable/pages/data-structures/disjoint-sets.md-f0b1a98e.js",
     "src": "src/routes/data-structures/disjoint-sets.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/data-structures/hashmap.md": {
-    "file": "immutable/pages/data-structures/hashmap.md-2e8313eb.js",
+    "file": "immutable/pages/data-structures/hashmap.md-5685ed6e.js",
     "src": "src/routes/data-structures/hashmap.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/data-structures/heap.md": {
-    "file": "immutable/pages/data-structures/heap.md-4408474c.js",
+    "file": "immutable/pages/data-structures/heap.md-4b5bd4ed.js",
     "src": "src/routes/data-structures/heap.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/data-structures/trie.md": {
-    "file": "immutable/pages/data-structures/trie.md-675569e5.js",
+    "file": "immutable/pages/data-structures/trie.md-0add361f.js",
     "src": "src/routes/data-structures/trie.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/drafts/games.md": {
-    "file": "immutable/pages/drafts/games.md-cc9e1344.js",
+    "file": "immutable/pages/drafts/games.md-d4885b21.js",
     "src": "src/routes/drafts/games.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "immutable/pages/index.svelte-8b829cae.js",
+    "file": "immutable/pages/index.svelte-ec9fa95f.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/notes/index.svelte": {
-    "file": "immutable/pages/notes/index.svelte-e87a703e.js",
+    "file": "immutable/pages/notes/index.svelte-37032c68.js",
     "src": "src/routes/notes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/raspberrypi/gadget-mode.md": {
-    "file": "immutable/pages/raspberrypi/gadget-mode.md-259e84f5.js",
+    "file": "immutable/pages/raspberrypi/gadget-mode.md-ab078220.js",
     "src": "src/routes/raspberrypi/gadget-mode.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
   "src/routes/raspberrypi/ssh-key-auth.md": {
-    "file": "immutable/pages/raspberrypi/ssh-key-auth.md-bd018c83.js",
+    "file": "immutable/pages/raspberrypi/ssh-key-auth.md-9585e6de.js",
     "src": "src/routes/raspberrypi/ssh-key-auth.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d3fa6a4c.js"
+      "_index-a3d3ad5c.js"
     ]
   },
-  "_index-d3fa6a4c.js": {
-    "file": "immutable/chunks/index-d3fa6a4c.js"
+  "_index-a3d3ad5c.js": {
+    "file": "immutable/chunks/index-a3d3ad5c.js"
   },
   "src/routes/__layout.css": {
-    "file": "immutable/assets/__layout-52bfdee6.css",
+    "file": "immutable/assets/__layout-4d3ebc4b.css",
     "src": "src/routes/__layout.css"
   }
 }
