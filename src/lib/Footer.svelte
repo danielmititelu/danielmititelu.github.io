@@ -6,16 +6,15 @@
 <footer class="mx-auto mt-auto">
     <p class="flex items-center">
         Created with 
-        <a class="mx-1 flex items-center" href="https://svelte.dev/">
+        <a class="mx-1 flex items-center link" href="https://svelte.dev/">
             <SvelteIcon /> Svelte
         </a>,
         hosted on 
 
-        <a class="mx-1 flex items-center" href="https://github.com/danielmititelu/danielmititelu.github.io">
+        <a class="mx-1 flex items-center link" href="https://github.com/danielmititelu/danielmititelu.github.io">
             <GithubIcon />
             <div class="w-1" />
             Github
         </a>
-      
     </p>
 </footer>
