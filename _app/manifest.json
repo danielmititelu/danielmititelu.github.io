@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-66f841ca.js",
+    "file": "immutable/start-376e8ff8.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -33,6 +33,8 @@
       "src/routes/data-structures/heap.md",
       "src/routes/data-structures/trie.md",
       "src/routes/drafts/games.md",
+      "src/routes/drafts/project-microphone.md",
+      "src/routes/drafts/project-plant-water.md",
       "src/routes/index.svelte",
       "src/routes/notes/index.svelte",
       "src/routes/raspberrypi/gadget-mode.md",
@@ -40,7 +42,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "immutable/pages/__layout.svelte-35124736.js",
+    "file": "immutable/pages/__layout.svelte-1f203966.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -48,7 +50,7 @@
       "_index-a3d3ad5c.js"
     ],
     "css": [
-      "immutable/assets/__layout-4d3ebc4b.css"
+      "immutable/assets/__layout-3e69f4ac.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -268,8 +270,26 @@
     ]
   },
   "src/routes/drafts/games.md": {
-    "file": "immutable/pages/drafts/games.md-d4885b21.js",
+    "file": "immutable/pages/drafts/games.md-31d7c5f9.js",
     "src": "src/routes/drafts/games.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a3d3ad5c.js"
+    ]
+  },
+  "src/routes/drafts/project-microphone.md": {
+    "file": "immutable/pages/drafts/project-microphone.md-15723b12.js",
+    "src": "src/routes/drafts/project-microphone.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a3d3ad5c.js"
+    ]
+  },
+  "src/routes/drafts/project-plant-water.md": {
+    "file": "immutable/pages/drafts/project-plant-water.md-e0565286.js",
+    "src": "src/routes/drafts/project-plant-water.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -316,7 +336,7 @@
     "file": "immutable/chunks/index-a3d3ad5c.js"
   },
   "src/routes/__layout.css": {
-    "file": "immutable/assets/__layout-4d3ebc4b.css",
+    "file": "immutable/assets/__layout-3e69f4ac.css",
     "src": "src/routes/__layout.css"
   }
 }
