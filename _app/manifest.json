@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-376e8ff8.js",
+    "file": "immutable/start-cbc90327.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -34,10 +34,10 @@
       "src/routes/data-structures/trie.md",
       "src/routes/drafts/games.md",
       "src/routes/drafts/project-microphone.md",
-      "src/routes/drafts/project-plant-water.md",
       "src/routes/index.svelte",
       "src/routes/notes/index.svelte",
       "src/routes/raspberrypi/gadget-mode.md",
+      "src/routes/raspberrypi/project-plant-water.md",
       "src/routes/raspberrypi/ssh-key-auth.md"
     ]
   },
@@ -279,17 +279,8 @@
     ]
   },
   "src/routes/drafts/project-microphone.md": {
-    "file": "immutable/pages/drafts/project-microphone.md-15723b12.js",
+    "file": "immutable/pages/drafts/project-microphone.md-b0770670.js",
     "src": "src/routes/drafts/project-microphone.md",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-a3d3ad5c.js"
-    ]
-  },
-  "src/routes/drafts/project-plant-water.md": {
-    "file": "immutable/pages/drafts/project-plant-water.md-e0565286.js",
-    "src": "src/routes/drafts/project-plant-water.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -306,7 +297,7 @@
     ]
   },
   "src/routes/notes/index.svelte": {
-    "file": "immutable/pages/notes/index.svelte-37032c68.js",
+    "file": "immutable/pages/notes/index.svelte-a6587ec1.js",
     "src": "src/routes/notes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -317,6 +308,15 @@
   "src/routes/raspberrypi/gadget-mode.md": {
     "file": "immutable/pages/raspberrypi/gadget-mode.md-ab078220.js",
     "src": "src/routes/raspberrypi/gadget-mode.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a3d3ad5c.js"
+    ]
+  },
+  "src/routes/raspberrypi/project-plant-water.md": {
+    "file": "immutable/pages/raspberrypi/project-plant-water.md-b59ab9a7.js",
+    "src": "src/routes/raspberrypi/project-plant-water.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
