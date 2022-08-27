@@ -3,7 +3,7 @@
     import GithubIcon from "./Icons/GithubIcon.svelte";
 </script>
 
-<footer class="mx-auto mt-auto">
+<footer class="mx-auto mt-auto mb-3">
     <div class="sm:flex items-center text-white mx-auto">
         <div class="flex items-center">
             Created with
