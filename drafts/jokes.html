@@ -10,7 +10,7 @@
 	<link rel="modulepreload" href="/_app/immutable/start-12d6f972.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-a3d3ad5c.js">
 	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-694c7699.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/algorithms/voting-algo.md-d9cea896.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/drafts/jokes.md-6dbd67d5.js">
 	</head>
 	<body class="m-0">
 		<div id="svelte">
@@ -21,23 +21,14 @@
 <div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto link" href="/">Home </a>
         <a class="my-auto link" href="/notes">Notes </a></div>
 </div>
-	<main class="max-w-screen-md mx-auto px-3"><h1>Boyer-Moore Voting Algorithm</h1>
-<p>Time complexity : O(n)
-Space complexity : O(1)</p>
-<p>The algorithm counts the majority of votes(elements) in an array by finding a part of the array (suffix) where the first element in array suffix is the majority. It does this by diregarding any prefix where the majority is equal to the minority of votes.</p>
-<pre class="language-cs"><!-- HTML_TAG_START --><code class="language-cs"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">MajorityElement</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> nums<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-	<span class="token class-name"><span class="token keyword">int</span></span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-	<span class="token class-name"><span class="token keyword">int</span></span> candidate <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-	<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> num <span class="token keyword">in</span> nums<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-		<span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-			candidate <span class="token operator">=</span> num<span class="token punctuation">;</span>
-		<span class="token punctuation">&#125;</span>
-		count <span class="token operator">+=</span> <span class="token punctuation">(</span>num <span class="token operator">==</span> candidate<span class="token punctuation">)</span> <span class="token punctuation">?</span> <span class="token number">1</span> <span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
-	<span class="token keyword">return</span> candidate<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3>References</h3>
-<p><a href="https://leetcode.com/problems/majority-element/solution/" rel="nofollow">https://leetcode.com/problems/majority-element/solution/</a></p></main>
+	<main class="max-w-screen-md mx-auto px-3"><h2>Dad jokes</h2>
+<hr>
+<p>I asked my date to meet me at the gym today. She didn’t show up.</p>
+<p>That’s when I knew we weren’t gonna work out.</p>
+<hr>
+<p>Today a man knocked on my door and asked for a small donation to the local swimming pool.</p>
+<p>I gave him a glass of water.</p>
+<hr></main>
 	<footer class="mx-auto mt-auto mb-3"><div class="sm:flex items-center text-white mx-auto"><div class="flex items-center">Created with
             <a class="mx-1 flex items-center link" href="https://svelte.dev/"><svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
 	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
@@ -58,10 +49,10 @@ Space complexity : O(1)</p>
             </a></div></div></footer></section>
 
 
-		<script type="module" data-sveltekit-hydrate="1b8d5x1">
+		<script type="module" data-sveltekit-hydrate="45bqw">
 		import { start } from "/_app/immutable/start-12d6f972.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1b8d5x1"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="45bqw"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -70,9 +61,9 @@ Space complexity : O(1)</p>
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 11],
+				nodes: [0, 26],
 				params: {},
-				routeId: "algorithms/voting-algo"
+				routeId: "drafts/jokes"
 			}
 		});
 	</script></div>

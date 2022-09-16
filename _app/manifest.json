@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-c5193a19.js",
+    "file": "immutable/start-12d6f972.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -33,6 +33,7 @@
       "src/routes/data-structures/heap.md",
       "src/routes/data-structures/trie.md",
       "src/routes/drafts/games.md",
+      "src/routes/drafts/jokes.md",
       "src/routes/drafts/project-microphone.md",
       "src/routes/index.svelte",
       "src/routes/notes/index.svelte",
@@ -272,6 +273,15 @@
   "src/routes/drafts/games.md": {
     "file": "immutable/pages/drafts/games.md-31d7c5f9.js",
     "src": "src/routes/drafts/games.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a3d3ad5c.js"
+    ]
+  },
+  "src/routes/drafts/jokes.md": {
+    "file": "immutable/pages/drafts/jokes.md-6dbd67d5.js",
+    "src": "src/routes/drafts/jokes.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
