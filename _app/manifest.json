@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-12d6f972.js",
+    "file": "immutable/start-2e5d1e43.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -9,7 +9,7 @@
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
-      "src/routes/algorithms/binary-tree-traversals.md",
+      "src/routes/algorithms/binary-tree-traversals/index.md",
       "src/routes/algorithms/cycle-detection.md",
       "src/routes/algorithms/dijkstra-algorithm.md",
       "src/routes/algorithms/graph-traversals.md",
@@ -19,31 +19,32 @@
       "src/routes/algorithms/three-way-partitioning.md",
       "src/routes/algorithms/topological-sort.md",
       "src/routes/algorithms/voting-algo.md",
-      "src/routes/blogs/bit-manipulation.md",
+      "src/routes/blogs/bit-manipulation/index.md",
       "src/routes/blogs/cool-quotes.md",
-      "src/routes/blogs/graphs.md",
+      "src/routes/blogs/english.md",
+      "src/routes/blogs/graphs/index.md",
       "src/routes/blogs/system-design.md",
       "src/routes/cheatsheets/ansible.md",
       "src/routes/cheatsheets/flexbox.md",
       "src/routes/cheatsheets/linux-commands.md",
       "src/routes/cheatsheets/svelte.md",
       "src/routes/cheatsheets/vscode.md",
-      "src/routes/data-structures/disjoint-sets.md",
+      "src/routes/data-structures/disjoint-sets/index.md",
       "src/routes/data-structures/hashmap.md",
       "src/routes/data-structures/heap.md",
-      "src/routes/data-structures/trie.md",
+      "src/routes/data-structures/trie/index.md",
       "src/routes/drafts/games.md",
       "src/routes/drafts/jokes.md",
       "src/routes/drafts/project-microphone.md",
       "src/routes/index.svelte",
       "src/routes/notes/index.svelte",
       "src/routes/raspberrypi/gadget-mode.md",
-      "src/routes/raspberrypi/project-plant-water.md",
+      "src/routes/raspberrypi/plant-water-system/index.md",
       "src/routes/raspberrypi/ssh-key-auth.md"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "immutable/pages/__layout.svelte-694c7699.js",
+    "file": "immutable/pages/__layout.svelte-fb90ef03.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -51,7 +52,7 @@
       "_index-a3d3ad5c.js"
     ],
     "css": [
-      "immutable/assets/__layout-9df3e1a2.css"
+      "immutable/assets/__layout-c8d8bb46.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -63,9 +64,9 @@
       "_index-a3d3ad5c.js"
     ]
   },
-  "src/routes/algorithms/binary-tree-traversals.md": {
-    "file": "immutable/pages/algorithms/binary-tree-traversals.md-b33991f6.js",
-    "src": "src/routes/algorithms/binary-tree-traversals.md",
+  "src/routes/algorithms/binary-tree-traversals/index.md": {
+    "file": "immutable/pages/algorithms/binary-tree-traversals/index.md-e802751c.js",
+    "src": "src/routes/algorithms/binary-tree-traversals/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -153,9 +154,9 @@
       "_index-a3d3ad5c.js"
     ]
   },
-  "src/routes/blogs/bit-manipulation.md": {
-    "file": "immutable/pages/blogs/bit-manipulation.md-f6b35e24.js",
-    "src": "src/routes/blogs/bit-manipulation.md",
+  "src/routes/blogs/bit-manipulation/index.md": {
+    "file": "immutable/pages/blogs/bit-manipulation/index.md-3d6a9a83.js",
+    "src": "src/routes/blogs/bit-manipulation/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -171,9 +172,18 @@
       "_index-a3d3ad5c.js"
     ]
   },
-  "src/routes/blogs/graphs.md": {
-    "file": "immutable/pages/blogs/graphs.md-21526d57.js",
-    "src": "src/routes/blogs/graphs.md",
+  "src/routes/blogs/english.md": {
+    "file": "immutable/pages/blogs/english.md-5ceda456.js",
+    "src": "src/routes/blogs/english.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-a3d3ad5c.js"
+    ]
+  },
+  "src/routes/blogs/graphs/index.md": {
+    "file": "immutable/pages/blogs/graphs/index.md-32906053.js",
+    "src": "src/routes/blogs/graphs/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -234,9 +244,9 @@
       "_index-a3d3ad5c.js"
     ]
   },
-  "src/routes/data-structures/disjoint-sets.md": {
-    "file": "immutable/pages/data-structures/disjoint-sets.md-f0b1a98e.js",
-    "src": "src/routes/data-structures/disjoint-sets.md",
+  "src/routes/data-structures/disjoint-sets/index.md": {
+    "file": "immutable/pages/data-structures/disjoint-sets/index.md-341d55ea.js",
+    "src": "src/routes/data-structures/disjoint-sets/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -261,9 +271,9 @@
       "_index-a3d3ad5c.js"
     ]
   },
-  "src/routes/data-structures/trie.md": {
-    "file": "immutable/pages/data-structures/trie.md-0add361f.js",
-    "src": "src/routes/data-structures/trie.md",
+  "src/routes/data-structures/trie/index.md": {
+    "file": "immutable/pages/data-structures/trie/index.md-238327a1.js",
+    "src": "src/routes/data-structures/trie/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -271,7 +281,7 @@
     ]
   },
   "src/routes/drafts/games.md": {
-    "file": "immutable/pages/drafts/games.md-31d7c5f9.js",
+    "file": "immutable/pages/drafts/games.md-a52aec57.js",
     "src": "src/routes/drafts/games.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -324,9 +334,9 @@
       "_index-a3d3ad5c.js"
     ]
   },
-  "src/routes/raspberrypi/project-plant-water.md": {
-    "file": "immutable/pages/raspberrypi/project-plant-water.md-143ee685.js",
-    "src": "src/routes/raspberrypi/project-plant-water.md",
+  "src/routes/raspberrypi/plant-water-system/index.md": {
+    "file": "immutable/pages/raspberrypi/plant-water-system/index.md-27f8127b.js",
+    "src": "src/routes/raspberrypi/plant-water-system/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -346,7 +356,7 @@
     "file": "immutable/chunks/index-a3d3ad5c.js"
   },
   "src/routes/__layout.css": {
-    "file": "immutable/assets/__layout-9df3e1a2.css",
+    "file": "immutable/assets/__layout-c8d8bb46.css",
     "src": "src/routes/__layout.css"
   }
 }

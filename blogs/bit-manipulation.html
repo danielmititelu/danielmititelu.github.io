@@ -6,11 +6,11 @@
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-9df3e1a2.css">
-	<link rel="modulepreload" href="/_app/immutable/start-12d6f972.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-c8d8bb46.css">
+	<link rel="modulepreload" href="/_app/immutable/start-2e5d1e43.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-a3d3ad5c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-694c7699.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/blogs/bit-manipulation.md-f6b35e24.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-fb90ef03.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blogs/bit-manipulation/index.md-3d6a9a83.js">
 	</head>
 	<body class="m-0">
 		<div id="svelte">
@@ -28,7 +28,7 @@
 <h2>Byte</h2>
 <p>A collection of 8 adjacent bits form a byte or octet. Since it’s comprised of 8 bits that can have the value either 1 or 0, a byte can have a value in the interval [0, 255] (2 to the power of 8 or 256 values).</p>
 <h3>6 representation in a byte:</h3>
-<p><img src="/bits.svg" alt="image"></p>
+<p><img src="/bits.svg" alt="Bit representation"></p>
 <p>Modern computer architechtures use memory registers of size four bytes (32-bit) or eight bytes (64-bit). </p>
 <h2>Endianness</h2>
 <p>Endianess refers to the order the bytes are stored in a computer memory. The most common order in processor architecture is called Little-endian where the least significant byte (the byte that contains the smallest bits) is stored in the left or the smallest address memory. In contrast Big-endian will store the least significant byte on the right.</p>
@@ -57,9 +57,9 @@ Compares two operands and returns a bit pattern that shows which bits are 1 in e
 <li><p>Bitwise logical XOR ( <code>^</code> ) -&gt;
 Compares two operands and returns a bit pattern that shows which bits are 1 only in one of the operands</p></li>
 <li><p>Bitwise left shift (<code>&lt;&lt; x</code>) operation will shift all bits to the left by x positions and esentially double the number for each shift.</p></li></ul>
-<p><img src="/left-shift.svg" alt="image"></p>
+<p><img src="/left-shift.svg" alt="Bits shifting left one cell"></p>
 <ul><li>Bitwise right shift (<code>&gt;&gt; x</code>) operation will shift all bits to the right by x positions and esentially halve the number for each shift.</li></ul>
-<p><img src="/right-shift.svg" alt="image"></p>
+<p><img src="/right-shift.svg" alt="Bits shifting right one cell"></p>
 <p>When shifting bits left/right the left-most/right-most bit will fall in the void of nothingness and disappears out of existence (dramatic music starts playing)</p>
 <h2>Terminology</h2>
 <ul><li>Least siginificant bit (LSB) is the right most bit</li>
@@ -82,7 +82,7 @@ Compares two operands and returns a bit pattern that shows which bits are 1 only
 <ul><li><a href="https://leetcode.com/problems/sum-of-two-integers/" rel="nofollow">https://leetcode.com/problems/sum-of-two-integers/</a></li>
 <li><a href="https://leetcode.com/problems/number-of-1-bits/" rel="nofollow">https://leetcode.com/problems/number-of-1-bits/</a></li>
 <li><a href="https://leetcode.com/problems/counting-bits/" rel="nofollow">https://leetcode.com/problems/counting-bits/</a></li></ul></main>
-	<footer class="mx-auto mt-auto mb-3"><div class="sm:flex items-center text-white mx-auto"><div class="flex items-center">Created with
+	<footer class="mx-auto py-4 mt-auto"><div class="sm:flex items-center text-white mx-auto"><div class="flex items-center">Created with
             <a class="mx-1 flex items-center link" href="https://svelte.dev/"><svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
 	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
 	c-2.4,3.6-4,7.6-4.7,11.8c-1.6,8.9,0.5,18.1,5.7,25.4c11,15.7,32.6,20.3,48.2,10.4l27.5-17.5c7.5-4.7,12.7-12.4,14.2-21.1
@@ -102,10 +102,10 @@ Compares two operands and returns a bit pattern that shows which bits are 1 only
             </a></div></div></footer></section>
 
 
-		<script type="module" data-sveltekit-hydrate="14mqspj">
-		import { start } from "/_app/immutable/start-12d6f972.js";
+		<script type="module" data-sveltekit-hydrate="olldsk">
+		import { start } from "/_app/immutable/start-2e5d1e43.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="14mqspj"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="olldsk"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,

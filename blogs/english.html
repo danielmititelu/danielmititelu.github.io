@@ -6,11 +6,11 @@
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-9df3e1a2.css">
-	<link rel="modulepreload" href="/_app/immutable/start-12d6f972.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-c8d8bb46.css">
+	<link rel="modulepreload" href="/_app/immutable/start-2e5d1e43.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-a3d3ad5c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-694c7699.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/raspberrypi/project-plant-water.md-143ee685.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-fb90ef03.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blogs/english.md-5ceda456.js">
 	</head>
 	<body class="m-0">
 		<div id="svelte">
@@ -21,44 +21,10 @@
 <div class="top-0 w-full bg-slate-800 left-0 right-0"><div class="flex max-w-screen-md m-auto justify-start h-16 text-xl gap-2"><a class="my-auto link" href="/">Home </a>
         <a class="my-auto link" href="/notes">Notes </a></div>
 </div>
-	<main class="max-w-screen-md mx-auto px-3"><h1>Project: Leave no plant behind</h1>
-<p>This project is meant to keep my plants healthy while I go on vacations.</p>
-<h2>Parts required</h2>
-<ul><li>raspberry pi zero (will work with any raspberry pi)</li>
-<li>micro usb power supply</li>
-<li>3v-5v pump</li>
-<li>small hose for the pump</li>
-<li>5v relay</li>
-<li>wires</li></ul>
-<h2>Wiring diagram</h2>
-<p><img src="/pump-scheme.png" alt="image"></p>
-<p>Relay inputs:</p>
-<ul><li>NO = normally opened</li>
-<li>NC = normally closed</li>
-<li>CO = common</li>
-<li>DC- = ground</li>
-<li>DC+ = 5V signal</li>
-<li>IN = signal </li></ul>
-<h2>Code</h2>
-<p>Simple python code to send a signal to pin 8 for 0.8 seconds which, in our case, will open the pump and water the plant.</p>
-<pre class="language-py"><!-- HTML_TAG_START --><code class="language-py"><span class="token keyword">from</span> time <span class="token keyword">import</span> sleep
-<span class="token keyword">import</span> RPI<span class="token punctuation">.</span>GPIO <span class="token keyword">as</span> GPIO
-
-GPIO<span class="token punctuation">.</span>setmode<span class="token punctuation">(</span>GPIO<span class="token punctuation">.</span>BOARD<span class="token punctuation">)</span>
-GPIO<span class="token punctuation">.</span>setup<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> GPIO<span class="token punctuation">.</span>OUT<span class="token punctuation">)</span>
-
-GPIO<span class="token punctuation">.</span>output<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> GPIO<span class="token punctuation">.</span>HIGH<span class="token punctuation">)</span>
-sleep<span class="token punctuation">(</span><span class="token number">0.8</span><span class="token punctuation">)</span>
-GPIO<span class="token punctuation">.</span>output<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> GPIO<span class="token punctuation">.</span>LOW<span class="token punctuation">)</span>
-
-GPIO<span class="token punctuation">.</span>cleanup<span class="token punctuation">(</span><span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
-<p>Using linux cron jobs we can run the above program on a schedule:</p>
-<ul><li>run <code>crontab -e command</code> in the terminal</li>
-<li>at the bottom of the file write the following line which will run water.py at 10:00 AM on Monday, Wednesday, Friday, and Saturday:</li></ul>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">0 10 * * 1,3,5,6 python ~/projects/water.py</code><!-- HTML_TAG_END --></pre>
-<h2>Final result</h2>
-<p><img src="/pump-image.jpg" alt="image"></p></main>
-	<footer class="mx-auto mt-auto mb-3"><div class="sm:flex items-center text-white mx-auto"><div class="flex items-center">Created with
+	<main class="max-w-screen-md mx-auto px-3"><h1>English</h1>
+<ul><li>than/then - than is comparison; then is time related.</li></ul>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined"></code><!-- HTML_TAG_END --></pre></main>
+	<footer class="mx-auto py-4 mt-auto"><div class="sm:flex items-center text-white mx-auto"><div class="flex items-center">Created with
             <a class="mx-1 flex items-center link" href="https://svelte.dev/"><svg width="30" height="25" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.1 118" style="enable-background:new 0 0 98.1 118;" xml:space="preserve"><style type="text/css">.st0{fill:#FF3E00;}
 	.st1{fill:#FFFFFF;}</style><title>Svelte</title><path class="st0" d="M91.8,15.6C80.9-0.1,59.2-4.7,43.6,5.2L16.1,22.8C8.6,27.5,3.4,35.2,1.9,43.9c-1.3,7.3-0.2,14.8,3.3,21.3
 	c-2.4,3.6-4,7.6-4.7,11.8c-1.6,8.9,0.5,18.1,5.7,25.4c11,15.7,32.6,20.3,48.2,10.4l27.5-17.5c7.5-4.7,12.7-12.4,14.2-21.1
@@ -78,10 +44,10 @@ GPIO<span class="token punctuation">.</span>cleanup<span class="token punctuatio
             </a></div></div></footer></section>
 
 
-		<script type="module" data-sveltekit-hydrate="721ctj">
-		import { start } from "/_app/immutable/start-12d6f972.js";
+		<script type="module" data-sveltekit-hydrate="9hd564">
+		import { start } from "/_app/immutable/start-2e5d1e43.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="721ctj"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="9hd564"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -90,9 +56,9 @@ GPIO<span class="token punctuation">.</span>cleanup<span class="token punctuatio
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 31],
+				nodes: [0, 14],
 				params: {},
-				routeId: "raspberrypi/project-plant-water"
+				routeId: "blogs/english"
 			}
 		});
 	</script></div>
