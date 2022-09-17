@@ -65,6 +65,8 @@ draft: true
 ## Counter-Strike 1.6
 ## Among Us
 ## Limbo
+## Inside
+Move, jump, interact that's all the controls Inside utilize to create a great puzzle game.
 ## Apex legends
 ## Metro 2033
 ## Metro Exodus

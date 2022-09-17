@@ -43,17 +43,19 @@ async function getNotes(): Promise<Notes[]> {
 
     const tagDict: { [name: string]: Note[] } = {}
 
-    const articles: any = import.meta.glob('../*/*.md', { eager: true });
-    for (const path in articles) {
+    const articles: any = import.meta.glob('../**/*.md', { eager: true });
+    for (let path in articles) {
         const { metadata } = articles[path];
       
         if (!metadata.tags) continue;
         if(metadata?.draft) continue;
 
+        path = path.replace('index', "")
         for (const tag of metadata.tags) {
             if (!tagDict[tag]) {
                 tagDict[tag] = [];
             }
+            
             tagDict[tag].push({
                 title: metadata.title,
                 path: path.slice(2, -3)

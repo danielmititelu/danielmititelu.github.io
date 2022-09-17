@@ -19,17 +19,17 @@ Time complexity for both find and union is smaller than O(log n) or amortized O(
 
 An array is used to represent the parents of the disjointed sets. This is how the parents array would look after the union operation is performed on the blue and red nodes:
 
-![image](/disjoint-sets.svg)
+![Disjoint sets representation](/disjoint-sets.svg)
 
-## Optimazations 
+## Optimizations 
 
 #### Path compression
-An optimization that aims to flatten the traveral tree to the height of one so that all find operation would be completed in constant time.
+An optimization that aims to flatten the traversal tree to the height of one so that all find operation would be completed in constant time.
 
 #### Union by rank
 This optimization aims to always attached the smaller tree to the bigger one. An additional array is required to store the ranks of each tree.
 
-![image](/disjoint-sets-copmleted.svg)
+![Completed disjointed sets](/disjoint-sets-completed.svg)
 #### Code example:
 ```cs
 public class DisjointSets {

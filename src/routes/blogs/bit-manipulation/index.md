@@ -15,7 +15,7 @@ The smallest data use to represent a piece of information in computers are bits 
 A collection of 8 adjacent bits form a byte or octet. Since it's comprised of 8 bits that can have the value either 1 or 0, a byte can have a value in the interval [0, 255] (2 to the power of 8 or 256 values).
 
 ### 6 representation in a byte:
-![image](/bits.svg)
+![Bit representation](/bits.svg)
 
 Modern computer architechtures use memory registers of size four bytes (32-bit) or eight bytes (64-bit). 
 
@@ -62,12 +62,12 @@ Compares two operands and returns a bit pattern that shows which bits are 1 only
 
 - Bitwise left shift (`<< x`) operation will shift all bits to the left by x positions and esentially double the number for each shift.
 
-![image](/left-shift.svg)
+![Bits shifting left one cell](/left-shift.svg)
 
 
 - Bitwise right shift (`>> x`) operation will shift all bits to the right by x positions and esentially halve the number for each shift.
 
-![image](/right-shift.svg)
+![Bits shifting right one cell](/right-shift.svg)
 
 When shifting bits left/right the left-most/right-most bit will fall in the void of nothingness and disappears out of existence (dramatic music starts playing)
 

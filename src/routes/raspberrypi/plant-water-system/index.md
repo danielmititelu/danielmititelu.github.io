@@ -1,10 +1,10 @@
 ---
-title: Project Leave no plant behind
+title: Leave no plant behind
 tags:
 - raspberrypi
 ---
 
-# Project: Leave no plant behind
+# Leave no plant behind
 
 This project is meant to keep my plants healthy while I go on vacations.
 
@@ -17,7 +17,7 @@ This project is meant to keep my plants healthy while I go on vacations.
 - wires
 
 ## Wiring diagram
-![image](/pump-scheme.png)
+![Pump scheme](/pump-scheme.png)
 
 Relay inputs:
 - NO = normally opened
@@ -52,4 +52,4 @@ Using linux cron jobs we can run the above program on a schedule:
 ```
 
 ## Final result
-![image](/pump-image.jpg)
+![Final result](/pump-image.jpg)

@@ -8,7 +8,7 @@ Created: 2021-11-30 12:43
 
 A trie or prefix tree is tree data structure that allows for fast searching of a key or string prefix in a dataset of strings. It is used in word completion like google search or intellisense
 
-![image](/trie.svg)
+![Trie](/trie.svg)
 
 ### Example implementation
 ```cs

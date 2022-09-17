@@ -7,7 +7,7 @@ tags:
 
 ## Preorder traversal
 
-![image](/preorder.svg)
+![Preorder transversal](/preorder.svg)
 
 Order of visiting: parent -> left child -> right child
 
@@ -52,7 +52,7 @@ public IList<int> PreorderTraversal(TreeNode root) {
 
 It's called inorder since for a binary search tree it traverse the nodes in ascending order.
 
-![image](/inorder.svg)
+![Inorder traversal](/inorder.svg)
 
 Order of visiting: left child -> parent -> right child
 
@@ -98,7 +98,7 @@ public IList<int> InorderTraversal(TreeNode root)
 
 ## Postorder traversal
 
-![image](/postorder.svg)
+![Postorder traversal](/postorder.svg)
 
 Order of visiting: left child -> right child -> parent
 
