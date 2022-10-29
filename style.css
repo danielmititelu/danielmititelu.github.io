@@ -54,6 +54,10 @@
   border-width: 2px
 }
 
+.border-solid {
+  border-style: solid
+}
+
 .border-sky-500\/0 {
   border-color: rgb(14 165 233 / 0)
 }
