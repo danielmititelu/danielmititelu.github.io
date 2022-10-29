@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ range .Pages }}
+<a class="link block p-1 border-2 border-soli hover:border-sky-500 border-sky-500/0" href="{{ .Permalink }}">
+    - {{ .Title }}
+</a>
+{{ end }}
+{{ end }}

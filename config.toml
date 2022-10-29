@@ -1,0 +1,8 @@
+baseURL = "https://danielmititelu.github.io/"
+languageCode = "en-us"
+title = "Home"
+theme = "PaperMod"
+pluralizelisttitles = false
+
+[Params]
+    ShowBreadCrumbs = false
