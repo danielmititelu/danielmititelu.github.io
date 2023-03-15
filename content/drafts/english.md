@@ -1,6 +1,5 @@
 ---
 title: English
-draft: true
 tags:
 - blog
 ---

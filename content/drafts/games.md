@@ -101,3 +101,6 @@ draft: true
 - Devil may cry 4
 - Devil may cry 5
 - The Looker
+- Children of Morta
+- Untitled Goose Game
+- Atomic Heart
