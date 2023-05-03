@@ -2,7 +2,6 @@
 title: Games
 tags:
 - games
-draft: true
 ---
 - Hades
 - Death's door
