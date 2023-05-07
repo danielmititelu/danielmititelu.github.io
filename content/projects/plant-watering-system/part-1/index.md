@@ -51,3 +51,7 @@ Using linux cron jobs we can run the above program on a schedule:
 
 ## Final result
 ![Final result](img/pump-image.jpg)
+
+# Syphon
+
+One of the challenges I faced was the continued flow of water through the hose even after switching off the pump. The solution I came out with was to elevate the flower pot on a bowl so the end of the hose is higher and the syphon can't form.
