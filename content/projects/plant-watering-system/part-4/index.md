@@ -4,7 +4,8 @@ tags:
 - raspberrypi
 ---
 
-While Arduino studio is awesome, it didn't seem to have the best support for the Raspberry Pi Pico. The recommended language for the Pico are C++ and Python and i decided to go with Python.
+While Arduino studio is awesome, it didn't seem to have the best support for the Raspberry Pi Pico. The recommended languages for the Pico are C++ and Python and I decided to go with Python.
+
 I rewrite the code in Python and did the following improvements:
 - connect the board to wi-fi
 - get the time from a NTP(Network Time Protocol) server
