@@ -13,3 +13,5 @@ draft: true
 - Ricoh GR III
 - Shinto rasp
 - Bad Axe no. 9 Precision Tenon Saw
+- [redgrass r9 desk lamp](https://www.redgrasscreative.com/product/redgrass-r9-desk-lamp/)
+- Stanley vise multi-angle

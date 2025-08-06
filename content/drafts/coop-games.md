@@ -1,0 +1,61 @@
+---
+title: Coop games
+tags:
+- games
+---
+
+# Played
+- Children of morta
+    - rogue-lite isometric hero game, one of the best games
+- Cult of the lamb
+    - rogue-lite isometric slash and hack game
+- Roboquest
+    - rogue-lite FPS
+- Gunfire reborn
+    - rogue-lite FPS
+- Portal 2
+    - FPS puzzle game
+- Overcooked 1 & 2
+    - isometric restaurant kitchen simulator
+- Spacelines from the Far Out
+    - isometric game where you manage a spaceship airline
+- Untitled goose game
+    - you are a duck and must wreack havoc
+- Death square
+    - fun puzzle game
+- Moving out
+    - isometric game where you move stuff
+- It takes two 
+    - third person platformer
+- Deep rock Galactic
+    - FPS mining game 
+- Sea of thieves
+    - FPS pirate game
+- Helldivers
+    - isometric shooter
+- Army of two
+    - FPS shooter
+- Don't starve Together
+    - isometric survival
+- A way out
+    - third person prison break 
+
+# To play
+- Dying light 1 & 2
+    - FPS game where you drop kick zombies
+- Dead space 1, 2 & 3
+    - Third person horror game
+- Borderlands series
+    - FPS looter shooter with funny story
+- Unrailed
+    - Simple isometric game where you have to move a train from point A to point B
+- Orcs must die series
+    - Third person tower defence
+- We were here series
+    - FPS puzzle game
+- Peak
+    - FPS game where the whole purpose is to climb a mountain, it's more fun than it sounds like
+- Split fiction
+    - similar with "It takes two"
+- Helldivers 2
+    - FPS mission shooter
